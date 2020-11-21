@@ -44,8 +44,11 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function(
 
     for(var i in json){
         var e = json[i];
-        let process = child_process.spawnSync("rm -R playbooks && git clone " + e.head.repo.clone_url + " playbooks && git checkout " + e.head.ref + " && sh buildRun.sh", { shell: true, encoding: 'utf-8' });
-        console.log(process);
+        let cp = child_process.spawnSync("rm -R playbooks && git clone " + e.head.repo.clone_url + " playbooks && git checkout " + e.head.ref + " && sh buildRun.sh", { shell: true, encoding: 'utf-8' });
+        console.log(cp);
+        if(cp.status != 0){
+            process.exit(cp.status);
+        }
 
         let katacodaDir = "build/output/katacoda/";
         let tutorialDirs = fs.readdirSync(katacodaDir);
@@ -60,6 +63,9 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function(
             });
         }
     }
-    let process = child_process.spawnSync("cd repo && git add . && git commit -m \"Updated tutorials\" && git push", { shell: true, encoding: 'utf-8' });
-    console.log(process);
+    let cp = child_process.spawnSync("cd repo && git add . && git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push", { shell: true, encoding: 'utf-8' });
+    console.log(cp);
+    if(cp.status != 0){
+        process.exit(cp.status);
+    }
 });
