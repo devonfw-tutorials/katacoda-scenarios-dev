@@ -39,7 +39,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
     let reposDirs = fs.readdirSync(repoDir);
     for (let index in reposDirs) {
         if (/^[0-9]+/.test(reposDirs[index])) {
-            rimraf(repoDir + reposDirs[index], function () { console.log(repoDir + reposDirs[index] + " deleted"); changed = true; });
+            rimraf(repoDir + reposDirs[index], function () { console.log(repoDir + reposDirs[index] + " deleted"); });
         }
     }
     for (var i in json) {
@@ -55,8 +55,9 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         let tutorialDirs = fs.readdirSync(katacodaDir);
         for (let index in tutorialDirs) {
             let dir = katacodaDir + tutorialDirs[index];
-            console.log("Copy " + dir);
-            fse.copySync(dir, "repo/" + e.number + "_" + e.title.replace(/[^A-Za-z0-9]/g, "-") + "_" + tutorialDirs[index], function (err) {
+            let targetDir = "repo/" + e.number + "_" + e.title.replace(/[^A-Za-z0-9]/g, "-") + "_" + tutorialDirs[index];
+            console.log("Copy " + dir + " -> " + targetDir);
+            fse.copySync(dir, targetDir, function (err) {
                 if (err) {
                     console.error(err);
                 } else {
@@ -67,7 +68,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         }
     }
     if (changed) {
-        let cp = child_process.spawnSync("cd repo && git add -A && git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push", { shell: true, encoding: 'utf-8' });
+        let cp = child_process.spawnSync("cd repo && ls -al && git add -A && git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push", { shell: true, encoding: 'utf-8' });
         console.log(cp);
         if (cp.status != 0) {
             process.exit(cp.status);
