@@ -44,7 +44,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function(
 
     for(var i in json){
         var e = json[i];
-        let cp = child_process.spawnSync("rm -R playbooks && git clone " + e.head.repo.clone_url + " playbooks && git rev-parse --abbrev-ref HEAD && if [ \"git rev-parse --abbrev-ref HEAD\" != \"" + e.head.ref + "\" ]; then git checkout " + e.head.ref + "; fi && sh buildRun.sh", { shell: true, encoding: 'utf-8' });
+        let cp = child_process.spawnSync("rm -R playbooks && git clone " + e.head.repo.clone_url + " playbooks && branch_name=$(git symbolic-ref -q HEAD) && branch_name=${branch_name##refs/heads/} && branch_name=${branch_name:-HEAD} && echo $branch_name && if [ \"$branch_name\" != \"" + e.head.ref + "\" ]; then git checkout " + e.head.ref + "; fi && sh buildRun.sh", { shell: true, encoding: 'utf-8' });
         console.log(cp);
         if(cp.status != 0){
             process.exit(cp.status);
