@@ -60,5 +60,6 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function(
             });
         }
     }
-    child_process.spawnSync("cd repo && git add . && git commit -m \"Updated tutorials\" && git push", { shell: true });
+    let process = child_process.spawnSync("cd repo && git add . && git commit -m \"Updated tutorials\" && git push", { shell: true, encoding: 'utf-8' });
+    console.log(process);
 });
