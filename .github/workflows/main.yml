@@ -26,6 +26,9 @@ jobs:
       
       - name: install TS
         run: npm install typescript
+
+      - name: install fs-extra
+        run: npm install fs-extra
       
       - name: npm install
         run: npm install
