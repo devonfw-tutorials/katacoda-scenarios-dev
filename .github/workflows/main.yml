@@ -1,4 +1,5 @@
 name: CI
+
 on:
   push:
     branches: [ main ]
@@ -6,13 +7,30 @@ on:
     branches: [ main ]
     
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout tutorial-compiler
+        uses: actions/checkout@v2
+        with:
+          repository: devonfw-forge/tutorial-compiler
+      
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: repo
       
       - uses: actions/setup-node@v2-beta
+      
+      - name: install TS
+        run: npm install typescript
+      
+      - name: npm install
+        run: npm install
 
-      - run: bash update.sh
+      - name: run runForAllPullRequests.js
+        run: node repo/runForAllPullRequests.js
+          
+      
