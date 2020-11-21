@@ -1,6 +1,7 @@
 const https = require('https');
 const child_process = require('child_process');
 const fse = require('fs-extra');
+const fs = require('fs');
 const rimraf = require("rimraf");
 
 const options = {
@@ -14,16 +15,13 @@ const options = {
 
 function download(url, f){
     https.get(url, options, (resp) => {
-        console.log(url);
         let data = '';
 
         resp.on('data', (chunk) => {
-            console.log("chunk",chunk);
             data += chunk;
         });
 
         resp.on('end', () => {
-            console.log("end", data);
             f(data);
         });
 
@@ -33,7 +31,6 @@ function download(url, f){
 }
 
 download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function(data){
-    console.log(data);
     let json = JSON.parse(data);
     console.log(json);
 
