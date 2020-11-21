@@ -3,8 +3,18 @@ const child_process = require('child_process');
 const fse = require('fs-extra');
 const rimraf = require("rimraf");
 
+const options = {
+    port: 443,
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'User-Agent': 'action'
+    }
+  }
+
 function download(url, f){
-    https.get(url, (resp) => {
+    https.get(url, options, (resp) => {
+        console.log(url);
         let data = '';
 
         resp.on('data', (chunk) => {
