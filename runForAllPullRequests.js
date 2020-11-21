@@ -33,7 +33,6 @@ function download(url, f) {
 download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function (data) {
     let json = JSON.parse(data);
     console.log(json);
-    let changed = false;
 
     let repoDir = "repo/";
     let reposDirs = fs.readdirSync(repoDir);
@@ -58,14 +57,12 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
             let targetDir = "repo/" + e.number + "_" + e.title.replace(/[^A-Za-z0-9]/g, "-") + "_" + tutorialDirs[index];
             console.log("Copy " + dir + " -> " + targetDir);
             fse.copySync(dir, targetDir);
-            changed = true;
         }
+    } 
+    let cp = child_process.spawnSync("cd repo && ls -al && git fetch --all && git checkout main && git add -A && git diff-index --quiet HEAD -- || (git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push)", { shell: true, encoding: 'utf-8' });
+    console.log(cp);
+    if (cp.status != 0) {
+        process.exit(cp.status);
     }
-    if (changed) {
-        let cp = child_process.spawnSync("cd repo && ls -al && git fetch --all && git checkout main && git add -A && git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push", { shell: true, encoding: 'utf-8' });
-        console.log(cp);
-        if (cp.status != 0) {
-            process.exit(cp.status);
-        }
-    }
+
 });
