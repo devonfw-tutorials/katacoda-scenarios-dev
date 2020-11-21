@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  schedule:
+    - cron:  '* * * * *'
+    
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout tutorial-compiler
+        uses: actions/checkout@v2
+        with:
+          repository: devonfw-forge/tutorial-compiler
+      
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: repo
+      
+      - run: ls repo
+
+      - run: ls
+      
+      - uses: actions/setup-node@v2-beta
+      
+      - name: install TS
+        run: npm install typescript
+
+      - name: install fs-extra
+        run: npm install fs-extra
+      
+      - name: npm install
+        run: npm install
+
+      - name: run runForAllPullRequests.js
+        run: node repo/runForAllPullRequests.js
+          
+      
