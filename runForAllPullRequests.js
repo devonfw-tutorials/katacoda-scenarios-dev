@@ -21,7 +21,9 @@ function download(url, f){
 }
 
 download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function(data){
+    console.log(data);
     let json = JSON.parse(data);
+    console.log(json);
 
     let repoDir = "repo/";
     let reposDirs = fs.readdirSync(repoDir);
