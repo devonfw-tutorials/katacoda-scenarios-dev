@@ -57,14 +57,8 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
             let dir = katacodaDir + tutorialDirs[index];
             let targetDir = "repo/" + e.number + "_" + e.title.replace(/[^A-Za-z0-9]/g, "-") + "_" + tutorialDirs[index];
             console.log("Copy " + dir + " -> " + targetDir);
-            fse.copySync(dir, targetDir, function (err) {
-                if (err) {
-                    console.error(err);
-                } else {
-                    changed = true;
-                    console.log("Copied " + dir + "to repo/" + e.number + "_" + e.title.replaceAll(/[^A-Za-z0-9]/g, "-") + "_" + tutorialDirs[index]);
-                }
-            });
+            fse.copySync(dir, targetDir);
+            changed = true;
         }
     }
     if (changed) {
