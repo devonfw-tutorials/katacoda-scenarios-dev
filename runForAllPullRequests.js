@@ -62,7 +62,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         }
     }
     if (changed) {
-        let cp = child_process.spawnSync("cd repo && ls -al && git add -A && git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push", { shell: true, encoding: 'utf-8' });
+        let cp = child_process.spawnSync("cd repo && ls -al && git fetch --all && git checkout main && git add -A && git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push", { shell: true, encoding: 'utf-8' });
         console.log(cp);
         if (cp.status != 0) {
             process.exit(cp.status);
