@@ -44,7 +44,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function(
 
     for(var i in json){
         var e = json[i];
-        let process = child_process.spawnSync("rm -R playbooks && git clone " + e.head.repo.clone_url + " playbooks && git checkout " + e.head.repo.ref + " && sh buildRun.sh", { shell: true, encoding: 'utf-8' });
+        let process = child_process.spawnSync("rm -R playbooks && git clone " + e.head.repo.clone_url + " playbooks && git checkout " + e.head.ref + " && sh buildRun.sh", { shell: true, encoding: 'utf-8' });
         console.log(process);
 
         let katacodaDir = "build/output/katacoda/";
