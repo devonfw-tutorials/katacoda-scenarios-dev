@@ -36,7 +36,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function(
 
     let repoDir = "repo/";
     let reposDirs = fs.readdirSync(repoDir);
-    for (let index in tutorialDirs) {
+    for (let index in reposDirs) {
         if(/^[0-9]+/.test(reposDirs[index])){
             rimraf(repoDir + reposDirs[index], function () { console.log(repoDir + reposDirs[index] + " deleted"); });
         }
