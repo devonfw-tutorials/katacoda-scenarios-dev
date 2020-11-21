@@ -6,18 +6,20 @@ const rimraf = require("rimraf");
 function download(url, f){
     https.get(url, (resp) => {
         let data = '';
-      
+
         resp.on('data', (chunk) => {
-          data += chunk;
+            console.log("chunk",chunk);
+            data += chunk;
         });
-      
+
         resp.on('end', () => {
-          f(data);
+            console.log("end", data);
+            f(data);
         });
-      
-      }).on("error", (err) => {
+
+        }).on("error", (err) => {
         console.log("Error: " + err.message);
-      });
+    });
 }
 
 download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function(data){
