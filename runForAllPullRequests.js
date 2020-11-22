@@ -38,10 +38,11 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
     let repoDir = "repo/";
     let reposDirs = fs.readdirSync(repoDir);
     for (let index in reposDirs) {
-        if (/^[0-9]+/.test(reposDirs[index])) {
-            rimraf(repoDir + reposDirs[index], function () { console.log(repoDir + reposDirs[index] + " deleted"); });
+        if (/^[0-9]+_.+$/.test(reposDirs[index])) {
+            rimraf.sync(repoDir + reposDirs[index]);
         }
     }
+
     for (var i in json) {
         var e = json[i];
         console.log("Clone " + e.head.repo.clone_url + " -> " + e.head.ref);
