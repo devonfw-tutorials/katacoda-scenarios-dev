@@ -33,6 +33,7 @@ function download(url, f) {
 download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function (data) {
     let json = JSON.parse(data);
     console.log(json);
+    let exitCode = 0;
 
     let repoDir = "repo/";
     let reposDirs = fs.readdirSync(repoDir);
@@ -47,22 +48,27 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         let cp = child_process.spawnSync("rm -R playbooks && git clone " + e.head.repo.clone_url + " playbooks && branch_name=$(git symbolic-ref -q HEAD) && branch_name=${branch_name##refs/heads/} && branch_name=${branch_name:-HEAD} && echo $branch_name && if [ \"$branch_name\" != \"" + e.head.ref + "\" ]; then git checkout " + e.head.ref + "; fi && sh buildRun.sh", { shell: true, encoding: 'utf-8' });
         console.log(cp);
         if (cp.status != 0) {
-            process.exit(cp.status);
+            exitCode = cp.status;
         }
-
-        let katacodaDir = "build/output/katacoda/";
-        let tutorialDirs = fs.readdirSync(katacodaDir);
-        for (let index in tutorialDirs) {
-            let dir = katacodaDir + tutorialDirs[index];
-            let targetDir = "repo/" + e.number + "_" + e.title.replace(/[^A-Za-z0-9]/g, "-") + "_" + tutorialDirs[index];
-            console.log("Copy " + dir + " -> " + targetDir);
-            fse.copySync(dir, targetDir);
+        else {
+            let katacodaDir = "build/output/katacoda/";
+            let tutorialDirs = fs.readdirSync(katacodaDir);
+            for (let index in tutorialDirs) {
+                let dir = katacodaDir + tutorialDirs[index];
+                let targetDir = "repo/" + e.number + "_" + e.title.replace(/[^A-Za-z0-9]/g, "-") + "_" + tutorialDirs[index];
+                console.log("Copy " + dir + " -> " + targetDir);
+                fse.copySync(dir, targetDir);
+            }
         }
-    } 
+        rimraf("build/output/katacoda/", function () { console.log("build/output/katacoda deleted"); });
+    }
     let cp = child_process.spawnSync("cd repo && ls -al && git fetch --all && git checkout main && git add -A && git diff-index --quiet HEAD -- || (git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push)", { shell: true, encoding: 'utf-8' });
     console.log(cp);
     if (cp.status != 0) {
         process.exit(cp.status);
+    }
+    if (exitCode != 0) {
+        process.exit(exitCode);
     }
 
 });
