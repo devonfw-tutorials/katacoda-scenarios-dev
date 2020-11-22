@@ -61,8 +61,9 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
                 fse.copySync(dir, targetDir);
             }
         }
-        rimraf("build/output/katacoda/", function () { console.log("build/output/katacoda deleted"); });
+        rimraf.sync("build/output/katacoda/");
     }
+
     let cp = child_process.spawnSync("cd repo && ls -al && git fetch --all && git checkout main && git add -A && git diff-index --quiet HEAD -- || (git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push)", { shell: true, encoding: 'utf-8' });
     console.log(cp);
     if (cp.status != 0) {
@@ -71,5 +72,4 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
     if (exitCode != 0) {
         process.exit(exitCode);
     }
-
 });
