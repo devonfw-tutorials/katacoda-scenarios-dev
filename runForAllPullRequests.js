@@ -46,16 +46,18 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
     for (var i in json) {
         var e = json[i];
         console.log("Clone " + e.head.repo.clone_url + " -> " + e.head.ref);
-        let branch = "pr/" + e.number;
-        let cmd = "git config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*' " + 
+        let cmd = "rm -R playbooks " + 
+        " && echo remote -v && git remote -v " +
+        " && echo remote set-url origin && git remote set-url origin " + e.head.repo.clone_url + " " +
         " && echo config --list && git config --list " +
+        " && echo clone && git clone " + e.head.repo.clone_url + " playbooks "+
         " && echo remote update && git remote update " +
         " && echo fetch --all && git fetch --all " +
         " && echo pull --all && git pull --all " +
         " && echo branch -a && git branch -a " +
         " && echo git show-ref && git show-ref " +
         " && branch_name=$(git symbolic-ref -q HEAD) && branch_name=${branch_name##refs/heads/} && branch_name=${branch_name:-HEAD} && echo $branch_name "+
-        " && if [ \"$branch_name\" != \"" + branch + "\" ]; then echo checkout && git checkout " + branch + "; fi "+
+        " && if [ \"$branch_name\" != \"" + e.head.ref + "\" ]; then echo checkout && git checkout " + e.head.ref + "; fi "+
         " && echo buildRun && sh buildRun.sh";
         console.log(cmd);
         let cp = child_process.spawnSync(
