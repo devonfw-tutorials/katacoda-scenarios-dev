@@ -18,6 +18,12 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: devonfw-forge/tutorial-compiler
+
+      - name: Checkout tutorial-compiler
+        uses: actions/checkout@v2
+        with:
+          repository: devonfw-forge/tutorials
+          path: playbooks
       
       - name: Checkout
         uses: actions/checkout@v2
