@@ -47,7 +47,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         var e = json[i];
         console.log("Clone " + e.head.repo.clone_url + " -> " + e.head.ref);
         let branch = "pr/" + e.number;
-        let cmd = "git config --add remote.origin.fetch '+refs/pull//head:refs/remotes/origin/pr/' "
+        let cmd = "git config --add remote.origin.fetch '+refs/pull//head:refs/remotes/origin/pr/' " + 
         " && echo config --list && git config --list " +
         " && echo remote update && git remote update " +
         " && echo fetch --all && git fetch --all " +
