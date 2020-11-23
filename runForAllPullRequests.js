@@ -47,11 +47,13 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         var e = json[i];
         console.log("Clone " + e.head.repo.clone_url + " -> " + e.head.ref);
         let cmd = "rm -R playbooks " + 
+        " && echo config --list && git config --list " +
         " && echo clone && git clone " + e.head.repo.clone_url + " playbooks "+
-        " && git remote update " +
-        " && git fetch --all " +
-        " && git pull --all " +
-        " && git branch -a && git show-ref " +
+        " && echo remote update && git remote update " +
+        " && echo fetch --all && git fetch --all " +
+        " && echo pull --all && git pull --all " +
+        " && echo branch -a && git branch -a " +
+        " && echo git show-ref && git show-ref " +
         " && branch_name=$(git symbolic-ref -q HEAD) && branch_name=${branch_name##refs/heads/} && branch_name=${branch_name:-HEAD} && echo $branch_name "+
         " && if [ \"$branch_name\" != \"" + e.head.ref + "\" ]; then echo checkout && git checkout " + e.head.ref + "; fi "+
         " && echo buildRun && sh buildRun.sh";
