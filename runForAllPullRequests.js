@@ -47,29 +47,44 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         var e = json[i];
         console.log("Clone " + e.head.repo.clone_url + " -> " + e.head.ref);
         let cmd = "rm -R playbooks " +
-        " && echo clone && git clone " + e.head.repo.clone_url + " playbooks "+
-        " && cd playbooks " + 
-        " && (echo fetch --all && git fetch --all " +
-        " && branch_name=$(git symbolic-ref -q HEAD) && branch_name=${branch_name##refs/heads/} && branch_name=${branch_name:-HEAD} && echo $branch_name "+
-        " && if [ \"$branch_name\" != \"" + e.head.ref + "\" ]; then echo checkout && git checkout " + e.head.ref + "; fi )"+
-        " ; cd .." +
-        " && echo buildRun && sh buildRun.sh";
+            " && echo clone && git clone " + e.head.repo.clone_url + " playbooks " +
+            " && cd playbooks " +
+            " && (echo fetch --all && git fetch --all " +
+            " && branch_name=$(git symbolic-ref -q HEAD) && branch_name=${branch_name##refs/heads/} && branch_name=${branch_name:-HEAD} && echo $branch_name " +
+            " && if [ \"$branch_name\" != \"" + e.head.ref + "\" ]; then echo checkout && git checkout " + e.head.ref + "; fi )" +
+            " ; cd ..";
         console.log(cmd);
-        let cp = child_process.spawnSync(
-                    cmd,
-                     { shell: true, encoding: 'utf-8' });
+        let cp = child_process.spawnSync(cmd, { shell: true, encoding: 'utf-8' });
         console.log(cp);
         if (cp.status != 0) {
             exitCode = cp.status;
         }
         else {
-            let katacodaDir = "build/output/katacoda/";
-            let tutorialDirs = fs.readdirSync(katacodaDir);
-            for (let index in tutorialDirs) {
-                let dir = katacodaDir + tutorialDirs[index];
-                let targetDir = "repo/" + e.number + "_" + e.title.replace(/[^A-Za-z0-9]/g, "-") + "_" + tutorialDirs[index];
-                console.log("Copy " + dir + " -> " + targetDir);
-                fse.copySync(dir, targetDir);
+            cmd = "echo buildRun && sh buildRun.sh";
+            console.log(cmd);
+            cp = child_process.spawnSync(cmd, { shell: true, encoding: 'utf-8' });
+            console.log(cp);
+            if (cp.status != 0) {
+                exitCode = cp.status;
+            }
+            else {
+                let katacodaDir = "build/output/katacoda/";
+                let tutorialDirs = fs.readdirSync(katacodaDir);
+                for (let index in tutorialDirs) {
+                    try {
+                        let dir = katacodaDir + tutorialDirs[index];
+                        let targetDir = "repo/" + e.number + "_" + e.title.replace(/[^A-Za-z0-9]/g, "-") + "_" + tutorialDirs[index];
+                        console.log("Copy " + dir + " -> " + targetDir);
+                        fse.copySync(dir, targetDir);
+                        let indexJsonString = fs.readFileSync(targetDir + "/index.json", { encoding: 'utf-8' });
+                        let indexJson = JSON.parse(indexJsonString);
+                        indexJson.title = e.number + " " + e.title + " "+ indexJson.title;
+                        fs.writeFileSync(targetDir + "/index.json", JSON.stringify(indexJson), { encoding: 'utf-8' });
+                    }
+                    catch(e){
+                        console.error(e);
+                    }
+                }
             }
         }
         rimraf.sync("build/output/katacoda/");
