@@ -24,10 +24,6 @@ jobs:
         with:
           path: repo
       
-      - run: ls repo
-
-      - run: ls
-      
       - uses: actions/setup-node@v2-beta
       
       - name: install TS
