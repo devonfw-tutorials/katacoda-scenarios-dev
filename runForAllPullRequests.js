@@ -49,6 +49,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         let cp = child_process.spawnSync(
                     "rm -R playbooks " + 
                     " && echo clone && git clone " + e.head.repo.clone_url + " playbooks "+
+                    " && git remote update " +
                     " && git fetch --all " +
                     " && git branch -a && git show-ref " +
                     " && branch_name=$(git symbolic-ref -q HEAD) && branch_name=${branch_name##refs/heads/} && branch_name=${branch_name:-HEAD} && echo $branch_name "+
