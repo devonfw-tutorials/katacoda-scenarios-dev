@@ -46,7 +46,18 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
     for (var i in json) {
         var e = json[i];
         console.log("Clone " + e.head.repo.clone_url + " -> " + e.head.ref);
-        let cp = child_process.spawnSync("rm -R playbooks && git clone " + e.head.repo.clone_url + " playbooks && branch_name=$(git symbolic-ref -q HEAD) && branch_name=${branch_name##refs/heads/} && branch_name=${branch_name:-HEAD} && echo $branch_name && if [ \"$branch_name\" != \"" + e.head.ref + "\" ]; then git checkout " + e.head.ref + "; fi && sh buildRun.sh", { shell: true, encoding: 'utf-8' });
+        let cmd = "rm -R playbooks " +
+        " && echo clone && git clone " + e.head.repo.clone_url + " playbooks "+
+        " && cd playbooks " + 
+        " && (echo fetch --all && git fetch --all " +
+        " && branch_name=$(git symbolic-ref -q HEAD) && branch_name=${branch_name##refs/heads/} && branch_name=${branch_name:-HEAD} && echo $branch_name "+
+        " && if [ \"$branch_name\" != \"" + e.head.ref + "\" ]; then echo checkout && git checkout " + e.head.ref + "; fi )"+
+        " ; cd .." +
+        " && echo buildRun && sh buildRun.sh";
+        console.log(cmd);
+        let cp = child_process.spawnSync(
+                    cmd,
+                     { shell: true, encoding: 'utf-8' });
         console.log(cp);
         if (cp.status != 0) {
             exitCode = cp.status;
