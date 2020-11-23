@@ -57,9 +57,8 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         " && echo git show-ref && git show-ref " +
         " && branch_name=$(git symbolic-ref -q HEAD) && branch_name=${branch_name##refs/heads/} && branch_name=${branch_name:-HEAD} && echo $branch_name "+
         " && if [ \"$branch_name\" != \"" + e.head.ref + "\" ]; then echo checkout && git checkout " + e.head.ref + "; fi )"+
-        " ; cd .."
-        " && echo buildRun && sh buildRun.sh"
-        ;
+        " ; cd .." +
+        " && echo buildRun && sh buildRun.sh";
         console.log(cmd);
         let cp = child_process.spawnSync(
                     cmd,
