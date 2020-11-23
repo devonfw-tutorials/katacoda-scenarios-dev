@@ -49,12 +49,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         let cmd = "rm -R playbooks " +
         " && echo clone && git clone " + e.head.repo.clone_url + " playbooks "+
         " && cd playbooks " + 
-        " && (echo remote -v && git remote -v " +
-        " && echo config --list && git config --list " +
-        " && echo remote update && git remote update " +
-        " && echo fetch --all && git fetch --all " +
-        " && echo branch -a && git branch -a " +
-        " && echo git show-ref && git show-ref " +
+        " && (echo fetch --all && git fetch --all " +
         " && branch_name=$(git symbolic-ref -q HEAD) && branch_name=${branch_name##refs/heads/} && branch_name=${branch_name:-HEAD} && echo $branch_name "+
         " && if [ \"$branch_name\" != \"" + e.head.ref + "\" ]; then echo checkout && git checkout " + e.head.ref + "; fi )"+
         " ; cd .." +
@@ -80,11 +75,11 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         rimraf.sync("build/output/katacoda/");
     }
 
-    /*let cp = child_process.spawnSync("cd repo && ls -al && git fetch --all && git checkout main && git add -A && git diff-index --quiet HEAD -- || (git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push)", { shell: true, encoding: 'utf-8' });
+    let cp = child_process.spawnSync("cd repo && ls -al && git fetch --all && git checkout main && git add -A && git diff-index --quiet HEAD -- || (git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push)", { shell: true, encoding: 'utf-8' });
     console.log(cp);
     if (cp.status != 0) {
         process.exit(cp.status);
-    }*/
+    }
     if (exitCode != 0) {
         process.exit(exitCode);
     }
