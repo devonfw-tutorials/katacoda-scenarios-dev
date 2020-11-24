@@ -64,10 +64,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
             console.log(cmd);
             cp = child_process.spawnSync(cmd, { shell: true, encoding: 'utf-8' });
             console.log(cp);
-            if (cp.status != 0) {
-                exitCode = cp.status;
-            }
-            else {
+            if (cp.status == 0) {
                 let katacodaDir = "build/output/katacoda/";
                 let tutorialDirs = fs.readdirSync(katacodaDir);
                 for (let index in tutorialDirs) {
