@@ -46,7 +46,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
     for (var i in json) {
         var e = json[i];
         console.log("Clone " + e.head.repo.clone_url + " -> " + e.head.ref);
-        let cmd = "rm -R playbooks " +
+        let cmd = "(rm -R playbooks || true) " +
             " && echo clone && git clone " + e.head.repo.clone_url + " playbooks " +
             " && cd playbooks " +
             " && (echo fetch --all && git fetch --all " +
