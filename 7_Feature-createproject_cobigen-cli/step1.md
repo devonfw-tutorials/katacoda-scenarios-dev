@@ -3,6 +3,8 @@ To use the cobigen cli you first have to install the devonfw ide. You will find 
 
 ## devonfw setup
 
+
+
 Create the directory where the devonfw ide will be installed.
 
 `mkdir devonfw`{{execute}}
