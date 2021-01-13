@@ -56,19 +56,12 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         console.log(cmd);
         let cp = child_process.spawnSync(cmd, { shell: true, encoding: 'utf-8' });
         console.log(cp);
-        console.log("DEBUG")
-        let p2 = child_process.spawnSync("cd playbooks && git status", { shell: true, encoding: 'utf-8' });
-        console.log(p2);
-        console.log("DEBUG2")
-        let p3 = child_process.spawnSync("ls build", { shell: true, encoding: 'utf-8' });
-        console.log(p3);
-        console.log("DEBUG3")
-        let p4 = child_process.spawnSync("rm -r build/playbooks", { shell: true, encoding: 'utf-8' });
-        console.log(p4);
         if (cp.status != 0) {
             exitCode = cp.status;
         }
         else {
+            cp = child_process.spawnSync("(rm -r build/playbooks || true)", { shell: true, encoding: 'utf-8' });
+            console.log(cp);
             cmd = "echo buildRun && sh buildRun.sh";
             console.log(cmd);
             cp = child_process.spawnSync(cmd, { shell: true, encoding: 'utf-8' });
