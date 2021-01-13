@@ -46,6 +46,10 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
     for (var i in json) {
         var e = json[i];
         console.log("Clone " + e.head.repo.clone_url + " -> " + e.head.ref);
+        let p1 = child_process.spawnSync("ls", { shell: true, encoding: 'utf-8' });
+        console.log(p1);
+        let p2 = child_process.spawnSync("rm -r playbooks", { shell: true, encoding: 'utf-8' });
+        console.log(p2);
         let cmd = "(rm -R playbooks || true) " +
             " && echo clone && git clone " + e.head.repo.clone_url + " playbooks " +
             " && cd playbooks " +
