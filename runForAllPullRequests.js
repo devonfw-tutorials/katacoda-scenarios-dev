@@ -46,16 +46,9 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
     for (var i in json) {
         var e = json[i];
         console.log("Clone " + e.head.repo.clone_url + " -> " + e.head.ref);
-        let p1 = child_process.spawnSync("ls", { shell: true, encoding: 'utf-8' });
+        console.log("current dir 1: ")
+        let p1 = child_process.spawnSync("pwd", { shell: true, encoding: 'utf-8' });
         console.log(p1);
-        let p2 = child_process.spawnSync("rm -r playbooks", { shell: true, encoding: 'utf-8' });
-        console.log(p2);
-        console.log("after remove playbooks");
-        let p3 = child_process.spawnSync("ls", { shell: true, encoding: 'utf-8' });
-        console.log(p3);
-        console.log("git status 1");
-        let p4 = child_process.spawnSync("git status", { shell: true, encoding: 'utf-8' });
-        console.log(p4);
         let cmd = "(rm -R playbooks || true) " +
             " && echo clone && git clone " + e.head.repo.clone_url + " playbooks " +
             " && cd playbooks " +
@@ -65,10 +58,13 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
             " ; cd ..";
         console.log(cmd);
         let cp = child_process.spawnSync(cmd, { shell: true, encoding: 'utf-8' });
-        console.log("git status 2")
-        let p5 = child_process.spawnSync("git status", { shell: true, encoding: 'utf-8' });
-        console.log(p5);
         console.log(cp);
+        console.log("current dir 2: ")
+        let p2 = child_process.spawnSync("pwd", { shell: true, encoding: 'utf-8' });
+        console.log(p2);
+        console.log("git status: ")
+        let p3 = child_process.spawnSync("git status", { shell: true, encoding: 'utf-8' });
+        console.log(p3);
         if (cp.status != 0) {
             exitCode = cp.status;
         }
