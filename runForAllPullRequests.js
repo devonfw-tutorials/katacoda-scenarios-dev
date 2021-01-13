@@ -45,7 +45,7 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
 
     for (var i in json) {
         var e = json[i];
-        console.log("Clone " + e.head.repo.clone_url + " -> " + e.head.ref); 
+        console.log("Clone " + e.head.repo.clone_url + " -> " + e.head.ref);
         let cmd = "(rm -R playbooks || true) " +
             " && echo clone && git clone " + e.head.repo.clone_url + " playbooks " +
             " && cd playbooks " +
@@ -59,6 +59,12 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
         console.log("DEBUG")
         let p2 = child_process.spawnSync("cd playbooks && git status", { shell: true, encoding: 'utf-8' });
         console.log(p2);
+        console.log("DEBUG2")
+        let p3 = child_process.spawnSync("ls build", { shell: true, encoding: 'utf-8' });
+        console.log(p3);
+        console.log("DEBUG3")
+        let p4 = child_process.spawnSync("rm -r build/playbooks", { shell: true, encoding: 'utf-8' });
+        console.log(p4);
         if (cp.status != 0) {
             exitCode = cp.status;
         }
