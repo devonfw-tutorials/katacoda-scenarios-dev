@@ -60,6 +60,8 @@ download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function 
             exitCode = cp.status;
         }
         else {
+            cp = child_process.spawnSync("(rm -r build/playbooks || true)", { shell: true, encoding: 'utf-8' });
+            console.log(cp);
             cmd = "echo buildRun && sh buildRun.sh";
             console.log(cmd);
             cp = child_process.spawnSync(cmd, { shell: true, encoding: 'utf-8' });
