@@ -1,3 +1,4 @@
 #!/bin/sh
 while [ ! -f /root/setup/setup.sh ] ; do sleep 1 ; done
-sh /root/setup/setup.sh
+source /root/setup/setup.sh
+export NG_CLI_ANALYTICS=CI
