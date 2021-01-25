@@ -1,11 +1,9 @@
 Create the entity class which will be passed to the cobigen cli generator later
 
 
-
-
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api`{{execute}}
+`mkdir -p /root/devonfw/workspaces/main/cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api`{{execute}}
 
 Switch to the IDE and click 'Copy to Editor'. 
 
