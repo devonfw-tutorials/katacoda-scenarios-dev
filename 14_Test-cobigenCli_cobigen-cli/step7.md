@@ -1,7 +1,9 @@
 Create the getter and setter for the new attribute
 
 
-Go back to the IDE and find the file CustomerEntity.java.
+Go back to the IDE and find the file "devonfw/workspaces/main/cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api/CustomerEntity.java".
+
+`devonfw/workspaces/main/cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api/CustomerEntity.java`{{open}}
 
 Insert after &#39; private int age; &#39; the following segment of code.
 
