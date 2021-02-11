@@ -1,11 +1,13 @@
 Create the getter and setter for the new attribute
 
 
-Go back to the IDE and find the file "devonfw/workspaces/main/cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api/CustomerEntity.java".
+Switch to the IDE and open the file "devonfw/workspaces/main/cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api/CustomerEntity.java".
 
 `devonfw/workspaces/main/cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api/CustomerEntity.java`{{open}}
 
-Insert after &#39; private int age; &#39; the following segment of code.
+
+Replace the content in the file as it is shown in the following segment of code.
+
 
 Click on 'Copy to Editor' to change it automatically.
 
@@ -22,7 +24,5 @@ public String getCompany() {
   /** @param company the company to set */
   public void setCompany(String company) {
     this.company = company;
-  }
-</pre>
-
+  }</pre>
 
