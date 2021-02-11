@@ -5,7 +5,7 @@ cd /root/devonfw-settings/
 
 git clone https://github.com/devonfw/ide-settings.git settings
 
-TOOLS="DEVON_IDE_TOOLS=(node npm ng)"
+TOOLS="DEVON_IDE_TOOLS=(java mvn)"
 echo $TOOLS > settings/devon.properties
 
 NPM_CONFIG="unsafe-perm=true"
