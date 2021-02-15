@@ -17,7 +17,7 @@ jobs:
       - name: Checkout tutorial-compiler
         uses: actions/checkout@v2
         with:
-          repository: devonfw-forge/tutorial-compiler
+          repository: devonfw-tutorials/tutorial-compiler
       
       - name: Checkout
         uses: actions/checkout@v2
