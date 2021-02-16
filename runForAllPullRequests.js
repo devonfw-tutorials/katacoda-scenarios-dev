@@ -30,7 +30,7 @@ function download(url, f) {
     });
 }
 
-download('https://api.github.com/repos/devonfw-forge/tutorials/pulls', function (data) {
+download('https://api.github.com/repos/devonfw-tutorials/tutorials/pulls', function (data) {
     let json = JSON.parse(data);
     console.log(json);
     let exitCode = 0;
