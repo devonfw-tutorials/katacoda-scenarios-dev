@@ -1,4 +1,4 @@
-Clone the Jump The Queue repository. You can find it on https://github.com/devonfw/jump-the-queue.
+Clone the My-Thai-Star repository. You can find it on https://github.com/devonfw/my-thai-star.
 
 
 Please change the folder to &#39;workspaces/main&#39;.
