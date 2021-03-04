@@ -68,21 +68,26 @@ download('https://api.github.com/repos/devonfw-tutorials/tutorials/pulls', funct
             console.log(cp);
             if (cp.status == 0) {
                 let katacodaDir = "build/output/katacoda/";
-                let tutorialDirs = fs.readdirSync(katacodaDir);
-                for (let index in tutorialDirs) {
-                    try {
-                        let dir = katacodaDir + tutorialDirs[index];
-                        let targetDir = "repo/" + e.number + "_" + e.title.replace(/[^A-Za-z0-9]/g, "-") + "_" + tutorialDirs[index];
-                        console.log("Copy " + dir + " -> " + targetDir);
-                        fse.copySync(dir, targetDir);
-                        let indexJsonString = fs.readFileSync(targetDir + "/index.json", { encoding: 'utf-8' });
-                        let indexJson = JSON.parse(indexJsonString);
-                        indexJson.title = e.number + " " + e.title + " "+ indexJson.title;
-                        fs.writeFileSync(targetDir + "/index.json", JSON.stringify(indexJson), { encoding: 'utf-8' });
+                if(fs.existsSync(katacodaDir)) {
+                    console.log("dir exist");
+                    let tutorialDirs = fs.readdirSync(katacodaDir);
+                    for (let index in tutorialDirs) {
+                        try {
+                            let dir = katacodaDir + tutorialDirs[index];
+                            let targetDir = "repo/" + e.number + "_" + e.title.replace(/[^A-Za-z0-9]/g, "-") + "_" + tutorialDirs[index];
+                            console.log("Copy " + dir + " -> " + targetDir);
+                            fse.copySync(dir, targetDir);
+                            let indexJsonString = fs.readFileSync(targetDir + "/index.json", { encoding: 'utf-8' });
+                            let indexJson = JSON.parse(indexJsonString);
+                            indexJson.title = e.number + " " + e.title + " "+ indexJson.title;
+                            fs.writeFileSync(targetDir + "/index.json", JSON.stringify(indexJson), { encoding: 'utf-8' });
+                        }
+                        catch(e){
+                            console.error(e);
+                        }
                     }
-                    catch(e){
-                        console.error(e);
-                    }
+                } else {
+                    console.warn("The directory build/output/katacoda/ does not exist. Maybe this refers to an error in the build process of the tutorial.")
                 }
             }
         }
