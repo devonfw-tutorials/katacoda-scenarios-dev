@@ -69,7 +69,6 @@ download('https://api.github.com/repos/devonfw-tutorials/tutorials/pulls', funct
             if (cp.status == 0) {
                 let katacodaDir = "build/output/katacoda/";
                 if(fs.existsSync(katacodaDir)) {
-                    console.log("dir exist");
                     let tutorialDirs = fs.readdirSync(katacodaDir);
                     for (let index in tutorialDirs) {
                         try {
