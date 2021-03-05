@@ -1,12 +1,14 @@
 
 
+Please change the folder to &#39;tutorial-compiler&#39;.
+
+`cd tutorial-compiler`{{execute T1}}
 
 
+Install the dependencies from the package.json file.
 
-Install the package typescript.
+`npm install  `{{execute T1}}
 
-`npm install -g  typescript`{{execute T1}}
 
-Due to the argument '-g' the package will be installed globally.
 This may take some time.
 
