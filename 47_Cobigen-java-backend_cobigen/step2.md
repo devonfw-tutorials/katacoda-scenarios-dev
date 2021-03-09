@@ -1,4 +1,4 @@
-For this tutorial an installation of the Devon IDE is required.
+For this tutorial an installation of the Devon IDE is required, which was already set up for you.
 To begin you need to install Cobigen and create a Project.
 
 
