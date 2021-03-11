@@ -5,7 +5,7 @@ The first part will be to setup your workspace.
 Afterwards we will show you, how to write your own tutorials.
 
 Requirements: 
- *  GitHub account
+ * GitHub account
 
 You can find the documentation here:
 

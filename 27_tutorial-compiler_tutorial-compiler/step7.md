@@ -1,18 +1,20 @@
-# Write the my-thai-star tutorial
-
-Let&#39;s start with the second part of this tutorial and write the &#34;my-thai-star&#34; tutorial.
+You have to write the introduction in between these equal signs &#39;====&#39; and underneath the title. 
 
 
 
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
+Switch to the IDE and open the file 'tutorials/my-thai-star/index.asciidoc'.
 
-`mkdir -p /root/tutorials/my-thai-star`{{execute T1}}
+`tutorials/my-thai-star/index.asciidoc`{{open}}
 
-Switch to the IDE and click 'Copy to Editor'. 
 
-'index.asciidoc' will be created automatically inside the newly created folder.
+Replace the content in the file as it is shown in the following segment of code.
 
-<pre class="file" data-filename="tutorials/my-thai-star/index.asciidoc">
 
+Click on 'Copy to Editor' to change it automatically.
+
+<pre class="file" data-filename="tutorials/my-thai-star/index.asciidoc" data-target="insert" data-marker="= My Thai Star">
+= My Thai Star
+====
+This is the online demo of https://github.com/devonfw/my-thai-star
 </pre>
 

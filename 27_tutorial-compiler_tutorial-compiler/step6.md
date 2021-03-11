@@ -1,14 +1,16 @@
+Add the tutorial title &#34;My Thai Star&#34;
 
 
-Please change the folder to &#39;tutorial-compiler&#39;.
+Switch to the IDE and open the file 'tutorials/my-thai-star/index.asciidoc'.
 
-`cd tutorial-compiler`{{execute T1}}
-
-
-Install the dependencies from the package.json file.
-
-`npm install  `{{execute T1}}
+`tutorials/my-thai-star/index.asciidoc`{{open}}
 
 
-This may take some time.
+Replace the content of the file with the following code.
+
+
+Click on 'Copy to Editor' to change it automatically.
+
+<pre class="file" data-filename="tutorials/my-thai-star/index.asciidoc" data-target="replace" data-marker="">
+= My Thai Star</pre>
 

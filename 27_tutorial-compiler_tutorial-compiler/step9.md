@@ -1,20 +1,34 @@
-You have to write the introduction in between these equal signs &#39;====&#39; and underneath the title. 
+For this step you need to open you local terminal at your forked and cloned &#39;tutorials&#39; folder.
+Run the commands
+1. &#39;git add .&#39; 
+2. &#39;git commit -m &#34;my-thai-star&#34;&#39;
+3. &#39;git push&#39;
+
+This will save all the changes and push them into your GitHub-repository &#39;tutorials&#39;. 
+
+Switch to your browser and open:
+https://github.com/devonfw-tutorials/tutorials
+
+Click on &#39;Pull requests&#39; &gt; &#39;New pull request&#39;.
 
 
 
-Switch to the IDE and open the file 'tutorials/my-thai-star/index.asciidoc'.
+![pull_request.jpg](./assets/pull_request.jpg)
 
-`tutorials/my-thai-star/index.asciidoc`{{open}}
-
-
-Replace the content in the file as it is shown in the following segment of code.
+![compare.jpg](./assets/compare.jpg)
 
 
-Click on 'Copy to Editor' to change it automatically.
 
-<pre class="file" data-filename="tutorials/my-thai-star/index.asciidoc" data-target="insert" data-marker="= My Thai Star">
-= My Thai Star
-====
-This is the online demo of https://github.com/devonfw/my-thai-star
-</pre>
+You might have to click on &#39;compare across forks&#39;.
 
+Select
+
+    * base repository: devonfw-tutorials
+    * base: main
+    * head repository: [username]/tutorials
+    * compare: &#39;main&#39;
+
+and finally create the pull request by clicking on &#39;Create pull request&#39;.
+
+After a while you will find your tutorial on: 
+https://www.katacoda.com/devonfw-dev

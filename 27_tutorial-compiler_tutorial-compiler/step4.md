@@ -1,18 +1,26 @@
-Switch to the &#39;tutorials&#39;-repository and repeat all the previous steps:
-
-https://github.com/devonfw-tutorials/tutorials.git
-
-- Fork the &#39;tutorials&#39;-repository
-- Copy the &#39;tutorials&#39;-URL
 
 
 
 
 
+Install the package typescript.
+
+`npm install -g  typescript`{{execute T1}}
+
+Due to the argument '-g' the package will be installed globally.
+This may take some time.
 
 
-Now clone the repository to your local directory.
 
-`git clone https://github.com/devonfw-tutorials/tutorials.git`{{execute T1}}
+Please change the folder to &#39;tutorial-compiler&#39;.
 
-After this step you should have both repositories in the same folder next to each other.
+`cd tutorial-compiler`{{execute T1}}
+
+
+Install the dependencies from the package.json file.
+
+`npm install  `{{execute T1}}
+
+
+This may take some time.
+
