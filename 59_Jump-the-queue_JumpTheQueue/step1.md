@@ -1,4 +1,4 @@
-Install Devonfw IDE
+Install devonfw IDE
 
 
 ## devonfw setup
