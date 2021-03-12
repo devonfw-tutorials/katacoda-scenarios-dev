@@ -1,4 +1,4 @@
-Build and Run the Angular Frontend Server
+Now build and run the Angular Frontend Server. For that you need to install the dependencies first.
 
 
 Please change the folder to &#39;../../angular&#39;.

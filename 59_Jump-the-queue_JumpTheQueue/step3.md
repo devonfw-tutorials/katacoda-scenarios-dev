@@ -1,4 +1,3 @@
-Build and Run the Java Server
 
 
 Please change the folder to &#39;jump-the-queue/java/jtqj&#39;.
