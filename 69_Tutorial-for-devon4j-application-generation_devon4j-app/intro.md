@@ -2,7 +2,7 @@ Devon4j is the Java stack of devonfw. It allows you to build business applicatio
 
 More information about Devon4j on https://devonfw.com/website/pages/docs/devon4j.asciidoc.html
 
-= Project structure
+
 
 
 
