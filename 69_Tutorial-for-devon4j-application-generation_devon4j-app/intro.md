@@ -2,6 +2,16 @@ Devon4j is the Java stack of devonfw. It allows you to build business applicatio
 
 More information about Devon4j on https://devonfw.com/website/pages/docs/devon4j.asciidoc.html
 
+== Project structure
+The structure of a devon4j application is divided into the following modules:
+
+api: module containing the API of your application. The API contains the required artifacts to interact with your application via remote services. This can be REST service interfaces, transfer-objects with their interfaces and datatypes but also OpenAPI or gRPC contracts.
+
+core: maven module containing the core of the application with service implementation, as well as entire logic layer and dataaccess layer.
+
+batch: optional module for batch layer
+
+server: module that bundles the entire app (core with optional batch) typically as a bootified WAR file.
 
 
 
