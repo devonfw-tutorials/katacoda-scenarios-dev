@@ -18,16 +18,17 @@ Click on &#39;Pull requests&#39; &gt; &#39;New pull request&#39;.
 
 ![pull_request.jpg](./assets/pull_request.jpg)
 
+You might have to click on &#39;compare across forks&#39;.
+
 ![compare.jpg](./assets/compare.jpg)
 
-You might have to click on &#39;compare across forks&#39;.
 
 Select
 
     * base repository: devonfw-tutorials
     * base: main
     * head repository: [your username]/tutorials
-    * compare: &#39;[your branch name]&#39;
+    * compare: [your branch name]
 
 and finally create the pull request by clicking on &#39;Create pull request&#39;.
 

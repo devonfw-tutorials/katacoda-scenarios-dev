@@ -1,4 +1,10 @@
-Last but not least add a step. A step consists of an explanation, a function to execute and an optional explanation of the result of the step. You can find a list with the currently available function on https://github.com/devonfw-tutorials/tutorial-compiler/wiki/Functions.
+Last but not least add a step. 
+
+Each step consists of
+
+* an explanation
+* a function to execute (You can find a list with the currently available functions on https://github.com/devonfw-tutorials/tutorial-compiler/wiki/Functions)
+* and an optional explanation of the results of the step.
 
 In this tutorial we will add a simple step which creates a new file.
 

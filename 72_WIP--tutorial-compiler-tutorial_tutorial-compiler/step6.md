@@ -1,4 +1,4 @@
-It&#39;s time to add some content to the tutorial. You can find the syntax are tutorial is written in on https://github.com/devonfw-tutorials/tutorials/wiki/Development.
+The syntax in which the tutorial is written can be found at https://github.com/devonfw-tutorials/tutorials/wiki/Development.
 
 At first we will add a title to the first line of the file.
 
