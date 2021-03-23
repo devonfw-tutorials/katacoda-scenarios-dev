@@ -1,11 +1,11 @@
-In this scenario you will learn how to create your own tutorial with the Tutorial-Compiler.
+In this scenario, you will learn how to create your own tutorial using the tutorial compiler.
 
-You will learn how to set up the environment and you will get introduced in the syntax for writing own tutorial.
+You will learn how to set up the environment and get an introduction to the syntax for writing your own tutorial.
 
 Requirements: 
  * GitHub account
 
-You can find the documentation here:
+You can find the documentation of the tutorial compiler here:
 
 https://github.com/devonfw-forge/tutorial-compiler/wiki
 
