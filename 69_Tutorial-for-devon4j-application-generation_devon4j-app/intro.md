@@ -1,6 +1,6 @@
-Devon4j is the Java stack of devonfw. It allows you to build business applications (backends) using Java technology in a highly efficient and standardized way based on established best-practices.
+devon4j is the Java stack of devonfw. It allows you to build business applications (backends) using Java technology in a highly efficient and standardized way based on established best-practices.
 
-More information about Devon4j on https://devonfw.com/website/pages/docs/devon4j.asciidoc.html
+More information about devon4j on https://devonfw.com/website/pages/docs/devon4j.asciidoc.html
 
 == Project structure
 The structure of a devon4j application is divided into the following modules:
