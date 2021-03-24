@@ -30,6 +30,10 @@ To run the tutorial-compiler execute the following command:
 
 This will execute your newly create tutorial in the &#39;katacoda&#39; environment. If you obmit the &#39;-e&#39; and &#39;-p&#39; paramter, all tutorials are executed in all environments.
 
+The tutorial-compiler will now create the files needed for a katacoda tutorial. You can find the files in the &#39;build/output/katacoda/myTutorial&#39; directory of the tutorial-compiler.
+The step you added to your tutorial will be displayed in the following file:
+
+`tutorial-compiler/build/output/katacoda/myTutorial/step1.md`{{open}}
 
 
 

@@ -6,6 +6,7 @@ Each step consists of
 * a function to execute (You can find a list with the currently available functions on https://github.com/devonfw-tutorials/tutorial-compiler/wiki/Functions)
 * and an optional explanation of the results of the step.
 
+====
 In this tutorial we will add a simple step which creates a new file.
 
 
