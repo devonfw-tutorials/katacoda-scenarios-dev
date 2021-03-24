@@ -1,2 +1,8 @@
-0
+2
 
+Clone devonfw IDE settings
+cloneDevonfwIdeSettings.sh
+##########
+Restore Devonfw IDE
+restoreDevonfwIde.sh
+##########
