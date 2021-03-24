@@ -1,9 +1,9 @@
 To use Material Design Icons along with the mat-icon component, we will load the Material Icons library in our src/index.html file by adding this line: `&lt;link href=&#34;https://fonts.googleapis.com/icon?family=Material+Icons&#34; rel=&#34;stylesheet&#34;&gt;`
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/devon4ng-mat-layout/src/index.html'.
+Switch to the IDE and open the file 'devonfw/workspaces/main/main/devon4ng-mat-layout/src/index.html'.
 
-`devonfw/workspaces/main/devon4ng-mat-layout/src/index.html`{{open}}
+`devonfw/workspaces/main/main/devon4ng-mat-layout/src/index.html`{{open}}
 
 
 Replace the content in the file as it is shown in the following segment of code.
@@ -11,7 +11,7 @@ Replace the content in the file as it is shown in the following segment of code.
 
 Click on 'Copy to Editor' to change it automatically.
 
-<pre class="file" data-filename="devonfw/workspaces/main/devon4ng-mat-layout/src/index.html" data-target="insert" data-marker="private static final long serialVersionUID = 1L;">
+<pre class="file" data-filename="devonfw/workspaces/main/main/devon4ng-mat-layout/src/index.html" data-target="insert" data-marker="private static final long serialVersionUID = 1L;">
 &lt;!doctype html&gt;
 &lt;html lang=&#34;en&#34;&gt;
 &lt;head&gt;
