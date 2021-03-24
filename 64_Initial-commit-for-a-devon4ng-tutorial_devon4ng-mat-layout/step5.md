@@ -6,12 +6,12 @@ Switch to the IDE and open the file 'devonfw/workspaces/main/main/devon4ng-mat-l
 `devonfw/workspaces/main/main/devon4ng-mat-layout/src/index.html`{{open}}
 
 
-Replace the content in the file as it is shown in the following segment of code.
+Replace the content of the file with the following code.
 
 
 Click on 'Copy to Editor' to change it automatically.
 
-<pre class="file" data-filename="devonfw/workspaces/main/main/devon4ng-mat-layout/src/index.html" data-target="insert" data-marker="private static final long serialVersionUID = 1L;">
+<pre class="file" data-filename="devonfw/workspaces/main/main/devon4ng-mat-layout/src/index.html" data-target="replace" data-marker="">
 &lt;!doctype html&gt;
 &lt;html lang=&#34;en&#34;&gt;
 &lt;head&gt;
