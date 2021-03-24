@@ -1,6 +1,3 @@
-This is the syntax without additional text after the step. There is an alternative syntax to display a text after the step (e.g. for describing the results of a step). This will be shown in the next step.
-====
-
 
 
 If you want to add some additional text after the step to explain the results of a step then you have to use the following syntax.

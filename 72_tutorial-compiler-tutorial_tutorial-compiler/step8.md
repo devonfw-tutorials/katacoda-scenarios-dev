@@ -6,7 +6,6 @@ Each step consists of
 * a function to execute (You can find a list with the currently available functions on https://github.com/devonfw-tutorials/tutorial-compiler/wiki/Functions)
 * and an optional explanation of the results of the step.
 
-====
 In this tutorial we will add a simple step which creates a new file.
 
 
@@ -35,3 +34,4 @@ The explanation can consist of multiple lines.
 createFile(&#34;pathToTheFile/fileName.txt&#34;)
 --</pre>
 
+This is the syntax without additional text after the step. There is an alternative syntax to display a text after the step (e.g. for describing the results of a step). This will be shown in the next step.
