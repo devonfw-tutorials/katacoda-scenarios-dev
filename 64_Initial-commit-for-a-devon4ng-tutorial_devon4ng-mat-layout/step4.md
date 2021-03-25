@@ -2,9 +2,9 @@ Once the dependencies are installed, we need to import the BrowserAnimationsModu
 Also, Angular Material provides a host of components for designing our application. All the components are well structured into NgModules. For each component from the Angular Material library that we want to use, we have to import the respective NgModule.
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/main/devon4ng-mat-layout/src/app/app.module.ts'.
+Switch to the IDE and open the file 'devonfw/workspaces/main/devon4ng-mat-layout/src/app/app.module.ts'.
 
-`devonfw/workspaces/main/main/devon4ng-mat-layout/src/app/app.module.ts`{{open}}
+`devonfw/workspaces/main/devon4ng-mat-layout/src/app/app.module.ts`{{open}}
 
 
 Replace the content of the file with the following code.
@@ -12,7 +12,7 @@ Replace the content of the file with the following code.
 
 Click on 'Copy to Editor' to change it automatically.
 
-<pre class="file" data-filename="devonfw/workspaces/main/main/devon4ng-mat-layout/src/app/app.module.ts" data-target="replace" data-marker="">
+<pre class="file" data-filename="devonfw/workspaces/main/devon4ng-mat-layout/src/app/app.module.ts" data-target="replace" data-marker="">
 import { BrowserAnimationsModule } from &#39;@angular/platform-browser/animations&#39;;
 import { MatIconModule } from &#39;@angular/material/icon&#39;;
 import { MatButtonModule } from &#39;@angular/material/button&#39;;
