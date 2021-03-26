@@ -16,9 +16,8 @@ Now you have devonIde installed.
 
 8. Templates can be fully tailored to project needs - this is considered as a simple task.
 
-Now we will proceed with Cobigen installation.
 ====
-
+Now we will proceed with Cobigen installation.
 
 
 Create the new folder 'devonfw/workspaces/main/Desktop/cobigen'.
