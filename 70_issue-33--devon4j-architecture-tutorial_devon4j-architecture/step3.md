@@ -1,6 +1,3 @@
-Before proceeding to next steps ide should be installed.
-
-====
 In this, we will create sample devon4j application with name sampleapp. 
 
 
@@ -14,3 +11,4 @@ Now you can use devonfw to setup a java project for you by executing the followi
 
 `devon java create com.example.application.sampleapp`{{execute T1}}
 
+In console under workspaces-&gt; main you should be able to see folder sampleapp. If you will expand this project you will see api, core and server module generated. All modules follow architectural concept explain previously.

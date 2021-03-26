@@ -1,6 +1,6 @@
-
-
 This step explains Key principles and architecture principles.
+
+
 
 ### Key Principles
 
@@ -33,3 +33,4 @@ As an architect you should be prepared for the future by reading the [TechnoVisi
 
 
 
+Dummy text to test.

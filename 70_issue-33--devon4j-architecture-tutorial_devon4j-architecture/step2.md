@@ -1,3 +1,4 @@
+This step explains application architecture.
 
 
 ### Application Architecture
@@ -40,3 +41,4 @@ Further, there are technical components for cross-cutting aspects grouped by the
 
 
 
+Dummy text.

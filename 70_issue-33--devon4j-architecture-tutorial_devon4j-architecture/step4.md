@@ -1,6 +1,3 @@
-In console under workspaces-&gt; main you should be able to see folder sampleapp. If you will expand this project you will see api, core and server module generated. All modules follow architectural concept explain previously.
-====
-
 
 
 
