@@ -1,4 +1,4 @@
-Let us set up the routing such that when we visit the root url we see the HomeComponent and when we visit `/data` url we see the DataComponent. We had opted for routing while creating the application, so we have the routing module `app-routing.module.ts` setup for us. In this file, we have the empty routes array where we set up our routes:
+Let us set up the routing such that when we visit the root url we see the `HomeComponent` and when we visit `/data` url we see the `DataComponent`. We had opted for routing while creating the application, so we have the routing module `app-routing.module.ts` setup for us. In this file, we have the empty routes array where we set up our routes:
 
 
 Switch to the IDE and open the file 'devonfw/workspaces/main/devon4ng-mat-layout/src/app/app-routing.module.ts'.

@@ -22,6 +22,7 @@ import { MatToolbarModule } from &#39;@angular/material/toolbar&#39;;
 import { MatSidenavModule } from &#39;@angular/material/sidenav&#39;;
 import { NgModule } from &#39;@angular/core&#39;;
 
+import { AppRoutingModule } from &#39;./app-routing.module&#39;;
 import { AppComponent } from &#39;./app.component&#39;;
 
 @NgModule({
@@ -36,6 +37,7 @@ import { AppComponent } from &#39;./app.component&#39;;
     MatListModule,
     MatToolbarModule,
     MatSidenavModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
