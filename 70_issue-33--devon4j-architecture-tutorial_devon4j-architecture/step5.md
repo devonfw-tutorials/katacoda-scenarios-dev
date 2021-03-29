@@ -1,26 +1,32 @@
 
 
-### Technology Stack
 
-The technology stack of the devonfw is illustrated by the following table.
+![Technical Reference Architecture](https://devonfw.com/website/pages/docs/images/T-Architecture.svg)
 
-Technology Stack of devonfw
-|*Topic*|*Detail*|*Standard*|*Suggested implementation*|
-| ----------- | ----------- |----------- | ----------- |
-|runtime|language &amp; VM|Java|Oracle JDK
-|runtime|servlet-container|JEE|[tomcat](http://tomcat.apache.org/)
-|[component management](https://github.com/devonfw/devon4j/blob/master/documentation/guide-dependency-injection.asciidoc)|dependency injection|[JSR330](https://jcp.org/en/jsr/detail?id=330) &amp; [JSR250](https://jcp.org/en/jsr/detail?id=250)|[spring](http://spring.io/)
-|[configuration](https://github.com/devonfw/devon4j/blob/master/documentation/guide-configuration.asciidoc)|framework|-|[spring-boot](http://projects.spring.io/spring-boot/)
-|[persistence](https://github.com/devonfw/devon4j/blob/master/documentation/guide-dataaccess-layer.asciidoc)|OR-mapper|[JPA](http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html) | [hibernate](http://hibernate.org/orm/)
-|[batch](https://github.com/devonfw/devon4j/blob/master/documentation/guide-batch-layer.asciidoc)|framework|[JSR352](https://jcp.org/en/jsr/detail?id=352)|[spring-batch](http://projects.spring.io/spring-batch/)
-|[service](https://github.com/devonfw/devon4j/blob/master/documentation/guide-service-layer.asciidoc)|[SOAP services](https://github.com/devonfw/devon4j/blob/master/documentation/guide-service-layer.asciidoc#soap)|[JAX-WS](https://jcp.org/en/jsr/detail?id=224)|[CXF](http://cxf.apache.org/)
-|[service](https://github.com/devonfw/devon4j/blob/master/documentation/guide-service-layer.asciidoc)|[REST services](https://github.com/devonfw/devon4j/blob/master/documentation/guide-service-layer.asciidoc#rest)|[JAX-RS](https://jax-rs-spec.java.net/)| [CXF](http://cxf.apache.org/)
-|[logging](https://github.com/devonfw/devon4j/blob/master/documentation/guide-logging.asciidoc)|framework|[slf4j](http://www.slf4j.org/)|[logback](http://logback.qos.ch/)
-|[validation](https://github.com/devonfw/devon4j/blob/master/documentation/guide-validation.asciidoc)|framework|[beanvalidation/JSR303](http://beanvalidation.org/)|[hibernate-validator](http://hibernate.org/validator/)
-|[security](https://github.com/devonfw/devon4j/blob/master/documentation/guide-security.asciidoc)|Authentication &amp; Authorization|[JAAS](http://www.oracle.com/technetwork/java/javase/jaas/index.html)|[spring-security](http://projects.spring.io/spring-security/)
-|[monitoring](https://github.com/devonfw/devon4j/blob/master/documentation/guide-monitoring.asciidoc)|framework|[JMX](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html)|[spring](http://spring.io/)
-|[monitoring](https://github.com/devonfw/devon4j/blob/master/documentation/guide-monitoring.asciidoc)|HTTP Bridge|HTTP &amp; JSON|[jolokia](http://www.jolokia.org)
-|[AOP](https://github.com/devonfw/devon4j/blob/master/documentation/guide-aop.asciidoc)|framework|[dynamic proxies](http://docs.oracle.com/javase/7/docs/api/java/lang/reflect/Proxy.html)|[spring AOP](http://docs.spring.io/autorepo/docs/spring/3.0.6.RELEASE/spring-framework-reference/html/aop.html)
+We reflect this architecture in our code as described in our [coding conventions](https://github.com/devonfw/devon4j/blob/master/documentation/coding-conventions.asciidoc#packages) allowing a traceability of business components, use-cases, layers, etc. into the code and giving
+developers a sound orientation within the project.
+
+Further, the architecture diagram shows the allowed dependencies illustrated by the dark green connectors.
+Within a business component a component part can call the next component part on the layer directly below via a dependency on its API (vertical connectors).
+While this is natural and obvious, it is generally forbidden to have dependencies upwards the layers
+or to skip a layer by a direct dependency on a component part two or more layers below.
+The general dependencies allowed between business components are defined by the [business architecture](https://github.com/devonfw/devon4j/blob/master/documentation/architecture.asciidoc#business-architecture).
+In our reference architecture diagram we assume that the business component `A1` is allowed to depend
+on component `A2`. Therefore, a use-case within the logic component part of `A1` is allowed to call a
+use-case from `A2` via a dependency on the component API. The same applies for dialogs on the client layer.
+This is illustrated by the horizontal connectors. Please note that [persistence entities](https://github.com/devonfw/devon4j/blob/master/documentation/guide-jpa.asciidoc#entity) are part of the API of the data-access component part so only the logic component part of the same
+business component may depend on them.
+
+The technical architecture has to address non-functional requirements:
+
+* *scalability* 
+is established by keeping state in the client and making the server state-less (except for login session). Via load-balancers new server nodes can be added to improve performance (horizontal scaling).
+* *availability* and *reliability* 
+are addressed by clustering with redundant nodes avoiding any single-point-of failure. If one node fails the system is still available. Further, the software has to be robust so there are no dead-locks or other bad effects that can make the system unavailable or not reliable.
+* *security* 
+is archived in the devonfw by the right templates and best-practices that avoid vulnerabilities. See [security guidelines](https://github.com/devonfw/devon4j/blob/master/documentation/guide-security.asciidoc) for further details.
+* *performance* 
+is obtained by choosing the right products and proper configurations. While the actual implementation of the application matters for performance a proper design is important as it is the key to allow performance-optimizations (see e.g. [caching](https://github.com/devonfw/devon4j/blob/master/documentation/guide-caching.asciidoc)).
 
 
 
