@@ -1,9 +1,6 @@
-This tutorial aims to explain architecture for devon4j application.There are many different views that are summarized by the term architecture. It focuses on
-* *Key Principles* 
-* *Architecture Principles* 
-* *Application Architecture* 
-    * *Business Architecture*
-    * *Technical Architecture*
+This tutorial aims to explain concepts and principles of devon4j architecture with help of an example.
+After completeing this tutorial you will be aware of devon4j structure and architecture. 
+
 
 
 
