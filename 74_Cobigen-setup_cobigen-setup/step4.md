@@ -1,30 +1,34 @@
-In this step we will learn about how we can integrate CobiGen in eclipse.
+In order to execute the commands we will have to initialize the CobiGen CLI first.
 
 
-# Installation
-Remark: CobiGen is preinstalled in the devonfw/devon-ide.
 
-1.1  Preconditions
-    - Eclipse 4.x
+CobiGen CLI is installed inside your devonfw distribution. In order to execute it follow the next steps:
 
-    - Java 7 Runtime (for starting eclipse with CobiGen). This is independent from the target version of your developed code
+1. Run console.bat, this will open a console.
 
-1.2. Installation steps
-    1. Open the eclipse installation dialog
-    menu bar → Help → Install new Software
+2. Execute cobigen or cg and the man page should be printed.
 
-    2. Open CobiGen’s update site
-    Insert the update site of your interest into the filed Work with and press Add
-    Stable releases: https://dl.bintray.com/devonfw/cobigen.p2/
+3. Use a valid CobiGen input file and run cobigen generate &lt;pathToInputFile&gt;. Note: On the first execution of the CLI, CobiGen will download all the needed dependencies, please be patient.
 
-    3. Follow the installation wizard
-    Select CobiGen Eclipse Plug-in → Next → Next → accept the license → Finish → OK → Yes
+A list of increments will be printed so that you can start the generation.
 
-    4. Once installed, a new menu entry named &#34;CobiGen&#34; will show up in the Package Explorer’s context menu. In the sub menu there will the Generate​ command, which may ask you to update the templates, and then you can start the generation wizard of CobiGen. You can adapt the templates by clicking on Adapt Templates which will give you the possibility to import the CobiGen_Templates automatically so that you can modified them.
+# Examples:
+A selection of commands that you can use with the CLI:
 
-    4. Checkout (clone) your project’s templates folder or use the current templates released with CobiGen (https://github.com/devonfw/cobigen/tree/master/cobigen-templates) and then choose Import -&gt; General -&gt; Existing Projects into Workspace to import the templates into your workspace.
+1. cobigen generate foo\bar\EmployeeEntity.java: As no output path has been defined, CobiGen will try to find the pom.xml of the current project in order to set the generation root path.
 
-    5. Now you can start generating. To get an introduction of CobiGen try the devon4j templates and work on the devon4j sample application. There you might want to start with Entity objects as a selection to run CobiGen with, which will give you a good overview of what CobiGen can be used for right out of the box in devon4j based development. If you need some more introduction in how to come up with your templates and increments, please be referred to the documentation of the context configuration and the templates configuration
+2. cobigen generate foo\bar\*.java --out other\project: Will retrieve all the Java files on that input folder and generate the code on the path specified by --out.
+
+3. cg g foo\bar\webServices.yml --increment TO: Performs a string search using TO and will print the closest increments
+
+4. cg g foo\bar\webServices.yml -i 1,4,6: Directly generates increments with IDs 1, 4 and 6. CobiGen will not request you any other input.
+
+5. cg a: Downloads the latest CobiGen_Templates and unpacks them next to the CLI. CobiGen will from now on use these unpacked Templates for generation.
+
+6. cg a -cl C:\my\custom\location: Downloads the latest CobiGen_Templates and unpacks them in C:\my\custom\location. CobiGen will from now on use these unpacked Templates for generation.
+
+# CLI update command
+command is &#34;cobigen update&#34;. In which you can select the plugins whichever you want to update.
 
 
 

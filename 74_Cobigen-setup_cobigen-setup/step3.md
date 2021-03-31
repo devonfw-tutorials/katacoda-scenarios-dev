@@ -26,18 +26,3 @@ Using the following command and option you will be able to customize your genera
 
 
 
-In order to execute the commands we will have to initialize the CobiGen CLI first.
-
-[step]
---
-nextKatacodaStep(&#34;CLI Execution steps&#34;, [{ &#34;file&#34;: &#34;files/cliExecutionCommands.md&#34; }])
---
-
-To resolve the errors caused by generation some extra files we will do troubleshooting in CLI.
-
-[step]
---
-nextKatacodaStep(&#34;Troubleshooting in CLI&#34;, [{ &#34;file&#34;: &#34;files/cliTroubleshooting.md&#34; }])
---
-
-Now in the next we will see how to integrate CobiGen in eclipse.
