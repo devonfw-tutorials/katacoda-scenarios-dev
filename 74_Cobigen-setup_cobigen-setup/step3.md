@@ -26,3 +26,4 @@ Using the following command and option you will be able to customize your genera
 
 
 
+In the next step we will learn about the we can execute various command on CLI.
