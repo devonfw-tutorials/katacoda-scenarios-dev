@@ -1,5 +1,4 @@
-Now, devonfw IDE installation is completed.
-Now we will proceed with Cobigen installation.
+Now we will proceed with CobiGen installation.
 
 
 ## Install cobigen

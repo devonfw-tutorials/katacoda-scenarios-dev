@@ -1,6 +1,6 @@
 CobiGen is a generic incremental code generator. It allows you to build Java CRUD application based on the devonfw architecture including all software layers. You can generate all necessary classes and services (DAOs, Transfer Objects, simple CRUD use cases with REST services) of the application from one single entity class.
 
-Here in this tutorial we will learn how we can set up the cobigen environment in our system along with eclipse and maven integration. 
+Here in this tutorial we will learn how we can set up the CobiGen environment in our system along with eclipse and maven integration. 
 
 Cobigen provides eclipse and maven integration. There is command line interface(CLI) through which we can proceed with integration.
 
