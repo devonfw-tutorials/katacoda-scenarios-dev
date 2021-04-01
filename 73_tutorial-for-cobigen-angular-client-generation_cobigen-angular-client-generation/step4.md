@@ -15,10 +15,10 @@ We do not need to execute the test cases, so we can skip them by using the optio
 
 
 
-Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/backendServer&#39; in terminal 2 automatically. Alternatively you can click on the + next to &#39;IDE&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
+Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/backendServer/server&#39; in terminal 2 automatically. Alternatively you can click on the + next to &#39;IDE&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
 
 
-`cd devonfw/workspaces/main/backendServer`{{execute T2}}
+`cd devonfw/workspaces/main/backendServer/server`{{execute T2}}
 
 Start the server in terminal 2 by running the maven command 'mvn spring-boot:run'.
 
