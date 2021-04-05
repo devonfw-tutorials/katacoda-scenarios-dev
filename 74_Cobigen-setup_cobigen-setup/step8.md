@@ -1,7 +1,4 @@
-After installation we will go through the modes of usage of CobiGen.
-
 ====
-
 In this step we will learn about the types of modes for usage of CobiGen.
 
 

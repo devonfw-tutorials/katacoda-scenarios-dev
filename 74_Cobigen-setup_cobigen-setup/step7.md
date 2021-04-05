@@ -1,7 +1,3 @@
-In next step we will learn about installation steps in eclipse.
-
-====
-
 1.2. Installation steps
     1. Open the eclipse installation dialog
     menu bar → Help → Install new Software
@@ -25,3 +21,4 @@ In next step we will learn about installation steps in eclipse.
 
 
 
+After installation we will go through the modes of usage of CobiGen.

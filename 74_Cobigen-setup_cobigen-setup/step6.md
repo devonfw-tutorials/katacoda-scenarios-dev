@@ -1,6 +1,3 @@
-Now in the next step we will see how to integrate CobiGen in eclipse.
-====
-
 In this step we will learn about how we can integrate CobiGen in eclipse.
 # Installation
 Remark: CobiGen is preinstalled in the devonfw/devon-ide.
@@ -16,3 +13,4 @@ Remark: CobiGen is preinstalled in the devonfw/devon-ide.
 
 
 
+In next step we will learn about installation steps in eclipse.

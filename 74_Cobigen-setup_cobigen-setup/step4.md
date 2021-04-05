@@ -32,3 +32,4 @@ command is &#34;cobigen update&#34;. In which you can select the plugins whichev
 
 
 
+In the next step we will learn about troubleshooting and how we can deal with unwanted files.

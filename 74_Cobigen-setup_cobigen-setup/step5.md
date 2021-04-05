@@ -1,7 +1,3 @@
-In the next step we will learn about troubleshooting and how we can deal with unwanted files.
-
-====
-
 To resolve the errors caused by generation some extra files we will do troubleshooting in CLI.
 
 
@@ -12,3 +8,4 @@ If you find an error like Compiled class foo\bar\EmployeeEntity.java has not bee
 
 
 
+Now in the next step we will see how to integrate CobiGen in eclipse.
