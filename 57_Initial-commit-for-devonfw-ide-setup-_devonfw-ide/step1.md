@@ -31,5 +31,7 @@ The devonfw ide is now installed. To use the new 'devon' commands you have the o
 
 `. ~/.bashrc`{{execute T1}}
 
-Now devonfw-ide is installed successfully with Maven and Java too. 
+devonfw-ide is installed successfully with Maven and Java too. These tools can be customized by changing the configuration
+in devon.properties.
+
 More information on devonfw-ide can be found at https://devonfw.com/website/pages/docs/devonfw-ide-introduction.asciidoc.html
