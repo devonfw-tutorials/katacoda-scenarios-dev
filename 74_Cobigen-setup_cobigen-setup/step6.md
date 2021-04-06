@@ -1,20 +1,24 @@
-Here we can select the updates.
-    2. Open CobiGen’s update site
+# Usage
+
+In this step we will learn about the types of modes for usage of CobiGen.
+
+CobiGen has two different generation modes depending on the input selected for generation. 
+    1. Simple mode
+    2. Batch mode
 
 
 
-![02-select-update-site.png](./assets/02-select-update-site.png)
+    Selecting the menu entry Generate​ the generation wizard will be opened.The left side of the wizard shows all available increments, which can be selected to be generated. Increments are a container like concept encompassing multiple files to be generated, which should result in a semantically closed generation output. On the right side of the wizard all files are shown, which might be effected by the generation - dependent on the increment selection of files on the left side. The type of modification of each file will be encoded into following color scheme if the files are selected for generation:
 
-    Insert the update site of your interest into the filed Work with and press Add
-    Stable releases: https://dl.bintray.com/devonfw/cobigen.p2/
+    - green: files, which are currently non-existent in the file system. These files will be created during generation
 
-    3. Follow the installation wizard
-    Select CobiGen Eclipse Plug-in → Next → Next → accept the license → Finish → OK → Yes
+    - yellow: files, which are currently existent in the file system and which are configured to be merged with generated contents.
 
-    4. Once installed, a new menu entry named &#34;CobiGen&#34; will show up in the Package Explorer’s context menu. In the sub menu there will the Generate​ command, which may ask you to update the templates, and then you can start the generation wizard of CobiGen. You can adapt the templates by clicking on Adapt Templates which will give you the possibility to import the CobiGen_Templates automatically so that you can modified them.
+    - red: files, which are currently existent in the file system. These files will be overwritten if manually selected.
 
-    5. Checkout (clone) your project’s templates folder or use the current templates released with CobiGen (https://github.com/devonfw/cobigen/tree/master/cobigen-templates) and then choose Import -&gt; General -&gt; Existing Projects into Workspace to import the templates into your workspace.
+    - no color: files, which are currently existent in the file system. Additionally files, which were unselected and thus will be ignored during generation.
+
+![03-simple-mode-usage.png](./assets/03-simple-mode-usage.png)
 
 
 
-Now you can start generating. To get an introduction of CobiGen try the devon4j templates and work on the devon4j sample application.

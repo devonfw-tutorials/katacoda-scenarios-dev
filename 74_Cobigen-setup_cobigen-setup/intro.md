@@ -4,8 +4,6 @@ Here in this tutorial we will learn how we can set up the CobiGen environment in
 
 Cobigen provides eclipse and maven integration. There is command line interface(CLI) through which we can proceed with integration.
 
-More information about CobiGen on https://devonfw.com/website/pages/docs/master-cobigen.asciidoc.html
-
 
 
 The definition of each step of this tutorial can be found at https://github.com/devonfw-tutorials/tutorials/tree/main/cobigen-setup

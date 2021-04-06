@@ -1,23 +1,30 @@
-
-
-CobiGen CLI is installed inside your devonfw distribution. In order to execute it follow the next steps:
-
-1. Now, we have to go into the devonfw installation directory to execute the commands.
-
-`cd devonfw`{{execute T1}}
-
-2.Execute cobigen or cg and the man page should be printed. Main entry point of the CLI. If no arguments are passed, man page will be printed.
-
-`devon cobigen`{{execute T1}}
-
-3. Use a valid CobiGen input file and run cobigen generate &lt;pathToInputFile&gt;. Note: On the first execution of the CLI, CobiGen will download all the needed dependencies, please be patient.
-
-A list of increments will be printed so that you can start the generation.
-
-# CLI update command
-command is &#34;cobigen update&#34;. In which you can select the plugins whichever you want to update.
-
-`devon cobigen update`{{execute T1}}
+Below are the commands which we can use on CobiGen CLI.
+Using the following command and option you will be able to customize your generation as follows
 
 
 
+* [generate, g]: Command used for code generation.
+To know more about implementation of this command you can follow https://katacoda.com/devonfw/scenarios/cobigen. Here we have shown the implementation &#34;generate&#34; command for further code generation.
+
+* [adapt-templates, a]: Generates a new templates folder next to the cobigen cli and stores its location    inside  a configuration file. After executing this command, the CLI will attempt to use the specified Templates folder.
+
+`devon cg a`{{execute T1}}
+
+{
+   what it will do: Downloads the latest CobiGen_Templates and unpacks them next to the CLI. CobiGen will from now on use these unpacked Templates for generation.
+}
+    - &lt; --custom-location, -cl &gt; : Allows the user to choose an absolute file path to a custom location where the CobiGen Templates should be stored and read from.
+
+`devon cg a -cl C:\my\custom\location`{{execute T1}}
+
+{
+   what it will do: Downloads the latest CobiGen_Templates and unpacks them in C:\my\custom\location. CobiGen will from now on use these unpacked Templates for generation.
+}
+
+To get more information about rest of all the command visit on https://devonfw.com/website/pages/docs/master-cobigen.asciidoc_cobigen-cli.html
+
+
+
+To get more information about Troubleshooting in CLI visit on https://devonfw.com/website/pages/docs/master-cobigen.asciidoc_cobigen-cli.html#howto_cobigen-cli-generation.asciidoc_troubleshooting
+
+Now in the next step we will see how to integrate CobiGen in eclipse.

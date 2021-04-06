@@ -1,19 +1,13 @@
 
 
-## 2. Batch mode
-If there are multiple input elements selected, e.g., Java files, CobiGen will be started in batch mode. For the generation wizard dialog this means, that the generation preview will be constrained to the first selected input element. It does not preview the generation for each element of the selection or of a complex input. The selection of the files to be generated will be generated for each input element analogously afterwards.
+Now you know how to use CobiGen in a particular project.
+However there can be some error while using cobigen. There are times where the selected command don&#39;t execute as per requirement so for that we do health check for CobiGen templates.
 
-Thus the color encoding differs also a little bit:
+To get more information on Health Check for Cobigen Templates visit on https://devonfw.com/website/pages/docs/master-cobigen.asciidoc_eclipse-integration.html#cobigen-eclipse_usage.asciidoc_health-check
 
-    - yellow: files, which are configured to be merged.
 
-    - red: files, which are not configured with any merge strategy and thus will be created if the file does not exist or overwritten if the file already exists
+More information about CobiGen on https://devonfw.com/website/pages/docs/master-cobigen.asciidoc.html
 
-    - no color: files, which will be ignored during generation
-
-Initially all possible files to be generated will be selected.
-
-![04-batch-mode-usage.png](./assets/04-batch-mode-usage.png)
 
 
 
