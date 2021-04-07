@@ -6,7 +6,7 @@ Remark: CobiGen is preinstalled in the devonfw/devon-ide.
     - Java 7 Runtime (for starting eclipse with CobiGen). This is independent from the target version of your developed code
 
 1.2. Installation steps
-    1. Open the eclipse installation dialog
+    * Open the eclipse installation dialog
     menu bar → Help → Install new Software
 
 
