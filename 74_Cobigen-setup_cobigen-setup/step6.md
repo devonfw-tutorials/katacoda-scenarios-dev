@@ -1,5 +1,3 @@
-# Usage
-
 In this step we will learn about the types of modes for usage of CobiGen.
 
 CobiGen has two different generation modes depending on the input selected for generation. 

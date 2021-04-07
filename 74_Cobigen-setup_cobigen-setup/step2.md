@@ -16,15 +16,15 @@ CobiGen CLI is installed inside your devonfw distribution. In order to execute i
 
 `devon`{{execute T1}}
 
-3. Use a valid CobiGen input file and run cobigen generate &lt;pathToInputFile&gt;. Note: On the first execution of the CLI, CobiGen will download all the needed dependencies, please be patient.
+`cobigen`{{execute T1}}
 
 A list of increments will be printed so that you can start the generation.
 
 # CLI update command
 command is &#34;cobigen update&#34;. In which you can select the plugins whichever you want to update.
 
-`devon cobigen update`{{execute T1}}
+`cobigen update`{{execute T1}}
 
 
 
-In next step we will go through some implementaion of commands.
+In next step we will go through some implementaion of commands used in Cobigen CLI.
