@@ -6,6 +6,8 @@ Switch to the IDE and open the file 'tutorials/my-thai-star/index.asciidoc'.
 `tutorials/my-thai-star/index.asciidoc`{{open}}
 
 
+
+
 Replace the content of the file with the following code.
 
 
