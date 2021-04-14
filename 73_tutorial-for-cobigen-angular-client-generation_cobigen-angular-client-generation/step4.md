@@ -1,4 +1,3 @@
-Build and run the Java backend server
 
 
 Please change the folder to &#39;backendServer&#39;.
@@ -30,3 +29,4 @@ Because this terminal runs the server we will not use it for any other command.
 
 This will take some time.
 
+Now the Java Server should be running.
