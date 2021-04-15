@@ -12,6 +12,17 @@ Use the ng create command to create a new Angular Project with the name cobigene
 
 
 
+Please change the folder to &#39;cobigenexample&#39;.
+
+`cd cobigenexample`{{execute T1}}
+
+
+Run ng build command to build the Angular Project to the output directory specified in the angular.json.
+`devon ng build`{{execute}}
+  
+
+
+
 Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/cobigenexample/angular&#39; in terminal 3 automatically. Alternatively you can click on the + next to &#39;IDE&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
 
 
