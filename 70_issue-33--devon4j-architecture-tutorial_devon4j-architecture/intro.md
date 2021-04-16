@@ -1,8 +1,8 @@
-== Prerequisites
+## Prerequisites
 
 Java programming knowledge
 
-== Learning goals
+## Learning goals
 
 This tutorial aims to explain concepts and principles of devon4j architecture with help of an example.
 * Create devon4j sample application
