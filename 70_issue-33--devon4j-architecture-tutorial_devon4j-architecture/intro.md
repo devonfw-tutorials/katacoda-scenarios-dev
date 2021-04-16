@@ -1,5 +1,16 @@
+== Prerequisites
+
+Java programming knowledge
+
+== Learning goals
+
 This tutorial aims to explain concepts and principles of devon4j architecture with help of an example.
-After completeing this tutorial you will be aware of devon4j structure and architecture. 
+* Create devon4j sample application
+* Understand devon4j application structure 
+* Understand Key and architectural principles followed by devon4j
+* Understand devon4j application architecture
+
+By end of this tutorial you will have detailed understanding of principles followed by devon4j application as well as its structure and architecture. 
 
 
 
