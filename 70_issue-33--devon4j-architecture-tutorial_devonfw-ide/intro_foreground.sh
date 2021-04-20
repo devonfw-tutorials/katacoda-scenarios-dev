@@ -9,3 +9,6 @@ export NG_CLI_ANALYTICS=CI
 export NG_CLI_ANALYTICS=CI
 . ~/.bashrc
 export NG_CLI_ANALYTICS=CI
+. ~/.bashrc
+export NG_CLI_ANALYTICS=CI
+export NG_CLI_ANALYTICS=CI
