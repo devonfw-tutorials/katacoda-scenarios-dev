@@ -1,4 +1,12 @@
-This is the online demo of https://github.com/devonfw/my-thai-star
+My-Thai-Star is the Open Source reference application for devonfw. This tutorial will walk you through the process of running My-Thai-Star on docker.
+
+## Prerequisites
+* User should have angular and Java development experience.
+
+## Learning goals
+* In this tutorial you will learn to run My-Thai-Star application on docker.
+
+More information about My-Thai-Star can be found at https://devonfw.com/website/pages/docs/master-my-thai-star.asciidoc.html
 
 
 

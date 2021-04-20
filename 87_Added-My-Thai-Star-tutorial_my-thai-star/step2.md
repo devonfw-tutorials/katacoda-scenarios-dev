@@ -2,7 +2,7 @@ Now you need to switch to the folder you just created.
 
 `cd my-thai-star`{{execute T1}}
 
-After that, you can build and run the application. 
+After that, you can build and run the application using docker-compose. 
 
 
 

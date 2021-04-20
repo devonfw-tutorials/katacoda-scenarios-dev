@@ -1,6 +1,6 @@
 devon4j is the Java stack of devonfw. It allows you to build business applications (backends) using Java technology in a highly efficient and standardized way based on established best-practices.
 
-## Prerequisities
+## Prerequisites
 * User should have Java development experience
 
 ## Learning goals
