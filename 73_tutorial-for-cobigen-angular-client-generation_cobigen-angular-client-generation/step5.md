@@ -52,7 +52,7 @@ Switch to the IDE and click 'Copy to Editor'.
 'CustomerEntity.java' will be created automatically inside the newly created folder.
 
 <pre class="file" data-filename="devonfw/workspaces/main/cobigenangularexample/core/src/main/java/com/example/application/cobigenangularexample/customermanagement/dataaccess/api/CustomerEntity.java">
-package com.example.application.cobigenexample.customermanagement.dataaccess.api;
+package com.example.application.cobigenangularexample.customermanagement.dataaccess.api;
 
 import java.sql.Timestamp;
 
