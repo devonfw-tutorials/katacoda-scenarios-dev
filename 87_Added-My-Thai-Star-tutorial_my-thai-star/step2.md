@@ -21,5 +21,5 @@ This will take some time.
 
 
 Then you can open the following link to use the app. 
-https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com/
+https://[[HOST_SUBDOMAIN]]-8082-[[KATACODA_HOST]].environments.katacoda.com/
  

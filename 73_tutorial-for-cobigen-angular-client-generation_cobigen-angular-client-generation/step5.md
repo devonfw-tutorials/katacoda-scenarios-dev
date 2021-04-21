@@ -6,15 +6,15 @@ Please change the folder to &#39;..&#39;.
 `cd ..`{{execute T1}}
 
 
-Use the ng create command to create a new Angular Project with the name cobigenexample.
-`devon ng create cobigenexample`{{execute T1}}
+Use the ng create command to create a new Angular Project with the name cobigenangularexample.
+`devon ng create cobigenangularexample`{{execute T1}}
 
 
 
 
-Please change the folder to &#39;cobigenexample&#39;.
+Please change the folder to &#39;cobigenangularexample&#39;.
 
-`cd cobigenexample`{{execute T1}}
+`cd cobigenangularexample`{{execute T1}}
 
 
 Run ng build command to build the Angular Project to the output directory specified in the angular.json.
@@ -23,10 +23,10 @@ Run ng build command to build the Angular Project to the output directory specif
 
 
 
-Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/cobigenexample/angular&#39; in terminal 3 automatically. Alternatively you can click on the + next to &#39;IDE&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
+Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/cobigenangularexample/angular&#39; in terminal 3 automatically. Alternatively you can click on the + next to &#39;IDE&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
 
 
-`cd devonfw/workspaces/main/cobigenexample/angular`{{execute T3}}
+`cd devonfw/workspaces/main/cobigenangularexample/angular`{{execute T3}}
 
 
 Now build and start the app
@@ -45,13 +45,13 @@ https://[[HOST_SUBDOMAIN]]-4200-[[KATACODA_HOST]].environments.katacoda.com/
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/cobigenangularexample/core/src/main/java/com/example/application/cobigenangularexample/customermanagement/dataaccess/api`{{execute T1}}
 
 Switch to the IDE and click 'Copy to Editor'. 
 
 'CustomerEntity.java' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api/CustomerEntity.java">
+<pre class="file" data-filename="devonfw/workspaces/main/cobigenangularexample/core/src/main/java/com/example/application/cobigenangularexample/customermanagement/dataaccess/api/CustomerEntity.java">
 package com.example.application.cobigenexample.customermanagement.dataaccess.api;
 
 import java.sql.Timestamp;
@@ -127,7 +127,7 @@ Run the cobiGen command 'adapt-templates' to generate a new templates folder and
 
 
 Start CobiGen CLI and pass the file as parameter by executing the following command.
-`devon cobigen generate cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api/CustomerEntity.java`{{execute T1}}
+`devon cobigen generate cobigenangularexample/core/src/main/java/com/example/application/cobigenangularexample/customermanagement/dataaccess/api/CustomerEntity.java`{{execute T1}}
 
 CobiGen will ask you which files to generate. You can enter the numbers separated by commas. 
 `1,3,5,6,8`{{execute T1}}
