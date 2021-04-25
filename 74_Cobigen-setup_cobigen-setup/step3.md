@@ -1,8 +1,10 @@
-Below are the commands which we can use on CobiGen CLI.
-
-Using the following command and option you will be able to customize your generation.
+In this step, you will learn CobiGen commands.
 
 
+
+* Execute the below command to know available CobiGen Commands
+
+`cobigen `{{execute T1}}
 
 * [generate, g]: Command used for code generation.
 To know more about implementation of this command you can follow https://katacoda.com/devonfw/scenarios/cobigen. Here we have shown the implementation &#34;generate&#34; command for further code generation.
@@ -11,14 +13,8 @@ To know more about implementation of this command you can follow https://katacod
 
 `cobigen a`{{execute T1}}
 
-{
-   what it will do: Downloads the latest CobiGen_Templates and unpacks them next to the CLI. CobiGen will from now on use these unpacked Templates for generation.
-}
-
 To get more information about rest of all the command visit on https://devonfw.com/website/pages/docs/master-cobigen.asciidoc_cobigen-cli.html
 
 
 
-To get more information about Troubleshooting in CLI visit on https://devonfw.com/website/pages/docs/master-cobigen.asciidoc_cobigen-cli.html#howto_cobigen-cli-generation.asciidoc_troubleshooting
-
-Now in the next step we will see how we can integrate CobiGen in eclipse.
+Now in the next step we will see how we can integrate CobiGen with eclipse.

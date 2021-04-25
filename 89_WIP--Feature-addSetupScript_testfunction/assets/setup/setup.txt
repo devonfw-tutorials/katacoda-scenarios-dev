@@ -1,8 +1,0 @@
-2
-
-Restore Workspace
-restoreWorkspace.sh
-##########
-Run createProjectScript.sh
-createProjectScript.sh
-##########
