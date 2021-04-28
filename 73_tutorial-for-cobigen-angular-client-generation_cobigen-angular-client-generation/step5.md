@@ -7,7 +7,7 @@ Please change the folder to &#39;..&#39;.
 
 
 Use the ng create command to create a new Angular Project with the name cobigenangularexample.
-`devon ng create cobigenangularexample`{{execute T1}}
+`devon ng create cobigenangularexample --style=scss --routing=true --strict=false`{{execute T1}}
 
 
 
@@ -23,10 +23,10 @@ Run ng build command to build the Angular Project to the output directory specif
 
 
 
-Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/cobigenangularexample/angular&#39; in terminal 3 automatically. Alternatively you can click on the + next to &#39;IDE&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
+Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/cobigenangularexample&#39; in terminal 3 automatically. Alternatively you can click on the + next to &#39;IDE&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
 
 
-`cd devonfw/workspaces/main/cobigenangularexample/angular`{{execute T3}}
+`cd devonfw/workspaces/main/cobigenangularexample`{{execute T3}}
 
 
 Now build and start the app
