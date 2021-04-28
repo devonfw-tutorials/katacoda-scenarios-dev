@@ -1,5 +1,5 @@
 CobiGen is a generic incremental code generator. It allows you to generate application code based on the devonfw architecture including all software layers. 
-There is also a CobiGen Command Line Interface(CLI) where we can start the setup following the generation of code. 
+There is also a CobiGen Command Line Interface(CLI) where you can start the setup following the generation of code. 
 
 This tutorial mainly focuses on the setup of CobiGen along with various commands to execute the generations.
 ## Prerequisites
