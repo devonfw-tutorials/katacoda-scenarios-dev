@@ -1,5 +1,5 @@
-To move between the components we will now configure the routes. You can refer the image in the first step to understand how we will configure the routes.+
-In `app-routing.module.ts` we will add a path &#39;first&#39; to `FirstComponent` and a redirection from &#39;&#39; to &#39;first&#39;. And then import the `FirstModule` in the main `app.module.ts`+
+To move between the components we will now configure the routes. You can refer the image in the first step to understand how we will configure the routes.
+In `app-routing.module.ts` we will add a path &#39;first&#39; to `FirstComponent` and a redirection from &#39;&#39; to &#39;first&#39;. And then import the `FirstModule` in the main `app.module.ts`
 Next, for the feature modules, we will add the routes &#39;first/second-left&#39; and &#39;first/second-right&#39; pointing to their respective `ContentComponent` in `first-routing.module.ts`. And then import `SecondLeftModule` and `SecondRightModule` in `first.module.ts`
 
 
