@@ -1,21 +1,24 @@
-### devon4j application structure
-
-
-![jtqj_app_structure.jpg](./assets/jtqj_app_structure.jpg)
+### devon4j layers explained
 
 
 
-As shown above, jump-the-queue contains 3 modules i.e api, core and server.
+![jtqj_detailed_app_structure.jpg](./assets/jtqj_detailed_app_structure.jpg)
 
-**api**: It contains API for sampleapp.The API contains the required artifacts to interact with your application via remote services. This can be REST service interfaces, transfer-objects with their interfaces and datatypes but also OpenAPI or gRPC contracts.
 
-**core**: It is the core of the application.In this module you can write actual business logic with service implementation, as well as entire logic layer and dataaccess layer.
 
-**batch**: optional module for batch layer. In this example we have not created it.
+Above image display detailed structure of devon4j application. As shown above jump-the-queue application contains different components like queuemanagement, visitormanagement etc
 
-**server**: This module bundles the entire app (core with optional batch) typically as a bootified WAR file.
+Each component is divided into following layers:
+* [client layer](https://github.com/devonfw/devon4j/blob/master/documentation/guide-client-layer.asciidoc) for the front-end (GUI).
 
-If you want to know more about modules and project structure refer [here](https://github.com/devonfw/devon4j/blob/master/documentation/guide-structure.asciidoc#project-structure).
+* [service layer](https://github.com/devonfw/devon4j/blob/master/documentation/guide-service-layer.asciidoc) for the services used to expose functionality of the back-end to the client or other consumers. 
+For example, in jtqj-api-&gt;queuemangement-&gt;service-&gt;api-&gt; rest contains interfaces for rest services. In core module jtqj-core-&gt;queuemanagement-&gt;service-&gt;impl-&gt; rest you will be able to see implementation of service.
 
-devon4j application follows [multilayered architecture](https://en.wikipedia.org/wiki/Multitier_architecture). We will understand more about it in next step.
+* [batch layer](https://github.com/devonfw/devon4j/blob/master/documentation/guide-batch-layer.asciidoc) for exposing functionality in batch-processes (e.g. mass imports).
+
+* [logic layer](https://github.com/devonfw/devon4j/blob/master/documentation/guide-logic-layer.asciidoc) for the business logic.
+For example, in jtqj-api-&gt;queuemangement-&gt;logic-&gt;api contains ETO(Entity Transfer Object) , CTO(Composite Transfer object), some logic interfaces. In core module jtqj-core-&gt;queuemanagement-&gt;logic-&gt;impl you will be able to see usecase implementation.
+
+* [data-access layer](https://github.com/devonfw/devon4j/blob/master/documentation/guide-dataaccess-layer.asciidoc) for the data access (esp. persistence).
+For example, in jtqj-api-&gt;queuemangement-&gt;dataaccess-&gt;core contains entities, spring data repositories etc
 

@@ -1,20 +1,74 @@
-For this tutorial an installation of the devonfw IDE is required, which was already set up for you.
-To begin you need to install CobiGen and create a Java Project.
+Create the entity class which will be passed to the cobigen cli generator later
 
 
-## Install cobigen
+If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`devon cobigen`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api`{{execute T1}}
 
+Switch to the IDE and click 'Copy to Editor'. 
 
+'CustomerEntity.java' will be created automatically inside the newly created folder.
 
-## Setting up your java project
+<pre class="file" data-filename="devonfw/workspaces/main/cobigenexample/core/src/main/java/com/example/application/cobigenexample/customermanagement/dataaccess/api/CustomerEntity.java">
+package com.example.application.cobigenexample.customermanagement.dataaccess.api;
 
-Please change the folder to &#39;devonfw/workspaces/main&#39;.
+import java.sql.Timestamp;
 
-`cd devonfw/workspaces/main`{{execute T1}}
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-Now you can use devonfw to setup a java project for you by executing the following devon command.
+@Entity
+@Table(name = &#34;Customer&#34;)
+public class CustomerEntity {
 
-`devon java create com.example.application.cobigenexample`{{execute T1}}
+  private String firstname;
+
+  private String lastname;
+
+  private int age;
+
+  /**
+   * @return the firstname
+   */
+  public String getFirstname() {
+    return firstname;
+  }
+
+  /**
+   * @param firstname the firstname to set
+   */
+  public void setFirstname(String firstname) {
+    this.firstname = firstname;
+  }
+
+  /**
+   * @return the lastname
+   */
+  public String getLastname() {
+    return lastname;
+  }
+
+  /**
+   * @param lastname the lastname to set
+   */
+  public void setLastname(String lastname) {
+    this.lastname = lastname;
+  }
+
+  /**
+   * @return the age
+   */
+  public int getAge() {
+    return age;
+  }
+
+  /**
+   * @param age the age to set
+   */
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+}
+</pre>
 

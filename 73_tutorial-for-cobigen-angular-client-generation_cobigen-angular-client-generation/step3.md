@@ -1,13 +1,14 @@
-CobiGen uses the backend classes for generating your code used in the Angular application. So in the next steps you will create a java project, create a simple java class.
 
 
-## Setting up your java project
+Please change the folder to &#39;cobigenjavaexample&#39;.
 
-Please change the folder to &#39;devonfw/workspaces/main&#39;.
+`cd cobigenjavaexample`{{execute T1}}
+ 
+Use the following devon command to build the java project.
 
-`cd devonfw/workspaces/main`{{execute T1}}
+`devon mvn clean install -Dmaven.test.skip=true`{{execute T1}}
 
-Now you can use devonfw to setup a java project for you by executing the following devon command.
+The maven command 'clean' will clear the target directory beforehand. 
 
-`devon java create com.example.application.cobigenjavaexample`{{execute T1}}
+We do not need to execute the test cases, so we can skip them by using the option '-Dmaven.test.skip=true'.
 

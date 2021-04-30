@@ -1,13 +1,15 @@
-Now you are ready to create your first project
+Build the java project
 
 
-## Setting up your java project
+Please change the folder to &#39;cobigenexample&#39;.
 
-Please change the folder to &#39;devonfw/workspaces/main&#39;.
+`cd cobigenexample`{{execute T1}}
+ 
+Use the following devon command to build the java project.
 
-`cd devonfw/workspaces/main`{{execute T1}}
+`devon mvn clean install -Dmaven.test.skip=true`{{execute T1}}
 
-Now you can use devonfw to setup a java project for you by executing the following devon command.
+The maven command 'clean' will clear the target directory beforehand. 
 
-`devon java create com.example.application.cobigenexample`{{execute T1}}
+We do not need to execute the test cases, so we can skip them by using the option '-Dmaven.test.skip=true'.
 
