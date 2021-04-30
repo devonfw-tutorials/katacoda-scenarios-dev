@@ -1,4 +1,4 @@
-Before creating a devon4ng application, you first have to install the devonfw ide. You will find more information about devonfw on https://devonfw.com/website/pages/welcome/welcome.html.
+Before creating a devon4ng application, you first have to install the devonfw ide. You will find more information about devonfw on https://devonfw.com/website/pages/welcome/welcome.html.+
 Once you have setup devonfw ide, you are ready to create your devon4ng application.
 
 
