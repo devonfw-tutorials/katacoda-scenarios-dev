@@ -86,7 +86,11 @@ restoreWorkspace({&#34;workspace&#34;: &#34;devon4ng&#34;})
 --
 </pre>
 
-Both ways will clone &#39;https://github.com/devonfw-tutorials/workspace-devon4ng.git&#39; into our workspace directory. 
+Both ways will clone 
+
+https://github.com/devonfw-tutorials/workspace-devon4ng.git
+
+ into our workspace directory. 
 
 Now you know, which name to choose for your repository and how to use &#39;restoreWorkspace&#39; inside your tutorials.
 
@@ -94,6 +98,6 @@ A quick summary:
 
 1) naming convention is the concatenation of &#39;workspace-&#39; and &#39;[name]&#39;
 
-2) &#39;restoreWorkspace()&#39;&#39; will use the folder name as [name]
+2) &#39;restoreWorkspace()&#39;&#39; will use the tutorial folder name as [name]
 
 3) &#39;restoreWorkspace({&#34;workspace&#34;: &#34;name&#34;})&#39; will use the parameter as [name]

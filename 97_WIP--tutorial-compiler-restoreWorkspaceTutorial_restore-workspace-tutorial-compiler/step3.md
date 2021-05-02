@@ -12,10 +12,9 @@ Open the forked repository in your GitHub account and copy the repository URL as
 ![clone_code.jpg](./assets/clone_code.jpg)
 
 
-\nPaste the URL to the &#39;git clone&#39; command to clone the repostitory. For this tutorial we will use the original tutorials repository of the &#39;devonfw-tutorials&#39; GitHub account.
+Paste the URL to the &#39;git clone&#39; command to clone the repostitory. For this tutorial we will use the original tutorials repository of the &#39;devonfw-tutorials&#39; GitHub account.
 
 When you run the command on your machine, you will of course need to customize the URL and add your personal GitHub name. So the command will be `git clone https://github.com/YourName/workspace-devon4ng.git`.
-\n
 
 
 

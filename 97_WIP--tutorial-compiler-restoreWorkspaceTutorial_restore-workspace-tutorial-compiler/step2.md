@@ -14,7 +14,7 @@ This will create a copy of the repository in your own GitHub account. You will f
 ![fork.jpg](./assets/fork.jpg)
 
 
-Now you can run your tutorial and add your username and your wanted branch to the command.
+Now you can run your tutorial and add your username and the right branch to the command.
 
 
 
