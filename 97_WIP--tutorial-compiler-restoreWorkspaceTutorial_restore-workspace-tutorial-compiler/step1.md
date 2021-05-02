@@ -32,7 +32,7 @@ In this scenario you will learn about the architecture of a devon4ng project.
 In this tutorial you will learn about: 
 * devon4ng layered architecture
 * devonfw reference client architecture
-* differente kinds of components and modules
+* different kinds of components and modules
 
 ====
 
@@ -76,7 +76,7 @@ In this scenario you will learn about the architecture of a devon4ng project.
 In this tutorial you will learn about: 
 * devon4ng layered architecture
 * devonfw reference client architecture
-* differente kinds of components and modules
+* different kinds of components and modules
 
 ====
 
