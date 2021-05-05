@@ -26,7 +26,7 @@ In this scenario you will learn about the architecture of a devon4ng project.
 
 ## Prerequisites
 * basic TypeScript knowledge
-* a Angular project   
+* an Angular project   
 
 ## Learning goals
 In this tutorial you will learn about: 
@@ -70,7 +70,7 @@ In this scenario you will learn about the architecture of a devon4ng project.
 
 ## Prerequisites
 * basic TypeScript knowledge
-* a Angular project   
+* an Angular project   
 
 ## Learning goals
 In this tutorial you will learn about: 
@@ -98,6 +98,6 @@ A quick summary:
 
 1) naming convention is the concatenation of &#39;workspace-&#39; and &#39;[name]&#39;
 
-2) &#39;restoreWorkspace()&#39;&#39; will use the tutorial folder name as [name]
+2) &#39;restoreWorkspace()&#39; will use the tutorial folder name as [name]
 
 3) &#39;restoreWorkspace({&#34;workspace&#34;: &#34;name&#34;})&#39; will use the parameter as [name]

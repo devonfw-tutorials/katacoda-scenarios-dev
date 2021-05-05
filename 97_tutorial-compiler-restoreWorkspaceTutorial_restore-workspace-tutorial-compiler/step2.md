@@ -21,7 +21,7 @@ Now you can run your tutorial and add your username and the right branch to the 
 
 If you run 
 
-&#39;localBuildRun.sh --user [YOUR_NAME] --branch [YOUR_BRANCH]&#39;
+&#39;bash localBuildRun.sh --user [YOUR_NAME] --branch [YOUR_BRANCH]&#39;
 
 in the terminal, it will clone 
 
