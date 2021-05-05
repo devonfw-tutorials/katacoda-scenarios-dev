@@ -1,4 +1,4 @@
-For this tutorial an installation of the devonfw IDE is required, which was already set up for you. The next step is to install the CobiGen CLI.
+For this tutorial an installation of the devonfw IDE is required first time you use it. The next step is to install the CobiGen CLI.
 
 
 ## Install cobigen

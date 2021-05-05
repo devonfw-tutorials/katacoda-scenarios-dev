@@ -16,4 +16,6 @@ You can choose the templates CobiGen should use by entering the numbers in the t
 `1`
 
 
-your Angular client will be generated inside your devon4ng-application-template/src folder.
+Angular client will be generated inside devon4ng-application-template/src folder.
+Client application for displaying your entities within minutes.
+
