@@ -2,7 +2,7 @@ It might also come in handy to use a local repository instead of the original or
 Choosing a local repository instead of a GitHub repository is a feature only used inside the console runner. 
 You should have
 https://github.com/devonfw-tutorials/workspace-devon4ng.git
-forked and listed in&#39;Your repositories&#39;.
+forked and listed in &#39;Your repositories&#39;.
 
 
 
