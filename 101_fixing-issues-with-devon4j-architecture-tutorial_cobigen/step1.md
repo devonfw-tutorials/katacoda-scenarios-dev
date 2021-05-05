@@ -15,5 +15,5 @@ Please change the folder to &#39;devonfw/workspaces/main&#39;.
 
 Now you can use devonfw to setup a java project for you by executing the following devon command.
 
-`devon java create cobigenexample`{{execute T1}}
+`devon java create com.example.application.cobigenexample`{{execute T1}}
 
