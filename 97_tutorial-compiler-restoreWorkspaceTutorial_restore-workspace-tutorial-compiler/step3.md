@@ -34,5 +34,5 @@ A quick summary:
 
 1) You need to fork the original workspace directory 
 
-2) clone the repository next to &#39;tutorials&#39; and &#39;tutorial-compiler&#39; folder 
+2) clone the repository next to the &#39;tutorials&#39; and the &#39;tutorial-compiler&#39; folder 
 
