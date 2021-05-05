@@ -43,3 +43,5 @@ echo 'export NG_CLI_ANALYTICS=CI' >> /root/.profile
 echo 'export NG_CLI_ANALYTICS=CI' >> /root/.profile
 
 echo 'export NG_CLI_ANALYTICS=CI' >> /root/.profile
+
+echo 'export NG_CLI_ANALYTICS=CI' >> /root/.profile

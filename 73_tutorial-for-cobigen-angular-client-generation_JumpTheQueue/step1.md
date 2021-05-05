@@ -1,5 +1,4 @@
-Make sure to install the devonfw IDE before executing the next steps. For this tutorial we have done it for you.
-Afterwards clone the Jump-The-Queue Repository.
+First, clone the Jump-The-Queue Repository.
 
 
 Please change the folder to &#39;devonfw/workspaces/main&#39;.
