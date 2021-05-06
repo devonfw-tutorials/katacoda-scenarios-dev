@@ -13,24 +13,42 @@ const options = {
     }
 }
 
-function download(url, f) {
-    https.get(url, options, (resp) => {
-        let data = '';
+async function download(url) {
+    return new Promise(
+        function(resolve, reject) {
+            https.get(url, options, (resp) => {
+                let data = '';
 
-        resp.on('data', (chunk) => {
-            data += chunk;
+                resp.on('data', (chunk) => {
+                    data += chunk;
+                });
+
+                resp.on('end', () => {
+                    resolve(data);
+                });
+
+            }).on("error", (err) => {
+                console.log("Error: " + err.message);
+                reject(err);
+            });
         });
-
-        resp.on('end', () => {
-            f(data);
-        });
-
-    }).on("error", (err) => {
-        console.log("Error: " + err.message);
-    });
 }
 
-download('https://api.github.com/repos/devonfw-tutorials/tutorials/pulls', function (data) {
+async function getChangedPlaybooks(prNumber){
+    var data = await download('https://api.github.com/repos/devonfw-tutorials/tutorials/pulls/' + prNumber + "/files");
+    let json = JSON.parse(data);
+    console.log(json);
+    var playbooks = [];
+    for (var i in json) {
+        var e = json[i];
+        var foldername = e.filename.split('/',2)[0];
+        playbooks.push(foldername);
+    }
+    return playbooks;
+}
+
+async function main(){
+    var data = await download('https://api.github.com/repos/devonfw-tutorials/tutorials/pulls');
     let json = JSON.parse(data);
     console.log(json);
     let exitCode = 0;
@@ -62,7 +80,12 @@ download('https://api.github.com/repos/devonfw-tutorials/tutorials/pulls', funct
         else {
             cp = child_process.spawnSync("(rm -r build/playbooks || true)", { shell: true, encoding: 'utf-8' });
             console.log(cp);
-            cmd = "echo buildRun && sh buildRun.sh -e katacoda";
+            var playbooks = await getChangedPlaybooks(e.number);
+            var playbooksParameter = '';
+            if (playbooks.length > 0){
+                playbooksParameter = ' -p ' + playbooks.join(' -p ');
+            }
+            cmd = "echo buildRun && sh buildRun.sh -e katacoda" + playbooksParameter;
             console.log(cmd);
             cp = child_process.spawnSync(cmd, { shell: true, encoding: 'utf-8' });
             console.log(cp);
@@ -92,7 +115,6 @@ download('https://api.github.com/repos/devonfw-tutorials/tutorials/pulls', funct
         }
         rimraf.sync("build/output/katacoda/");
     }
-
     let cp = child_process.spawnSync("cd repo && ls -al && git fetch --all && git checkout main && git add -A && git diff-index --quiet HEAD -- || (git config user.email \"devonfw\" && git config user.name \"devonfw\" && git commit -m \"Updated tutorials\" && git push)", { shell: true, encoding: 'utf-8' });
     console.log(cp);
     if (cp.status != 0) {
@@ -101,4 +123,8 @@ download('https://api.github.com/repos/devonfw-tutorials/tutorials/pulls', funct
     if (exitCode != 0) {
         process.exit(exitCode);
     }
+}
+
+main().catch(function(e){
+    console.log(e);
 });
