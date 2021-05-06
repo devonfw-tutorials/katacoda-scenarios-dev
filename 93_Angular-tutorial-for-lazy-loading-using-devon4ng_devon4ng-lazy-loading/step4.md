@@ -1,4 +1,4 @@
-Next we will create the feature modules and components for the app. We will follow the structure shown in the image in the first step. You can use the CLI command `devon ng generate module` along with the `--routing` flag to generate the modules, and `devon ng generate component` command to generate the components.
+Next you will create the feature modules and components for the app. You will follow the structure shown in the image in the first step. You can use the CLI command `devon ng generate module` along with the `--routing` flag to generate the modules, and `devon ng generate component` command to generate the components.
 
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
