@@ -29,6 +29,4 @@ Because this terminal runs the server we will not use it for any other command.
 
 This will take some time.
 
-This will take some time
-
 Now the Java Server should be running.
