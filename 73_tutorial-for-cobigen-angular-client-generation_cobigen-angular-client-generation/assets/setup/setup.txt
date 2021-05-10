@@ -3,7 +3,7 @@
 Clone devonfw IDE settings
 cloneDevonfwIdeSettings.sh
 ##########
-Restore Devonfw IDE
+Restore devonfw IDE
 restoreDevonfwIde.sh
 ##########
 Install CobiGen plugin

@@ -158,7 +158,7 @@ export class FirstModule { }
 
 
 
-Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/level-app&#39; in terminal 2 automatically. Alternatively you can click on the + next to &#39;IDE&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
+Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/level-app&#39; in terminal 2 automatically. The first click will open a new terminal and the second one will change the directory. Alternatively you can click on the + next to &#39;IDE&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
 
 
 `cd devonfw/workspaces/main/level-app`{{execute T2}}
@@ -169,7 +169,7 @@ Now build and start the app
 
 `devon ng serve --host 0.0.0.0 --disable-host-check`{{execute T2 }}
 
-For your local projects you wouldn't add '--host 0.0.0.0' and '--disable-host-check' to the ng command.
+For your local projects you wouldn't add '--host 0.0.0.0' and '--disable-host-check' to the 'ng' command.
 
 
 Now you can open the following link to use the app. 

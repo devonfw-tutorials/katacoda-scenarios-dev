@@ -5,7 +5,7 @@ Please change the folder to &#39;cobigenjavaexample&#39;.
 
 `cd cobigenjavaexample`{{execute T1}}
  
-Use the following devon command to build the java project.
+Use the following devon command to build the Java project.
 
 `devon mvn clean install -Dmaven.test.skip=true`{{execute T1}}
 
