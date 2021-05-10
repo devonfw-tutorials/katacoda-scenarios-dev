@@ -1,3 +1,4 @@
+This step is for building the java project.
 
 
 Please change the folder to &#39;cobigenjavaexample&#39;.
