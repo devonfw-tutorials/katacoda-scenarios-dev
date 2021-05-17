@@ -1,0 +1,13 @@
+devon4ng-application-template is a simple application containing a home page (with some dummy text) and a data page (with some CRUD operations).
+
+
+Please change the folder to &#39;devonfw/workspaces/main&#39;.
+
+`cd devonfw/workspaces/main`{{execute T1}}
+
+
+
+Now clone the repository to your local directory.
+
+`git clone https://github.com/devonfw/devon4ng-application-template.git`{{execute T1}}
+
