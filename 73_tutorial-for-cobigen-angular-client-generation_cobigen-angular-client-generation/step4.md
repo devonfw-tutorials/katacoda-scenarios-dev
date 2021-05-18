@@ -5,7 +5,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/cobigenjavaexample/core/src/main/java/com/example/application/cobigenjavaexample/customermanagement/dataaccess/api`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'CustomerEntity.java' will be created automatically inside the newly created folder.
 

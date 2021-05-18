@@ -5,7 +5,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'first-routing.module.ts' will be created automatically inside the newly created folder.
 
@@ -29,7 +29,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'first.module.ts' will be created automatically inside the newly created folder.
 
@@ -57,7 +57,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-left`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'second-left-routing.module.ts' will be created automatically inside the newly created folder.
 
@@ -81,7 +81,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-left`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'second-left.module.ts' will be created automatically inside the newly created folder.
 
@@ -110,7 +110,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-right`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'second-right-routing.module.ts' will be created automatically inside the newly created folder.
 
@@ -134,7 +134,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-right`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'second-right.module.ts' will be created automatically inside the newly created folder.
 
@@ -163,7 +163,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/first`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'first.component.html' will be created automatically inside the newly created folder.
 
@@ -190,7 +190,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/first`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'first.component.scss' will be created automatically inside the newly created folder.
 
@@ -204,7 +204,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/first`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'first.component.ts' will be created automatically inside the newly created folder.
 
@@ -233,7 +233,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-left/content`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'content.component.html' will be created automatically inside the newly created folder.
 
@@ -259,7 +259,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-left/content`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'content.component.scss' will be created automatically inside the newly created folder.
 
@@ -273,7 +273,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-left/content`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'content.component.ts' will be created automatically inside the newly created folder.
 
@@ -302,7 +302,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-right/content`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'content.component.html' will be created automatically inside the newly created folder.
 
@@ -327,7 +327,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-right/content`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'content.component.scss' will be created automatically inside the newly created folder.
 
@@ -341,7 +341,7 @@ If the parent directories aren't already in the project, 'mkdir -p' will create 
 
 `mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-right/content`{{execute T1}}
 
-Switch to the IDE and click 'Copy to Editor'. 
+Switch to the editor and click 'Copy to Editor'. 
 
 'content.component.ts' will be created automatically inside the newly created folder.
 

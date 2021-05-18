@@ -1,7 +1,7 @@
 Clear the `app.component.html` file and setup a header with a menu button and some navigational links. You will use `mat-toolbar`, `mat-button`, `mat-menu`, `mat-icon` and `mat-icon-button` for this:
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/devon4ng-mat-layout/src/app/app.component.html'.
+Switch to the editor and open the file 'devonfw/workspaces/main/devon4ng-mat-layout/src/app/app.component.html'.
 
 `devonfw/workspaces/main/devon4ng-mat-layout/src/app/app.component.html`{{open}}
 

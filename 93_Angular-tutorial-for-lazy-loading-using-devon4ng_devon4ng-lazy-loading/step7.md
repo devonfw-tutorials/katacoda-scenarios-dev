@@ -3,7 +3,7 @@ Modifying an angular application to load its modules lazily is easy, you have to
 Also, in `first-routing.module.ts` you can change the path for the `ContentComponent`s from `first/second-left` and `first/second-right` to simply `second-left` and `second-right` respectively,  because it aquires the context set by AppRoutingModule.
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/level-app/src/app/app-routing.module.ts'.
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/app-routing.module.ts'.
 
 `devonfw/workspaces/main/level-app/src/app/app-routing.module.ts`{{open}}
 
@@ -40,7 +40,7 @@ export class AppRoutingModule { }
 
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/level-app/src/app/app.module.ts'.
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/app.module.ts'.
 
 `devonfw/workspaces/main/level-app/src/app/app.module.ts`{{open}}
 
@@ -75,7 +75,7 @@ export class AppModule { }
 
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts'.
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts'.
 
 `devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts`{{open}}
 

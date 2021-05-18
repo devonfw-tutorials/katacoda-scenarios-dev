@@ -4,7 +4,7 @@ In `app-routing.module.ts` you will add a path &#39;first&#39; to `FirstComponen
 Next, for the feature modules, you will add the routes &#39;first/second-left&#39; and &#39;first/second-right&#39; pointing to their respective `ContentComponent` in `first-routing.module.ts`. And then import `SecondLeftModule` and `SecondRightModule` in `first.module.ts`
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/level-app/src/app/app-routing.module.ts'.
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/app-routing.module.ts'.
 
 `devonfw/workspaces/main/level-app/src/app/app-routing.module.ts`{{open}}
 
@@ -42,7 +42,7 @@ export class AppRoutingModule { }
 
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/level-app/src/app/app.module.ts'.
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/app.module.ts'.
 
 `devonfw/workspaces/main/level-app/src/app/app.module.ts`{{open}}
 
@@ -79,7 +79,7 @@ export class AppModule { }
 
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts'.
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts'.
 
 `devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts`{{open}}
 
@@ -122,7 +122,7 @@ export class FirstRoutingModule { }
 
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/level-app/src/app/first/first.module.ts'.
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/first/first.module.ts'.
 
 `devonfw/workspaces/main/level-app/src/app/first/first.module.ts`{{open}}
 
@@ -158,7 +158,7 @@ export class FirstModule { }
 
 
 
-Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/level-app&#39; in terminal 2 automatically. The first click will open a new terminal and the second one will change the directory. Alternatively you can click on the + next to &#39;IDE&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
+Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/level-app&#39; in terminal 2 automatically. The first click will open a new terminal and the second one will change the directory. Alternatively you can click on the &#39;+&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
 
 
 `cd devonfw/workspaces/main/level-app`{{execute T2}}

@@ -1,7 +1,7 @@
 To use Material Design Icons along with the mat-icon component, you will load the Material Icons library in your `src/index.html` file.
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/devon4ng-mat-layout/src/index.html'.
+Switch to the editor and open the file 'devonfw/workspaces/main/devon4ng-mat-layout/src/index.html'.
 
 `devonfw/workspaces/main/devon4ng-mat-layout/src/index.html`{{open}}
 

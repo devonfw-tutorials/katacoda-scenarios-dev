@@ -13,7 +13,7 @@ Use the 'ng create' command to create a new Angular project with the name devon4
 
 
 
-Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/devon4ng-mat-layout&#39; in terminal 2 automatically. The first click will open a new terminal and the second one will change the directory. Alternatively you can click on the + next to &#39;IDE&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
+Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/devon4ng-mat-layout&#39; in terminal 2 automatically. The first click will open a new terminal and the second one will change the directory. Alternatively you can click on the &#39;+&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
 
 
 `cd devonfw/workspaces/main/devon4ng-mat-layout`{{execute T2}}

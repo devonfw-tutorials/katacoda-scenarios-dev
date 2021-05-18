@@ -1,7 +1,7 @@
 Now, lets make the SecondLeftModule load lazily. For this, you need to change `component` to `loadChildren` and refer `SecondLeftModule` in the file `first-routing.module.ts`. Next, you need to remove `SecondLeftModule` from the `imports` array of `first.module.ts`. After that you need to route the `ContentComponent` within the `second-left-routing.module.ts`.
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts'.
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts'.
 
 `devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts`{{open}}
 
@@ -44,7 +44,7 @@ export class FirstRoutingModule { }
 
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/level-app/src/app/first/first.module.ts'.
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/first/first.module.ts'.
 
 `devonfw/workspaces/main/level-app/src/app/first/first.module.ts`{{open}}
 
@@ -78,7 +78,7 @@ export class FirstModule { }
 
 
 
-Switch to the IDE and open the file 'devonfw/workspaces/main/level-app/src/app/first/second-left/second-left-routing.module.ts'.
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/first/second-left/second-left-routing.module.ts'.
 
 `devonfw/workspaces/main/level-app/src/app/first/second-left/second-left-routing.module.ts`{{open}}
 
