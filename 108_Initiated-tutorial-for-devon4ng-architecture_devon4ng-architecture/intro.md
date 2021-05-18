@@ -6,12 +6,11 @@ Basic Angular knowledge
 
 This tutorial aims to explain concepts and principles of devon4ng architecture by refering an Angular application template. Below are the steps we will go through to understand it clearly.
 
-* Clone devon4ng-application-template repository
-* Understand devon4ng application structure 
-* Understand Key and architectural principles followed by devon4j
-* Understand devon4j application architecture
+* Understand Angular architectural terminology (components and modules)
+* Different layers of an Angular application
+* Clone and understand devon4ng application structure 
 
-By end of this tutorial you will have detailed understanding of principles followed by devon4j application as well as its structure and architecture. 
+By end of this tutorial you will have detailed understanding of principles followed by devon4ng application as well as its structure and architecture. 
 
 
 
