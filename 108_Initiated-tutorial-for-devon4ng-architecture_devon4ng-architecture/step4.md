@@ -1,10 +1,13 @@
+devon4ng-application-template is a simple application containing a home page (with some dummy text) and a data page (with some CRUD operations). After cloning you can checkout the file structure and understand the concepts explained earlier.
 
 
-![architecture-modules.svg](./assets/architecture-modules.svg)
+Please change the folder to &#39;devonfw/workspaces/main&#39;.
 
-Angular requires a module called app which is the main entrance to an application at runtime - this module gets bootstrapped. Angular Styleguide defines feature modules and two special modules - core and shared.
-
-A feature module is basically a vertical cut through both layers. The shared module consists of components shared across feature modules. The core module holds services shared across modules. So core module is a module only having a services layer and shared module is a module only having a components layer.
+`cd devonfw/workspaces/main`{{execute T1}}
 
 
+
+Now clone the repository to your local directory.
+
+`git clone https://github.com/devonfw/devon4ng-application-template.git`{{execute T1}}
 

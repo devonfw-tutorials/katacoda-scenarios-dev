@@ -1,16 +1,12 @@
 
 
+![architecture-layers.png](./assets/architecture-layers.png)
 
+The architecture describes two layers:
 
-When using Angular, the web client architecture is driven by the framework in a certain way Google and the Angular community think about web client architecture. Angular gives an opinion on how to look at architecture. It is component based like devon4j but uses different terms which are common language in web application development. The important term is module which is used instead of component. The primary reason is the naming collision with the Web Components standard.
-To clarify this:
+* [Components Layer](https://devonfw.com/website/pages/docs/master-devon4ng.asciidoc_layers.html#components-layer.asciidoc) encapsulates components which present the current application state. Components are separated into [Smart and Dumb Components](https://devonfw.com/website/pages/docs/master-devon4ng.asciidoc_layers.html#components-layer.asciidoc_smart-and-dumb-components). The only logic present is view logic inside Smart Components.
 
-* A component describes an UI element containing HTML, CSS and JavaScript - structure, design and logic encapsulated inside a reusable container called component.
-
-* A module describes an applications feature area. The application flight-app may have a module called booking.
-
-An application developed using Angular consists of multiple modules. There are feature modules and special modules described by the Angular Styleguide - core and shared. Angular or Angular Styleguide give no guidance on how to structure a module internally. This is where this architecture comes in.
-
+* [Services Layer](https://devonfw.com/website/pages/docs/master-devon4ng.asciidoc_layers.html#services-layer.asciidoc) is more or less what we call &#39;business logic layer&#39; on the server side. The layer defines the applications state, the transitions between state and classic business logic. Stores contain application state over time to which Smart Components subscribe to. Adapters are used to perform XHRs, WebSocket connections, etc. The business model is described inside the module. Use case services perform business logic needed for use cases. A use case services interacts with the store and adapters. Methods of use case services are the API for Smart Components. Those methods are Actions in reactive terminology.
 
 
 

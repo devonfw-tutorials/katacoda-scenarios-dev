@@ -1,12 +1,18 @@
 
 
-![architecture-layers.svg](./assets/architecture-layers.svg)
+![architecture-modules.png](./assets/architecture-modules.png)
 
-The architecture describes two layers:
+Angular requires a module called app which is the main entrance to an application at runtime - this module gets bootstrapped. Angular Styleguide defines feature modules and two special modules - core and shared.
 
-* [Components Layer](https://devonfw.com/website/pages/docs/master-devon4ng.asciidoc_layers.html#components-layer.asciidoc) encapsulates components which present the current application state. Components are separated into Smart and Dumb Components. The only logic present is view logic inside Smart Components.
+* A **feature** module is basically a vertical cut through both layers.
 
-* [Services Layer](https://devonfw.com/website/pages/docs/master-devon4ng.asciidoc_layers.html#services-layer.asciidoc) is more or less what we call &#39;business logic layer&#39; on the server side. The layer defines the applications state, the transitions between state and classic business logic. Stores contain application state over time to which Smart Components subscribe to. Adapters are used to perform XHRs, WebSocket connections, etc. The business model is described inside the module. Use case services perform business logic needed for use cases. A use case services interacts with the store and adapters. Methods of use case services are the API for Smart Components. Those methods are Actions in reactive terminology.
+* The **shared** module consists of components shared across feature modules.
+
+* The **core** module holds services shared across modules.
+
+So core module is a module only having a services layer and shared module is a module only having a components layer.
+
+Let us refer an application to get a better clarity on the concepts.
 
 
 
