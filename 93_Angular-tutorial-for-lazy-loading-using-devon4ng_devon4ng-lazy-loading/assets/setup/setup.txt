@@ -1,5 +1,8 @@
-2
+3
 
+Run setup.sh
+setup.sh
+##########
 Clone devonfw IDE settings
 cloneDevonfwIdeSettings.sh
 ##########

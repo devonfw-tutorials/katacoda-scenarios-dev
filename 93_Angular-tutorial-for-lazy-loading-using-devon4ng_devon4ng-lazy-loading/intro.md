@@ -1,7 +1,6 @@
 In single-page-applications as the application size increases its loading speed decreases (since typically the entire application is loaded at once). Lazy loading is a design pattern that defers initialization of objects until it is needed. Angular handles lazy loading through the routing module which redirects to requested pages. Those pages can be loaded at start or on demand. In this tutorial you will build a simple app to understand how lazyloading is implemented in Angular.
 
 ## Prerequisites
-* devonfw-ide installed
 * Basic Angular knowledge
 
 ## Learning goals
