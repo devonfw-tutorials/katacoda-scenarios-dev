@@ -1,5 +1,5 @@
 ## Conclusion
 
-In this tutorial you have learnt how to create Migrate a devon4j project to the latest version using command line.
+In this tutorial you have learnt How to migrate an older version of devon4j project to the latest version using command line.
 
  
