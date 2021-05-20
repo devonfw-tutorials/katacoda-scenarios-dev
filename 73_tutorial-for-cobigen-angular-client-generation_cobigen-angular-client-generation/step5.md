@@ -1,4 +1,4 @@
-Now you can go through api module of your java project and use Cobigen again to generate your client.
+Now you can go through api module of your java project and use Cobigen again to generate your front end (angular code).
 
 
 ## CobiGen Java
