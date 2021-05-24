@@ -1,4 +1,4 @@
-Now, we will create sample devon4j application with name *sampleapp*. 
+Now, we will create a sample devon4j application with the name *sampleapp*.
 
 
 
@@ -12,7 +12,6 @@ Now you can use devonfw to setup a Java project for you by executing the followi
 
 `devon java create sampleapp`{{execute T1}}
 
-cd sampleapp
 In command prompt just type &#34;devon java migrate&#34;.
 This will migrate current devon4j application from &#34;2020.08.001&#34; to the latest version available.
 
