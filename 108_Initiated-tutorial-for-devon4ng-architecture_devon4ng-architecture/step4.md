@@ -1,4 +1,4 @@
-devon4ng-application-template is a simple application containing a home page (with some dummy text) and a data page (with some CRUD operations). After cloning you can checkout the file structure and understand the concepts explained earlier.
+devon4ng-application-template is a simple application containing a home page (with some dummy text) and a data page (with CRUD operations). After cloning you can checkout the file structure and understand the concepts explained earlier.
 
 
 Please change the folder to &#39;devonfw/workspaces/main&#39;.
