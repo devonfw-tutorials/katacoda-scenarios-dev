@@ -10,3 +10,10 @@ You can study in more detail about Angular architecture by following [this docum
 
 
 
+Now we want to open the file core.module.ts. 
+
+You can either click on this link, here: 
+
+`devonfw/workspaces/main/devon4ng-application-template/src/app/core/core.module.ts`{{open}}
+
+and it will open the file automatically or switch to the editor and open it yourself. 
