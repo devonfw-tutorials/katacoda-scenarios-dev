@@ -1,20 +1,18 @@
 
 
-You can switch to the IDE tab to checkout the files of the application you just cloned.
+![architecture-modules.png](./assets/architecture-modules.png)
 
-* If you check out the file &#39;src &gt; app &gt; core &gt; core.module.ts&#39;, you can see services like `TranslocoRootModule` (translation service), `HttpRequestInterceptorService` (HTTP interceptor sesrvice) and Angular Material related modules being part of this core module. This core module is then imported into every other module as the services are used throughout the application.
+Every Angular application requires a module called app which is the main entrance to an application at runtime - this module gets bootstrapped. Angular Styleguide defines feature modules and two special modules - core and shared.
 
-* In the file &#39;src &gt; app &gt; layout &gt; layout.module.ts&#39;, you can see components like `NavBar` and `Header` being part of this module. This module is comparable to a **shared** module which holds common components used throughout the application. The shared module is imported into other (feature) modules where the common components will be used.
+* A **feature** module is basically a vertical cut through both layers.
 
-You can study in more detail about Angular architecture by following [this document](https://devonfw.com/website/pages/docs/master-devon4ng.asciidoc_architecture.html#meta-architecture.asciidoc_devonfw-reference-client-architecture).
+* The **shared** module consists of components shared across feature modules.
+
+* The **core** module holds services shared across modules.
+
+So core module is a module only having a services layer and shared module is a module only having a components layer.
+
+Let us refer the application again to get a better clarity on the concepts.
 
 
 
-
-Now we want to open the file core.module.ts. 
-
-You can either click on this link, here: 
-
-`devonfw/workspaces/main/devon4ng-application-template/src/app/core/core.module.ts`{{open}}
-
-and it will open the file automatically or switch to the editor and open it yourself. 
