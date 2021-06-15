@@ -129,6 +129,20 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
 
 
 
+Please change the folder to &#39;httprestserver&#39;.
+
+`cd httprestserver`{{execute T1}}
+ 
+Use the following devon command to build the Java project.
+
+`devon mvn clean install -Dmaven.test.skip=true`{{execute T1}}
+
+The maven command 'clean' will clear the target directory beforehand. 
+
+We do not need to execute the test cases, so we can skip them by using the option '-Dmaven.test.skip=true'.
+
+
+
 Run the CobiGen command 'adapt-templates' to generate a new templates folder and save its location in a configuration file.
 
 `devon cobigen adapt-templates`{{execute T1}}
@@ -347,20 +361,6 @@ public abstract class BaseWebSecurityConfig extends WebSecurityConfigurerAdapter
 
 }
 </pre>
-
-
-
-Please change the folder to &#39;httprestserver&#39;.
-
-`cd httprestserver`{{execute T1}}
- 
-Use the following devon command to build the Java project.
-
-`devon mvn clean install -Dmaven.test.skip=true`{{execute T1}}
-
-The maven command 'clean' will clear the target directory beforehand. 
-
-We do not need to execute the test cases, so we can skip them by using the option '-Dmaven.test.skip=true'.
 
 
 
