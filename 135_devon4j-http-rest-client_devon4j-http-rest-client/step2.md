@@ -21,6 +21,20 @@ Now you can use devonfw to setup a Java project for you by executing the followi
 
 
 
+Please change the folder to &#39;httprestserver&#39;.
+
+`cd httprestserver`{{execute T1}}
+ 
+Use the following devon command to build the Java project.
+
+`devon mvn clean install -Dmaven.test.skip=true`{{execute T1}}
+
+The maven command 'clean' will clear the target directory beforehand. 
+
+We do not need to execute the test cases, so we can skip them by using the option '-Dmaven.test.skip=true'.
+
+
+
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
 `mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0`{{execute T1}}
@@ -56,11 +70,11 @@ INSERT INTO Visitor (id, modificationCounter, username, password) VALUES (1, 1, 
 
 
 
-Create the new folder 'httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api'.
+Create the new folder 'core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api'.
 
 The '-p' parameter ensures, that the whole directory structure is created.
 
-`mkdir -p httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api`{{execute T1}}
+`mkdir -p core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api`{{execute T1}}
 
 
 
@@ -126,20 +140,6 @@ public class VisitorEntity extends ApplicationPersistenceEntity implements Visit
 }
 
 </pre>
-
-
-
-Please change the folder to &#39;httprestserver&#39;.
-
-`cd httprestserver`{{execute T1}}
- 
-Use the following devon command to build the Java project.
-
-`devon mvn clean install -Dmaven.test.skip=true`{{execute T1}}
-
-The maven command 'clean' will clear the target directory beforehand. 
-
-We do not need to execute the test cases, so we can skip them by using the option '-Dmaven.test.skip=true'.
 
 
 
