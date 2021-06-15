@@ -29,229 +29,80 @@ We do not need to execute the test cases, so we can skip them by using the optio
 
 
 
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'V0005__Create_Visitor.sql' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0/V0005__Create_Visitor.sql">
-create table Visitor(
-  id BIGINT NOT NULL AUTO_INCREMENT,
-  modificationCounter INTEGER NOT NULL,
-  username VARCHAR(255),
-  password VARCHAR(255),
-  CONSTRAINT PK_Visitor PRIMARY KEY(id)
-);
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'V0006__Master_data.sql' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0/V0006__Master_data.sql">
-INSERT INTO Visitor (id, modificationCounter, username, password) VALUES (0, 1, &#39;mike@mail.com&#39;, &#39;mike@123&#39;);
-INSERT INTO Visitor (id, modificationCounter, username, password) VALUES (1, 1, &#39;tanya@mail.com&#39;, &#39;tanya@123&#39;);
-</pre>
-
-
-
-Create the new folder 'core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api'.
+Create the new folder 'core/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest'.
 
 The '-p' parameter ensures, that the whole directory structure is created.
 
-`mkdir -p core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api`{{execute T1}}
+`mkdir -p core/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest`{{execute T1}}
 
 
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest`{{execute T1}}
 
 Switch to the editor and click 'Copy to Editor'. 
 
-'VisitorEntity.java' will be created automatically inside the newly created folder.
+'VisitormanagementRestService.java' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api/VisitorEntity.java">
-package com.example.application.httprestserver.visitormanagement.dataaccess.api;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-import com.example.application.httprestserver.general.dataaccess.api.ApplicationPersistenceEntity;
-import com.example.application.httprestserver.visitormanagement.common.api.Visitor;
-
-@Entity
-@Table(name = &#34;Visitor&#34;)
-public class VisitorEntity extends ApplicationPersistenceEntity implements Visitor {
-
-  private String username;
-
-  private String password;
-
-  private static final long serialVersionUID = 1L;
-
-  /**
-   * @return username
-   */
-  public String getUsername() {
-
-    return this.username;
-  }
-
-  /**
-   * @param username new value of {@link #getusername}.
-   */
-  public void setUsername(String username) {
-
-    this.username = username;
-  }
-
-  /**
-   * @return password
-   */
-  public String getPassword() {
-
-    return this.password;
-  }
-
-  /**
-   * @param password new value of {@link #getpassword}.
-   */
-  public void setPassword(String password) {
-
-    this.password = password;
-  }
-
-}
-
-</pre>
-
-
-
-## Install CobiGen
-
-`devon cobigen`{{execute T1}}
-
-
-
-Run the CobiGen command 'adapt-templates' to generate a new templates folder and save its location in a configuration file.
-
-`devon cobigen adapt-templates`{{execute T1}}
-
-
-
-
-## CobiGen Java
-
-
-Start CobiGen CLI and pass the file as parameter by executing the following command.
-`devon cobigen generate httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api/VisitorEntity.java`{{execute T1}}
-
-CobiGen will ask you which files to generate. You can enter the numbers separated by commas. 
-`1,3,5,6,8`{{execute T1}}
-
-CobiGen will now generate code based on the source file and the templates you have passed.
-
-
-
-
-Switch to the editor and open the file 'devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java'.
-
-`devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java`{{open}}
-
-
-
-
-Replace the content of the file with the following code.
-
-
-Click on 'Copy to Editor' to change it automatically.
-
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java" data-target="replace" data-marker="">
-package com.devonfw.httprestapi.restapi.visitormanagement.service.api.rest;
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java">
+package com.example.application.httprestserver.visitormanagement.service.api.rest;
 
 import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import org.springframework.data.domain.Page;
 
-import com.devonfw.httprestapi.restapi.visitormanagement.logic.api.Visitormanagement;
-import com.devonfw.httprestapi.restapi.visitormanagement.logic.api.to.VisitorEto;
-import com.devonfw.httprestapi.restapi.visitormanagement.logic.api.to.VisitorSearchCriteriaTo;
-
-/**
- * The service interface for REST calls in order to execute the logic of component {@link Visitormanagement}.
- */
 @Path(&#34;/visitormanagement/v1&#34;)
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface VisitormanagementRestService {
 
-  /**
-   * Delegates to {@link Visitormanagement#findVisitor}.
-   *
-   * @param id the ID of the {@link VisitorEto}
-   * @return the {@link VisitorEto}
-   */
   @GET
   @Path(&#34;/clientrequest&#34;)
   public String returnResponseToClient(String args);
 
-}</pre>
+}
+</pre>
 
 
 
-Switch to the editor and open the file 'devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java'.
+Create the new folder 'core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest'.
 
-`devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java`{{open}}
+The '-p' parameter ensures, that the whole directory structure is created.
 
-
-
-
-Replace the content of the file with the following code.
+`mkdir -p core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest`{{execute T1}}
 
 
-Click on 'Copy to Editor' to change it automatically.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java" data-target="replace" data-marker="">
-package com.devonfw.httprestapi.restapi.visitormanagement.service.impl.rest;
+If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
+
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest`{{execute T1}}
+
+Switch to the editor and click 'Copy to Editor'. 
+
+'VisitormanagementRestServiceImpl.java' will be created automatically inside the newly created folder.
+
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java">
+package com.example.application.httprestserver.visitormanagement.service.impl.rest;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.devonfw.httprestapi.restapi.visitormanagement.logic.api.Visitormanagement;
-import com.devonfw.httprestapi.restapi.visitormanagement.service.api.rest.VisitormanagementRestService;
+import com.example.application.httprestserver.visitormanagement.service.api.rest.VisitormanagementRestService;
 
-/**
- * The service implementation for REST calls in order to execute the logic of component {@link Visitormanagement}.
- */
 @Named(&#34;VisitormanagementRestService&#34;)
 public class VisitormanagementRestServiceImpl implements VisitormanagementRestService {
-
-  @Inject
-  private Visitormanagement visitormanagement;
 
   @Override
   public String returnResponseToClient(String args) {
     args = &#34;welcome to rest api&#34;;
     return args;
   }
-}</pre>
+}
+</pre>
 
 
 
