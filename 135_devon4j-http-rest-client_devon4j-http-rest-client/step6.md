@@ -52,6 +52,20 @@ service.client.app.restapi.user.password=admin</pre>
 
 
 
+Please change the folder to &#39;httprestclient&#39;.
+
+`cd httprestclient`{{execute T1}}
+ 
+Use the following devon command to build the Java project.
+
+`devon mvn clean install -Dmaven.test.skip=true`{{execute T1}}
+
+The maven command 'clean' will clear the target directory beforehand. 
+
+We do not need to execute the test cases, so we can skip them by using the option '-Dmaven.test.skip=true'.
+
+
+
 ## Service Discovery
 * service.client.default.url :- It is used to set the default url of server and it is added for service discovery.
 * service.client.app.restapi.url :- This property provide base url of REST in your application. It follows format such as &#34;service.client.app.«application».url&#34;. Here, «application» refers to the technical name of the application providing the service.

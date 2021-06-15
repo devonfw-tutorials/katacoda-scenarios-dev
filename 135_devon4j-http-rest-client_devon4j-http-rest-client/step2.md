@@ -3,6 +3,12 @@ As explained in REST document, With JAX-RS it is important to make sure that eac
 Let&#39;s create devon4j server.
 
 
+## Install CobiGen
+
+`devon cobigen`{{execute T1}}
+
+
+
 ## Setting up your Java project
 
 Please change the folder to &#39;devonfw/workspaces/main&#39;.
@@ -15,37 +21,148 @@ Now you can use devonfw to setup a Java project for you by executing the followi
 
 
 
-Please change the folder to &#39;httprestserver&#39;.
+If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`cd httprestserver`{{execute T1}}
- 
-Use the following devon command to build the Java project.
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0`{{execute T1}}
 
-`devon mvn clean install -Dmaven.test.skip=true`{{execute T1}}
+Switch to the editor and click 'Copy to Editor'. 
 
-The maven command 'clean' will clear the target directory beforehand. 
+'V0005__Create_Visitor.sql' will be created automatically inside the newly created folder.
 
-We do not need to execute the test cases, so we can skip them by using the option '-Dmaven.test.skip=true'.
-
-
-
-Create the new folder 'core/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest'.
-
-The '-p' parameter ensures, that the whole directory structure is created.
-
-`mkdir -p core/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest`{{execute T1}}
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0/V0005__Create_Visitor.sql">
+create table Visitor(
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  modificationCounter INTEGER NOT NULL,
+  username VARCHAR(255),
+  password VARCHAR(255),
+  CONSTRAINT PK_Visitor PRIMARY KEY(id)
+);
+</pre>
 
 
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0`{{execute T1}}
 
 Switch to the editor and click 'Copy to Editor'. 
 
-'VisitormanagementRestService.java' will be created automatically inside the newly created folder.
+'V0006__Master_data.sql' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java">
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0/V0006__Master_data.sql">
+INSERT INTO Visitor (id, modificationCounter, username, password) VALUES (0, 1, &#39;mike@mail.com&#39;, &#39;mike@123&#39;);
+INSERT INTO Visitor (id, modificationCounter, username, password) VALUES (1, 1, &#39;tanya@mail.com&#39;, &#39;tanya@123&#39;);
+</pre>
+
+
+
+Create the new folder 'httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api'.
+
+The '-p' parameter ensures, that the whole directory structure is created.
+
+`mkdir -p httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api`{{execute T1}}
+
+
+
+If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
+
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api`{{execute T1}}
+
+Switch to the editor and click 'Copy to Editor'. 
+
+'VisitorEntity.java' will be created automatically inside the newly created folder.
+
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api/VisitorEntity.java">
+package com.example.application.httprestserver.visitormanagement.dataaccess.api;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import com.example.application.httprestserver.general.dataaccess.api.ApplicationPersistenceEntity;
+import com.example.application.httprestserver.visitormanagement.common.api.Visitor;
+
+@Entity
+@Table(name = &#34;Visitor&#34;)
+public class VisitorEntity extends ApplicationPersistenceEntity implements Visitor {
+
+  private String username;
+
+  private String password;
+
+  private static final long serialVersionUID = 1L;
+
+  /**
+   * @return username
+   */
+  public String getUsername() {
+
+    return this.username;
+  }
+
+  /**
+   * @param username new value of {@link #getusername}.
+   */
+  public void setUsername(String username) {
+
+    this.username = username;
+  }
+
+  /**
+   * @return password
+   */
+  public String getPassword() {
+
+    return this.password;
+  }
+
+  /**
+   * @param password new value of {@link #getpassword}.
+   */
+  public void setPassword(String password) {
+
+    this.password = password;
+  }
+
+}
+
+</pre>
+
+
+
+Run the CobiGen command 'adapt-templates' to generate a new templates folder and save its location in a configuration file.
+
+`devon cobigen adapt-templates`{{execute T1}}
+
+
+
+
+## CobiGen Java
+
+
+Start CobiGen CLI and pass the file as parameter by executing the following command.
+`devon cobigen generate httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api/VisitorEntity.java`{{execute T1}}
+
+CobiGen will ask you which files to generate. You can enter the numbers separated by commas. 
+`1,3,5,6,8`{{execute T1}}
+
+CobiGen will now generate code based on the source file and the templates you have passed.
+
+
+
+
+Switch to the editor and open the file 'devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java'.
+
+`devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java`{{open}}
+
+
+
+
+Replace the content of the file with the following code.
+
+
+Click on 'Copy to Editor' to change it automatically.
+
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java" data-target="replace" data-marker="">
 package com.example.application.httprestserver.visitormanagement.service.api.rest;
 
 import javax.ws.rs.Consumes;
@@ -64,28 +181,23 @@ public interface VisitormanagementRestService {
   @Path(&#34;/clientrequest&#34;)
   public String returnResponseToClient(String args);
 
-}
-</pre>
+}</pre>
 
 
 
-Create the new folder 'core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest'.
+Switch to the editor and open the file 'devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java'.
 
-The '-p' parameter ensures, that the whole directory structure is created.
-
-`mkdir -p core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest`{{execute T1}}
+`devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java`{{open}}
 
 
 
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest`{{execute T1}}
+Replace the content of the file with the following code.
 
-Switch to the editor and click 'Copy to Editor'. 
 
-'VisitormanagementRestServiceImpl.java' will be created automatically inside the newly created folder.
+Click on 'Copy to Editor' to change it automatically.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java">
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java" data-target="replace" data-marker="">
 package com.example.application.httprestserver.visitormanagement.service.impl.rest;
 
 import javax.inject.Inject;
@@ -101,8 +213,7 @@ public class VisitormanagementRestServiceImpl implements VisitormanagementRestSe
     args = &#34;welcome to rest api&#34;;
     return args;
   }
-}
-</pre>
+}</pre>
 
 
 
@@ -236,6 +347,20 @@ public abstract class BaseWebSecurityConfig extends WebSecurityConfigurerAdapter
 
 }
 </pre>
+
+
+
+Please change the folder to &#39;httprestserver&#39;.
+
+`cd httprestserver`{{execute T1}}
+ 
+Use the following devon command to build the Java project.
+
+`devon mvn clean install -Dmaven.test.skip=true`{{execute T1}}
+
+The maven command 'clean' will clear the target directory beforehand. 
+
+We do not need to execute the test cases, so we can skip them by using the option '-Dmaven.test.skip=true'.
 
 
 
