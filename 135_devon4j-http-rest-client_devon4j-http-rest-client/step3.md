@@ -13,9 +13,9 @@ Now you can use devonfw to setup a Java project for you by executing the followi
 
 
 
-Please change the folder to &#39;httprestclient&#39;.
+Please change the folder to &#39;httprestserver/server/httprestclient&#39;.
 
-`cd httprestclient`{{execute T1}}
+`cd httprestserver/server/httprestclient`{{execute T1}}
  
 Use the following devon command to build the Java project.
 

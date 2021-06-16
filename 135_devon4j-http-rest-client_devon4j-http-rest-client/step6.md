@@ -2,9 +2,9 @@
 An application needs to be configurable in order to allow internal setup but also to allow externalized configuration of a deployed package (e.g. integration into runtime environment). 
 
 
-Switch to the editor and open the file 'devonfw/workspaces/main/httprestclient/core/src/main/resources/config/application.properties'.
+Switch to the editor and open the file 'devonfw/workspaces/main/httprestserver/server/httprestclient/core/src/main/resources/config/application.properties'.
 
-`devonfw/workspaces/main/httprestclient/core/src/main/resources/config/application.properties`{{open}}
+`devonfw/workspaces/main/httprestserver/server/httprestclient/core/src/main/resources/config/application.properties`{{open}}
 
 
 
@@ -14,7 +14,7 @@ Replace the content of the file with the following code.
 
 Click on 'Copy to Editor' to change it automatically.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestclient/core/src/main/resources/config/application.properties" data-target="replace" data-marker="">
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/server/httprestclient/core/src/main/resources/config/application.properties" data-target="replace" data-marker="">
 # This is the spring boot configuration file for development. It will not be included into the application.
 # In order to set specific configurations in a regular installed environment create an according file
 # config/application.properties in the server. If you are deploying the application to a servlet container as untouched

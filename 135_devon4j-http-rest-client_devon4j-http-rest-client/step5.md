@@ -12,13 +12,13 @@ The '-p' parameter ensures, that the whole directory structure is created.
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/httprestclient/api/src/main/java/com/sample/application/httprestclient/general/service/api/rest`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/server/httprestclient/api/src/main/java/com/sample/application/httprestclient/general/service/api/rest`{{execute T1}}
 
 Switch to the editor and click 'Copy to Editor'. 
 
 'Devon4jRestClient.java' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestclient/api/src/main/java/com/sample/application/httprestclient/general/service/api/rest/Devon4jRestClient.java">
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/server/httprestclient/api/src/main/java/com/sample/application/httprestclient/general/service/api/rest/Devon4jRestClient.java">
 package com.sample.application.httprestclient;
 
 import javax.ws.rs.Consumes;
@@ -43,13 +43,13 @@ public interface Devon4jRestClient {
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/httprestclient/core/src/main/java/com/sample/application/httprestclient/general/service/impl/rest`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/server/httprestclient/core/src/main/java/com/sample/application/httprestclient/general/service/impl/rest`{{execute T1}}
 
 Switch to the editor and click 'Copy to Editor'. 
 
 'Devon4jRestClientImpl.java' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestclient/core/src/main/java/com/sample/application/httprestclient/general/service/impl/rest/Devon4jRestClientImpl.java">
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/server/httprestclient/core/src/main/java/com/sample/application/httprestclient/general/service/impl/rest/Devon4jRestClientImpl.java">
 package com.sample.application.httprestclient;
 
 import javax.inject.Inject;

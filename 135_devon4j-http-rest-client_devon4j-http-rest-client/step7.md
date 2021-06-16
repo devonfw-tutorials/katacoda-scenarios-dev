@@ -1,4 +1,3 @@
-This might take some time for application to start.
 
 
 
