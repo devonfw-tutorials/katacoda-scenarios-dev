@@ -15,25 +15,11 @@ Now you can use devonfw to setup a Java project for you by executing the followi
 
 
 
-Please change the folder to &#39;httprestserver&#39;.
-
-`cd httprestserver`{{execute T1}}
- 
-Use the following devon command to build the Java project.
-
-`devon mvn clean install`{{execute T1}}
-
-The maven command 'clean' will clear the target directory beforehand. 
-
-
-
-
-
-Create the new folder 'core/src/main/java/com/example/application/httprestserver/general/service/api/rest'.
+Create the new folder 'httprestserver/core/src/main/java/com/example/application/httprestserver/general/service/api/rest'.
 
 The '-p' parameter ensures, that the whole directory structure is created.
 
-`mkdir -p core/src/main/java/com/example/application/httprestserver/general/service/api/rest`{{execute T1}}
+`mkdir -p httprestserver/core/src/main/java/com/example/application/httprestserver/general/service/api/rest`{{execute T1}}
 
 
 
@@ -231,11 +217,25 @@ public abstract class BaseWebSecurityConfig extends WebSecurityConfigurerAdapter
 
 
 
+Please change the folder to &#39;httprestserver&#39;.
 
-Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/httprestserver/server/devonfw/workspaces/main/httprestserver/server&#39; in terminal 2 automatically. The first click will open a new terminal and the second one will change the directory. Alternatively you can click on the &#39;+&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
+`cd httprestserver`{{execute T1}}
+ 
+Use the following devon command to build the Java project.
+
+`devon mvn clean install`{{execute T1}}
+
+The maven command 'clean' will clear the target directory beforehand. 
 
 
-`cd devonfw/workspaces/main/httprestserver/server/devonfw/workspaces/main/httprestserver/server`{{execute T2}}
+
+
+
+
+Now you have to open another terminal. Click on the cd command twice and you will change to &#39;devonfw/workspaces/main/devonfw/workspaces/main/httprestserver/server&#39; in terminal 2 automatically. The first click will open a new terminal and the second one will change the directory. Alternatively you can click on the &#39;+&#39;, choose the option &#39;Open New Terminal&#39; and run the cd command afterwards. 
+
+
+`cd devonfw/workspaces/main/devonfw/workspaces/main/httprestserver/server`{{execute T2}}
 
 Start the server in terminal 2 by running the 'maven' command 'mvn spring-boot:run'.
 

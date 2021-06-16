@@ -11,18 +11,4 @@ Now you can use devonfw to setup a Java project for you by executing the followi
 
 `devon java create com.sample.application.httprestclient`{{execute T1}}
 
-
-
-Please change the folder to &#39;httprestserver/server/httprestclient&#39;.
-
-`cd httprestserver/server/httprestclient`{{execute T1}}
- 
-Use the following devon command to build the Java project.
-
-`devon mvn clean install`{{execute T1}}
-
-The maven command 'clean' will clear the target directory beforehand. 
-
-
-
 Then, You need to add required dependency to your application. 

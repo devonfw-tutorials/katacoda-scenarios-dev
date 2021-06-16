@@ -1,3 +1,18 @@
+This might take some time for application to start.
+
+
+Please change the folder to &#39;httprestclient&#39;.
+
+`cd httprestclient`{{execute T1}}
+ 
+Use the following devon command to build the Java project.
+
+`devon mvn clean install`{{execute T1}}
+
+The maven command 'clean' will clear the target directory beforehand. 
+
+
+
 
 
 
