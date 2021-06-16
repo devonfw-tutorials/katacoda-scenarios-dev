@@ -7,11 +7,11 @@ Please change the folder to &#39;httprestclient&#39;.
  
 Use the following devon command to build the Java project.
 
-`devon mvn clean install`{{execute T1}}
+`devon mvn clean install -Dmaven.test.skip=true`{{execute T1}}
 
 The maven command 'clean' will clear the target directory beforehand. 
 
-
+We do not need to execute the test cases, so we can skip them by using the option '-Dmaven.test.skip=true'.
 
 
 
