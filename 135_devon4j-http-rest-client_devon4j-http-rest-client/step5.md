@@ -19,7 +19,7 @@ Switch to the editor and click 'Copy to Editor'.
 'Devon4jRestClient.java' will be created automatically inside the newly created folder.
 
 <pre class="file" data-filename="devonfw/workspaces/main/httprestclient/api/src/main/java/com/sample/application/httprestclient/general/service/api/rest/Devon4jRestClient.java">
-package com.sample.application.httprestclient;
+package com.sample.application.httprestclient.general.service.api.rest;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -50,12 +50,12 @@ Switch to the editor and click 'Copy to Editor'.
 'Devon4jRestClientImpl.java' will be created automatically inside the newly created folder.
 
 <pre class="file" data-filename="devonfw/workspaces/main/httprestclient/core/src/main/java/com/sample/application/httprestclient/general/service/impl/rest/Devon4jRestClientImpl.java">
-package com.sample.application.httprestclient;
+package com.sample.application.httprestclient.general.service.impl.rest;
 
 import javax.inject.Inject;
 import javax.inject.Named;
-
-import com.example.application.httprestserver.visitormanagement.service.api.rest.VisitormanagementRestService;
+import com.sample.application.httprestclient.general.service.api.rest.Devon4jRestClient;
+import com.example.application.httprestserver.general.service.api.rest.VisitormanagementRestService;
 import com.devonfw.module.service.common.api.client.ServiceClientFactory;
 
 @Named(&#34;RestClientService&#34;)

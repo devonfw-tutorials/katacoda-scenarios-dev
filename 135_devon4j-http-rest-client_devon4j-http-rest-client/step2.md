@@ -32,7 +32,7 @@ Switch to the editor and click 'Copy to Editor'.
 'VisitormanagementRestService.java' will be created automatically inside the newly created folder.
 
 <pre class="file" data-filename="devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/general/service/api/rest/VisitormanagementRestService.java">
-package com.example.application.httprestserver.visitormanagement.service.api.rest;
+package com.example.application.httprestserver.general.service.api.rest;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -64,12 +64,12 @@ Switch to the editor and click 'Copy to Editor'.
 'VisitormanagementRestServiceImpl.java' will be created automatically inside the newly created folder.
 
 <pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/general/service/impl/rest/VisitormanagementRestServiceImpl.java">
-package com.example.application.httprestserver.visitormanagement.service.impl.rest;
+package com.example.application.httprestserver.general.service.impl.rest;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.example.application.httprestserver.visitormanagement.service.api.rest.VisitormanagementRestService;
+import com.example.application.httprestserver.general.service.api.rest.VisitormanagementRestService;
 
 @Named(&#34;VisitormanagementRestService&#34;)
 public class VisitormanagementRestServiceImpl implements VisitormanagementRestService {
@@ -97,7 +97,7 @@ Replace the content of the file with the following code.
 Click on 'Copy to Editor' to change it automatically.
 
 <pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/general/service/impl/config/BaseWebSecurityConfig.java" data-target="replace" data-marker="">
-package com.devonfw.httprestapi.restapi.general.service.impl.config;
+package com.example.application.httprestserver.general.service.impl.config;
 
 import javax.inject.Inject;
 import javax.servlet.Filter;
