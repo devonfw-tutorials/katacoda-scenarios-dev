@@ -15,24 +15,16 @@ Now you can use devonfw to setup a Java project for you by executing the followi
 
 
 
-Create the new folder 'httprestserver/core/src/main/java/com/example/application/httprestserver/general/service/api/rest'.
-
-The '-p' parameter ensures, that the whole directory structure is created.
-
-`mkdir -p httprestserver/core/src/main/java/com/example/application/httprestserver/general/service/api/rest`{{execute T1}}
-
-
-
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/general/service/api/rest`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest`{{execute T1}}
 
 Switch to the editor and click 'Copy to Editor'. 
 
 'VisitormanagementRestService.java' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/general/service/api/rest/VisitormanagementRestService.java">
-package com.example.application.httprestserver.general.service.api.rest;
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java">
+package com.example.application.httprestserver.visitormanagement.service.api.rest;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -41,7 +33,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 
-@Path(&#34;/visitormanagement/v1&#34;)
+@Path(&#34;/visitormanagement&#34;)
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface VisitormanagementRestService {
@@ -57,19 +49,19 @@ public interface VisitormanagementRestService {
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/general/service/impl/rest`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest`{{execute T1}}
 
 Switch to the editor and click 'Copy to Editor'. 
 
 'VisitormanagementRestServiceImpl.java' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/general/service/impl/rest/VisitormanagementRestServiceImpl.java">
-package com.example.application.httprestserver.general.service.impl.rest;
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java">
+package com.example.application.httprestserver.visitormanagement.service.impl.rest;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.example.application.httprestserver.general.service.api.rest.VisitormanagementRestService;
+import com.example.application.httprestserver.visitormanagement.service.api.rest.VisitormanagementRestService;
 
 @Named(&#34;VisitormanagementRestService&#34;)
 public class VisitormanagementRestServiceImpl implements VisitormanagementRestService {
