@@ -23,7 +23,7 @@ Click on 'Copy to Editor' to change it automatically.
 # the config folder inside the WEB-INF/classes folder of the webapplication.
 
 server.port=8081
-server.servlet.context-path=/client
+server.servlet.context-path=/httprestclient
 # Datasource for accessing the database
 # See https://github.com/devonfw/devon4j/blob/develop/documentation/guide-configuration.asciidoc#security-configuration
 #jasypt.encryptor.password=none

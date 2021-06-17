@@ -3,12 +3,6 @@ As explained in REST document, With JAX-RS it is important to make sure that eac
 Let&#39;s create devon4j server.
 
 
-## Install CobiGen
-
-`devon cobigen`{{execute T1}}
-
-
-
 ## Setting up your Java project
 
 Please change the folder to &#39;devonfw/workspaces/main&#39;.
@@ -23,139 +17,68 @@ Now you can use devonfw to setup a Java project for you by executing the followi
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest`{{execute T1}}
 
 Switch to the editor and click 'Copy to Editor'. 
 
-'V0005__Create_Visitor.sql' will be created automatically inside the newly created folder.
+'VisitormanagementRestService.java' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0/V0005__Create_Visitor.sql">
-create table Visitor(
-  id BIGINT NOT NULL AUTO_INCREMENT,
-  modificationCounter INTEGER NOT NULL,
-  username VARCHAR(255),
-  password VARCHAR(255),
-  CONSTRAINT PK_Visitor PRIMARY KEY(id)
-);
-</pre>
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java">
+package com.example.application.httprestserver.visitormanagement.service.api.rest;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
+@Path(&#34;/visitormanagement&#34;)
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
+public interface VisitormanagementRestService {
 
-`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'V0006__Master_data.sql' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/resources/db/migration/1.0/V0006__Master_data.sql">
-INSERT INTO Visitor (id, modificationCounter, username, password) VALUES (0, 1, &#39;mike@mail.com&#39;, &#39;mike@123&#39;);
-INSERT INTO Visitor (id, modificationCounter, username, password) VALUES (1, 1, &#39;tanya@mail.com&#39;, &#39;tanya@123&#39;);
-</pre>
-
-
-
-Create the new folder 'httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api'.
-
-The '-p' parameter ensures, that the whole directory structure is created.
-
-`mkdir -p httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api`{{execute T1}}
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'VisitorEntity.java' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api/VisitorEntity.java">
-package com.example.application.httprestserver.visitormanagement.dataaccess.api;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-import com.example.application.httprestserver.general.dataaccess.api.ApplicationPersistenceEntity;
-import com.example.application.httprestserver.visitormanagement.common.api.Visitor;
-
-@Entity
-@Table(name = &#34;Visitor&#34;)
-public class VisitorEntity extends ApplicationPersistenceEntity implements Visitor {
-
-  private String username;
-
-  private String password;
-
-  private static final long serialVersionUID = 1L;
-
-  /**
-   * @return username
-   */
-  public String getUsername() {
-
-    return this.username;
-  }
-
-  /**
-   * @param username new value of {@link #getusername}.
-   */
-  public void setUsername(String username) {
-
-    this.username = username;
-  }
-
-  /**
-   * @return password
-   */
-  public String getPassword() {
-
-    return this.password;
-  }
-
-  /**
-   * @param password new value of {@link #getpassword}.
-   */
-  public void setPassword(String password) {
-
-    this.password = password;
-  }
+  @GET
+  @Path(&#34;/clientrequest&#34;)
+  public String returnResponseToClient();
 
 }
-
 </pre>
 
 
 
-Run the CobiGen command 'adapt-templates' to generate a new templates folder and save its location in a configuration file.
+If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`devon cobigen adapt-templates`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest`{{execute T1}}
+
+Switch to the editor and click 'Copy to Editor'. 
+
+'VisitormanagementRestServiceImpl.java' will be created automatically inside the newly created folder.
+
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java">
+package com.example.application.httprestserver.visitormanagement.service.impl.rest;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import com.example.application.httprestserver.visitormanagement.service.api.rest.VisitormanagementRestService;
+
+@Named(&#34;VisitormanagementRestService&#34;)
+public class VisitormanagementRestServiceImpl implements VisitormanagementRestService {
+
+  @Override
+  public String returnResponseToClient() {
+   String args = &#34;welcome to rest api&#34;;
+   return args;
+  }
+}
+</pre>
 
 
 
+Switch to the editor and open the file 'devonfw/workspaces/main/httprestserver/core/src/main/resources/config/application.properties'.
 
-## CobiGen Java
-
-
-Open the following Java file in the IDE.
-`devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/dataaccess/api/VisitorEntity.java`{{open}}
-
-You can use the plugin simply via the context menu. Make a right click on the Java file (in the explorer on the left or in the editor itself). The context menu will open and you can start the CobiGen Plugin by clicking on 'CobiGen'.
-
-A terminal will open on the bottom of the IDE and CobiGen CLI will start.
-
-You can choose the templates CobiGen should use by entering the numbers in the terminal of the IDE.
-
-`1,3,5,6,8`
-
-
-
-
-Switch to the editor and open the file 'devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java'.
-
-`devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java`{{open}}
+`devonfw/workspaces/main/httprestserver/core/src/main/resources/config/application.properties`{{open}}
 
 
 
@@ -165,24 +88,34 @@ Replace the content of the file with the following code.
 
 Click on 'Copy to Editor' to change it automatically.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java" data-target="replace" data-marker="">
-</pre>
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/resources/config/application.properties" data-target="replace" data-marker="">
+# This is the spring boot configuration file for development. It will not be included into the application.
+# In order to set specific configurations in a regular installed environment create an according file
+# config/application.properties in the server. If you are deploying the application to a servlet container as untouched
+# WAR file you can locate this config folder in ${symbol_dollar}{CATALINA_BASE}/lib. If you want to deploy multiple applications to
+# the same container (not recommended by default) you need to ensure the WARs are extracted in webapps folder and locate
+# the config folder inside the WEB-INF/classes folder of the webapplication.
 
+server.port=8080
+server.servlet.context-path=/httprestserver
 
+# Datasource for accessing the database
+# See https://github.com/devonfw/devon4j/blob/develop/documentation/guide-configuration.asciidoc#security-configuration
+#jasypt.encryptor.password=none
+#spring.datasource.password=ENC(7CnHiadYc0Wh2FnWADNjJg==)
+spring.datasource.password=
+spring.datasource.url=jdbc:h2:./.restapi;
 
-Switch to the editor and open the file 'devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java'.
+# print SQL to console for debugging (e.g. detect N+1 issues)
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
 
-`devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java`{{open}}
+# Enable JSON pretty printing
+spring.jackson.serialization.INDENT_OUTPUT=true
 
-
-
-
-Replace the content of the file with the following code.
-
-
-Click on 'Copy to Editor' to change it automatically.
-
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/visitormanagement/service/impl/rest/VisitormanagementRestServiceImpl.java" data-target="replace" data-marker="">
+# Flyway for Database Setup and Migrations
+spring.flyway.enabled=true
+spring.flyway.clean-on-validation-error=true
 </pre>
 
 
