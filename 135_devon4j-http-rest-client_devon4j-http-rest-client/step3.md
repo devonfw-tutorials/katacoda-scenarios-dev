@@ -1,4 +1,4 @@
-You have successfully built the REST-server. Now, you have to start the build and start thr server.
+You have successfully built the REST-server. Now, you have to start the build and then, start the server as mentioned below.
 
 
 Please change the folder to &#39;httprestserver&#39;.
@@ -32,7 +32,7 @@ This will take some time.
 
 
 
-Once, Java server starts running. 
+Once, Java server starts running. To test REST-server follow below steps:
 * Click on &#34;+&#34; next to terminal tab
 * Select &#34;select port to view host&#34;
 * Enter the port number &#34;8080&#34; 

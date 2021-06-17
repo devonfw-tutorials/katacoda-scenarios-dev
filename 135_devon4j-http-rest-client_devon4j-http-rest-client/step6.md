@@ -1,5 +1,5 @@
-You already have a Java interface VisitormanagementRestService to invoke.
-You have to create rest client i.e. Devon4jRestClient.java and it&#39;s implementation class.
+You have to create a Java interface VisitormanagementRestService to invoke.
+You have to create rest client i.e. Devon4jRestClient.java and it&#39;s implementation class i.e. Devon4jRestClientImpl.java.
 
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
@@ -111,14 +111,12 @@ public class Devon4jRestClientImpl implements Devon4jRestClient {
 
 
 
-* As you can see synchronous invocation of a service is very simple and type-safe. The actual call of showResponse will technically call the remote service(i.e. VisitormanagementRestService) over the wire ( via HTTP) including marshaling the arguments (converting String to JSON) and un-marshalling the result (e.g. converting the received JSON to String).
-* Here in Devon4jRestClientImpl, there is a method &#34;callSynchronous&#34; which will call the VisitormanagementRestService and return the object of VisitormanagementRestService to visitormanagementRestService.
-
-* With visitormanagementRestService, it is calling the method &#34;returnResponseToClient(String)&#34; of server.
-
-* The response from server will be stored in &#34;resultFromAPICall&#34; as the return type of result is String.
+As you can see synchronous invocation of a service is very simple and type-safe. The actual call of showResponse will technically call the remote service(i.e. VisitormanagementRestService) over the wire ( via HTTP) including marshaling the arguments (converting String to JSON) and un-marshalling the result (e.g. converting the received JSON to String).
+Here in Devon4jRestClientImpl, there is a method &#34;callSynchronous&#34; which will call the VisitormanagementRestService and return the object of VisitormanagementRestService to visitormanagementRestService.
+With visitormanagementRestService, it is calling the method &#34;returnResponseToClient(String)&#34; of server.
+The response from server will be stored in &#34;resultFromAPICall&#34; as the return type of result is String.
 
 
 
 
-After getting response, you can handle the response in your implementation. Here you can see that response is getting handled in &#34;showResponse&#34; method.
+After getting response, you can handle the response further in your implementation. Here, you can see that response is getting handled in &#34;showResponse&#34; method.

@@ -1,3 +1,4 @@
+You have successfully built the devon4j rest client.
 Let&#39;s build and start the service client application.
 This might take some time for application to start.
 
@@ -16,6 +17,14 @@ We do not need to execute the test cases, so we can skip them by using the optio
 
 
 
+Once, application builds successfully. Open new terminal by clicking &#34;+&#34;.
+Now, execute below command to navigate into client server.
+cd devonfw/workspaces/main/httprestclient/server {{execute T1}} 
+
+
+
+
+
 
 
 The server is already running. Rerun the command to stop and relaunch it automatically.
@@ -25,8 +34,7 @@ The server is already running. Rerun the command to stop and relaunch it automat
 
 This will take some time.
 
-You have successfully built the devon4j rest client.
-To test Synchronous method, follow bellow steps.
+To test Synchronous method, follow below steps.
 * Click on &#34;+&#34; next to terminal tab
 * Select &#34;select port to view host&#34;
 * Enter the port number &#34;8081&#34; 

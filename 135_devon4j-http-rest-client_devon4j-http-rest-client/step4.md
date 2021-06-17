@@ -1,4 +1,4 @@
-* To create devon4j service Client. First You need to create a sample devon4j project and build the project.
+To create devon4j service Client. First, You need to create a sample devon4j project.
 
 
 

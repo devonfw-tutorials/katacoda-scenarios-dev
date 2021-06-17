@@ -1,6 +1,6 @@
 As explained in REST document, With JAX-RS it is important to make sure that each service method is annotated with the proper HTTP annotation(@GET, @POST, etc).
-Let&#39;s create devon4j server.
-* In below example you have to create VisitormanagementRestService and it&#39;s implementation i.e. VisitormanagementRestServiceImpl using JAX-RS standard.
+Let&#39;s create devon4j server. You have to modify BaseWebSecurityConfig file to allow application for basic authentication.
+In below example you will create VisitormanagementRestService and it&#39;s implementation i.e. VisitormanagementRestServiceImpl using JAX-RS standard.
 
 
 ## Setting up your Java project
@@ -304,5 +304,4 @@ spring.flyway.enabled=true
 spring.flyway.clean-on-validation-error=true
 </pre>
 
-* Here , you can see &#34;VisitormanagementRestServiceImpl.java&#34; is annotated with @Named to make it a spring-bean.
-* To get return response to client &#34;returnResponseToClient()&#34; can be accessed via HTTP GET under the URL path &#34;/visitormanagement/v1/clientrequest&#34;. It will return its result (String) as JSON (see @Produces in VisitormanagementRestService).
+Here , you can see &#34;VisitormanagementRestServiceImpl.java&#34; is annotated with @Named to make it a spring-bean. To get return response to client &#34;returnResponseToClient()&#34; can be accessed via HTTP GET under the URL path &#34;/visitormanagement/v1/clientrequest&#34;. It will return its result (String) as JSON (see @Produces in VisitormanagementRestService).

@@ -1,6 +1,6 @@
 ## Configuration 
 An application needs to be configurable in order to allow internal setup but also to allow externalized configuration of a deployed package (e.g. integration into runtime environment). 
-Now, You need to change the content of existing file and replace it with below content.
+Now, You need to modifiy the content of existing properties files and add configuration for Server.
 
 
 Switch to the editor and open the file 'devonfw/workspaces/main/httprestclient/core/src/main/resources/application.properties'.
@@ -133,4 +133,4 @@ service.client.app.httprestserver.user.password=admin
 
 
 
-Now, after configuration you have to start the client application.
+Now, after configuration you have to build and then start the client application.
