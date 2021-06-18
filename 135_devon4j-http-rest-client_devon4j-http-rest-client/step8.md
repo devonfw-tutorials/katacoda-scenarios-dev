@@ -17,9 +17,12 @@ We do not need to execute the test cases, so we can skip them by using the optio
 
 
 
-Once, application builds successfully. Open new terminal by clicking &#34;+&#34;.
-Now, execute below command to navigate into client server.
-`cd devonfw/workspaces/main/httprestclient/server`{{execute T1}}
+* Once, application builds successfully. Open new terminal by clicking &#34;+&#34;.
+* Now, copy below command and paste it in terminal and press enter to navigate into client server.
+&#34;cd devonfw/workspaces/main/httprestclient/server&#34; 
+* Now, Copy below command and paste it in terminal and press enter to start the application.
+&#34;devon mvn spring-boot:run&#34;
+
 
 
 

@@ -57,8 +57,12 @@ import javax.ws.rs.core.MediaType;
 public interface Devon4jRestClient {
 
   @GET
-  @Path(&#34;/response/&#34;)
+  @Path(&#34;/response&#34;)
   public String showResponse();
+
+  @GET
+  @Path(&#34;/clientService&#34;)
+  public String returnServiceDetail();
 }
 
 </pre>
@@ -105,6 +109,12 @@ public class Devon4jRestClientImpl implements Devon4jRestClient {
     return resultFromAPICall;
   }
 
+  @Override
+  public String returnServiceDetail() {
+
+    String result = &#34;This is devon4j rest service client&#34;;
+    return result;
+  }
 }
 
 </pre>
