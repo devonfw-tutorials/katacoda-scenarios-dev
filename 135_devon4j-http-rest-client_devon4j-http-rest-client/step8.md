@@ -19,7 +19,7 @@ We do not need to execute the test cases, so we can skip them by using the optio
 
 Once, application builds successfully. Open new terminal by clicking &#34;+&#34;.
 Now, execute below command to navigate into client server.
-cd devonfw/workspaces/main/httprestclient/server {{execute T1}} 
+`cd devonfw/workspaces/main/httprestclient/server`{{execute T1}}
 
 
 

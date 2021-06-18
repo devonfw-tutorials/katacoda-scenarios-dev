@@ -1,4 +1,4 @@
-## Configuration 
+# Configuration 
 An application needs to be configurable in order to allow internal setup but also to allow externalized configuration of a deployed package (e.g. integration into runtime environment). 
 Now, You need to modifiy the content of existing properties files and add configuration for Server.
 
