@@ -10,7 +10,9 @@ This should create the `migrations` folder and the respective `__pycache__` fold
 
 In order to upload the table declared in our &#34;Model.py&#34; we need a migration script. This command requires an attached message whenever it runs, for instance:
 
-`flask db migrate -m &#39;first migration&#39;`
+```
+flask db migrate -m &#34;first migration&#34;
+```
 
 In this case, the terminal should print in return `Detected added table user`, among others.
 
