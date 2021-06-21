@@ -1,54 +1,30 @@
-The only thing we are missing now is a .yml input in v3.0.0 format declaring a component and its properties. Take `user.yaml` as an example.
+Inspect `user.yml`. Note that the entity is declared under the `components: schemas:` section. In this case, we declared four typed attributes. 
+
+Properties called `id` will be ignored, since the code generator automatically sets `id` as the table&#39;s primary key.
+
+Besides the type, the project considers the following constraints:
+
+* *maxLength*
+* *uniqueItems*: sets `unique=True` for the column declaration.
+* *required*: sets `nullable=False` for the column declaration.
+
+====
 
 
 
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
+Now open the command line at your project folder. You can check whether the CobiGen CLI is properly set up by running `devon cobigen`.
 
-`mkdir -p /root/main/cobigen-python-example`{{execute T1}}
+Let&#39;s generate the code now. Type:
 
-Switch to the editor and click 'Copy to Editor'. 
+`cobigen generate user.yml`
 
-'user.yml' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="main/cobigen-python-example/user.yml">
-openapi: 3.0.0
-servers:
-  - url: &#39;https://localhost:8081/server/services/rest&#39;
-    description: Just some data
-info:
-  title: devonfw Example
-  description: Example of a API definition
-  version: 1.0.0
-  x-rootpackage: com.devonfw.poc.jwtsample
-paths:
-  /:
-    post:
-      responses:
-        &#39;200&#39;:
-          description: Any
-components:
-    schemas:
-        User:
-          x-component: usermanagement
-          description: Entity definiton of User
-          type: object
-          properties:
-            name:
-              type: string
-              maxLength: 100
-              uniqueItems: true            
-            age:
-              type: integer
-            phone :
-              type: string
-              maxLength: 100
-              uniqueItems: true
-            email:
-              type: string
-              maxLength: 100
-              uniqueItems: true              
-          required:
-            - name
-            - email
-</pre>
+If the command is not working properly you might want to run `cobigen update` or `cobigen adapt-templates` first. 
+
+Otherwise the command line should return a full list of the available increments. 
+
+Assuming that the `context.xml` and `templates.xml` files were properly set up, this should include the &#34;CRUD Python Flask&#34; option. Select this option. The command line should print out &#34;Successful generation&#34; shortly.
+
+
+
 

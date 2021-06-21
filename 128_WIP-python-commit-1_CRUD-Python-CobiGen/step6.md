@@ -1,26 +1,36 @@
-### Database
 
 
+Run the application on your local host:
 
+`flask run`
 
+We can test our application using Postman. Paste the main path on a new Postman tab, for instance:
 
-Let&#39;s initialize the database now by running:
+http://127.0.0.1:5000/user
 
-`flask db init`
+Our table is empty for the moment, so we will select the POST method to add new data. We can submit JSON requests by clicking on the &#34;Body&#34; tab and selecting &#34;raw&#34;. For example, submit:
 
-This should create the &#34;migrations&#34; folder and the respective &#34;__pycache__&#34; folders in your directory. 
+--
+{
+    &#34;name&#34;:&#34;elena&#34;,
+    &#34;age&#34;:26,
+    &#34;phone&#34;:&#34;555123&#34;,
+    &#34;email&#34;: &#34;elena@devon.com&#34;
+}
+--
+Our new user should now be accessible from the database under &#34;id&#34; number 1. Check this by submiting a GET request to the following path:
 
-In order to upload the table declared in our &#34;Model.py&#34; we need a migration script. This command requires an attached message whenever it runs, for instance:
+http://127.0.0.1:5000/user/1
 
-`flask db migrate -m &#39;first migration&#39;`
+We will now edit our entry by sending a PUT request. Submit the following body to http://127.0.0.1:5000/user/1:
 
-In this case, the terminal should print in return &#34;Detected added table &#39;user&#39;&#34;, among others.
+--
+{ &#34;phone&#34;:&#34;777123&#34; }
+--
+Now send another GET request and check whether the column was properly updated.
 
-We can now upload the migration script by running:
+Lastly, you can check the DELETE method by sending this request to http://127.0.0.1:5000/user/1. Then send a GET request to http://127.0.0.1:5000/user. The application returns &#34;User list is empty&#34;.
 
-`flask db upgrade`
-
-This way our database is all set up. 
 
 
 

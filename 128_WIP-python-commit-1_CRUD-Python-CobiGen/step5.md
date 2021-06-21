@@ -1,29 +1,24 @@
-### Virtual environment
 
 
 
 
-Now open the folder containing the .yml input on Visual Studio, for instance. Observe that Cobigen has generated and named the five files mentioned above. We are now set to run the application.
+Let&#39;s initialize the database now by running:
 
-The safest way to install the required packages is to do so locally, by setting up a virtual environment. 
-Open the integrated terminal. You might need to install the &#34;virtualenv&#34; package if you haven&#39;t already:
+`flask db init`
 
-`python -m pip install virtualenv`
+This should create the `migrations` folder and the respective `__pycache__` folders in your directory. 
 
-Create your virtual environment. Name it &#34;venv&#34;, for instance:
-python -m virtualenv venv`
+In order to upload the table declared in our &#34;Model.py&#34; we need a migration script. This command requires an attached message whenever it runs, for instance:
 
-You should now see a new &#34;venv&#34; folder in your package explorer. On Windows, activate the virtual environment by running:
+`flask db migrate -m &#39;first migration&#39;`
 
-`.\venv\Scripts\activate`
+In this case, the terminal should print in return `Detected added table &#34;user&#34;`, among others.
 
-To check whether the virtual environment activated properly make sure the terminal is printing &#34;(venv)&#34;, followed by your directory.
+We can now upload the migration script by running:
 
-We can now install the required packages safely. Run:
+`flask db upgrade`
 
-`pip install -r requirements.txt`
-
-If any packages failed to install automatically, try to do so manually. 
+This way our database is all set up. 
 
 
 
