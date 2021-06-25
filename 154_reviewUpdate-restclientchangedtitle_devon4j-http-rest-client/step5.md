@@ -7,6 +7,7 @@ Since in this tutorial you will build client on Synchronous call so, you have to
   &lt;groupId&gt;com.devonfw.java.starters&lt;/groupId&gt;
   &lt;artifactId&gt;devon4j-starter-cxf-client-rest&lt;/artifactId&gt;
 &lt;/dependency&gt;
+
 ----
 Note: With devonfw we have already added the required dependency in pom.xml
 
