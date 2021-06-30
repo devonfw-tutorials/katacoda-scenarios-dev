@@ -15,6 +15,6 @@ The maven command 'clean' will clear the target directory beforehand.
 
 We do not need to execute the test cases, so we can skip them by using the option '-Dmaven.test.skip=true'.
 
-* Once, application builds successfully. Open new terminal by clicking &#34;+&#34;.
-* Now, Execute below command to navigate into client server.
-`cd devonfw/workspaces/main/httprestclient/server` {{execute T1}}
+* Once, application builds successfully. Open new terminal by clicking &#34;+&#34; and wait for it to load.
+* Now, Copy and execute below command to navigate into client server.
+`cd devonfw/workspaces/main/httprestclient/server`
