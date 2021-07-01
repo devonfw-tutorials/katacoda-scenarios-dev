@@ -1,3 +1,23 @@
+This should create the `migrations` folder and the respective `__pycache__` folders in your directory. 
+
+In order to upload the table declared in our &#34;Model.py&#34; we need a migration script. This command requires an attached message whenever it runs.
+
+In this case, the terminal should print in return `Detected added table user`, among others.
+
+The migration script can be then uploaded. This way our database is all set up. 
+
+
+
+
+
+
+
+
+Run flask run with this bash-command.
+`flask run `{{execute T1}} 
+
+
+
 
 
 Run the application on your local host:
@@ -14,7 +34,7 @@ Our table is empty for the moment, so we will select the POST method to add new 
   { &#34;name&#34; : &#34;elena&#34;, &#34;age&#34; : 26, &#34;phone&#34; : &#34;555123&#34;, &#34;email&#34; : &#34;elena@devon.com&#34; }
 
 
-Our new user should now be accessible from the database under &#34;id&#34; number 1. Check this by submiting a GET request to the following path:
+Our new user should now be accessible from the database under &#34;id&#34; number 1. Check this by submitting a GET request to the following path:
 
 http://127.0.0.1:5000/user/1
 

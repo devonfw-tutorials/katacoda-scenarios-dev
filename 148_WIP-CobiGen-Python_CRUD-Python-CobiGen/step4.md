@@ -1,27 +1,33 @@
+If the command is not working properly you might want to run `cobigen update` or `cobigen adapt-templates` first. 
 
+Otherwise the command line should return a full list of the available increments. 
+
+Assuming that the `context.xml` and `templates.xml` files were properly set up, this should include the &#34;CRUD Python Flask&#34; option. Select this option. The command line should print out &#34;Successful generation&#34; shortly.
 
 
 Now open the folder containing the .yml input on Visual Studio, for instance. Observe that Cobigen has generated and named the five files mentioned above. We are now set to run the application.
 
 The safest way to install the required packages is to do so locally, by setting up a virtual environment. 
-Open the integrated terminal. You might need to install the &#34;virtualenv&#34; package if you haven&#39;t already:
 
-`python -m pip install virtualenv`
+executeCommand(&#34;.\venv\Scripts\activate&#34;,&#34;.\venv\Scripts\activate&#34;)
 
-Create your virtual environment. Name it &#34;venv&#34;, for instance:
-python -m virtualenv venv`
 
-You should now see a new &#34;venv&#34; folder in your package explorer. On Windows, activate the virtual environment by running:
 
-`.\venv\Scripts\activate`
 
-To check whether the virtual environment activated properly make sure the terminal is printing &#34;(venv)&#34;, followed by your directory.
 
-We can now install the required packages safely. Run:
 
-`pip install -r requirements.txt`
+Run python -m pip install virtualenv with this bash-command.
+`python -m pip install virtualenv `{{execute T1}} 
 
-If any packages failed to install automatically, try to do so manually. 
+
+
+
+
+
+
+
+Run pip install -r requirements.txt with this bash-command.
+`pip install -r requirements.txt `{{execute T1}} 
 
 
 

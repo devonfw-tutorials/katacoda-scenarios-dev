@@ -7,6 +7,7 @@ Inspect the `context.xml` file. For code generation purposes, this lists a trigg
 We need to edit this file by adding another trigger referring to our new `CRUD-openapi-python` folder. On Visual Studio, for instance, paste at the top of the trigger list the contents from `pythonTrigger.xml`:
 
 
+
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
 `mkdir -p /root/main`{{execute T1}}
