@@ -1,24 +1,42 @@
 
 
-The templates folder is typically found at:
-
-`C:\Users\[yourName]\.cobigen\templates\CobiGen_Templates\src\main\templates`
-
-Open the command line in this location and clone the `CRUD-openapi-python` project using:
-
-`git clone https://github.com/devonfw-forge/cobigen-python-templates.git`
-
-You should now find the `CRUD-openapi-python` folder in your templates directory. Let&amp;#39;s briefly explore its contents:
-
-* `templates.xml`: a file for code generation purposes detailing the increments that will be available for selection from the CobiGen CLI.
-* templates: the folder containing the basic application structure including all the files that will be generated.
-   * `requirements.txt`: a list of all packages required to run the application and the database. Encoded in UTF-8.
-   * `config.py`: declares the `Config` class which represents the Flask-SQLAlchemy database configuration.
-   * app:
-      * `__init__.py.ftl`: FreeMarker template declaring the application and the database.
-      * `${variables.entityName#cap_first}Model.py.ftl`: FreeMarker template declarating the table with the entity&#39;s attributes as columns
-      * `${variables.entityName#cap_first}Routes.py.ftl`: FreeMarker template declaring the service returning JSON objects for the GET, POST, PUT and DELETE methods.
+## devonfw setup
 
 
 
+Create the directory where the devonfw IDE will be installed.
+
+`mkdir devonfw`{{execute T1}}
+
+`cd devonfw`{{execute T1}}
+
+
+To install devonfw execute the following commands. More information about setting up your IDE on https://devonfw.com/website/pages/docs/devonfw-ide-introduction.asciidoc.html#setup.asciidoc
+
+First you have do download and extract the installation files.
+
+`wget -c https://bit.ly/2BCkFa9 -O - | tar -xz`{{execute T1}}
+
+Now start the installation process. The tools that are installed within the IDE can be configured in a settings repository. A repository that you can use has already been created by the setup script. It is located in the '/root/devonfw-settings' folder.
+
+`bash setup /root/devonfw-settings/settings.git`{{execute T1}}
+
+The installation process may take a while.
+
+Accept the licence agreements.
+`yes`{{execute T1}}
+
+
+The installer will ask you if you want to enter secrets for your maven repository. You can simply skip this by pressing 'Enter'.
+ 
+
+The devonfw IDE is now installed. To use the new 'devon' commands you have the open a new terminal or use the following command:
+
+`. ~/.bashrc`{{execute T1}}
+
+
+
+## Install CobiGen
+
+`devon cobigen`{{execute T1}}
 
