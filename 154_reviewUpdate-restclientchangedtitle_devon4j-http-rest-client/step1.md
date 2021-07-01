@@ -1,3 +1,4 @@
+== REST
 REST (REpresentational State Transfer) is an inter-operable protocol for services that is more lightweight than SOAP.
 
 For implementing REST services we use the JAX-RS standard. As an implementation we recommend CXF. For JSON bindings we use Jackson while XML binding works out-of-the-box with JAXB. To implement a service you write an interface with JAX-RS annotations for the API and a regular implementation class annotated with @Named to make it a spring-bean.
@@ -12,7 +13,6 @@ For more details on REST visit https://devonfw.com/website/pages/docs/devon4j.as
 For more details on devon4j Service Client https://devonfw.com/website/pages/docs/devon4j.asciidoc_guides.html#guide-service-client.asciidoc
 
 ## Create the devon4j REST SERVER
-
 As explained in REST document, With JAX-RS it is important to make sure that each service method is annotated with the proper HTTP annotation(@GET, @POST, etc).
 Let&#39;s create devon4j server. You have to modify BaseWebSecurityConfig file to allow application for basic authentication.
 In below example you will create VisitormanagementRestService and it&#39;s implementation i.e. VisitormanagementRestServiceImpl using JAX-RS standard.

@@ -23,4 +23,4 @@ Since in this tutorial you will build client on Synchronous call so, you have to
 &lt;/dependency&gt;
 
 ----
-Note: With devonfw we have already added the required dependency in pom.xml
+Note: With devon4j we have already added the required dependency in pom.xml
