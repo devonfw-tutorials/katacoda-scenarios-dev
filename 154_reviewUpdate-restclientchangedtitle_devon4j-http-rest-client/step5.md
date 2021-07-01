@@ -52,47 +52,13 @@ spring.batch.job.enabled=false
 spring.flyway.locations=classpath:db/migration
 
 # rest client setup
-service.client.default.url=http://localhost:8080/httprestserver/services/rest
-service.client.app.httprestserver.url=http://localhost:8080/httprestserver/services/rest
+service.client.default.url=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/httprestserver/services/rest
+service.client.app.httprestserver.url=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/httprestserver/services/rest
 service.client.default.timeout.connection=120
 service.client.default.timeout.response=3600
 service.client.app.httprestserver.auth=basic
 service.client.app.httprestserver.user.login=admin
 service.client.app.httprestserver.user.password=admin</pre>
-
-
-
-Switch to the editor and open the file 'devonfw/workspaces/main/httprestclient/core/src/main/resources/application.properties'.
-
-`devonfw/workspaces/main/httprestclient/core/src/main/resources/application.properties`{{open}}
-
-
-
-
-Replace the content in the file as it is shown in the following segment of code.
-
-
-Click on 'Copy to Editor' to change it automatically.
-
-<pre class="file" data-filename="devonfw/workspaces/main/httprestclient/core/src/main/resources/application.properties" data-target="insert" data-marker="service.client.default.url=http://localhost:8080/httprestserver/services/rest">
-service.client.default.url=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/httprestserver/services/rest</pre>
-
-
-
-Switch to the editor and open the file 'devonfw/workspaces/main/httprestclient/core/src/main/resources/application.properties'.
-
-`devonfw/workspaces/main/httprestclient/core/src/main/resources/application.properties`{{open}}
-
-
-
-
-Replace the content in the file as it is shown in the following segment of code.
-
-
-Click on 'Copy to Editor' to change it automatically.
-
-<pre class="file" data-filename="devonfw/workspaces/main/httprestclient/core/src/main/resources/application.properties" data-target="insert" data-marker="service.client.default.url=http://localhost:8080/httprestserver/services/rest">
-service.client.app.httprestserver.url=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/httprestserver/services/rest</pre>
 
 
 
@@ -138,48 +104,14 @@ spring.flyway.enabled=true
 spring.flyway.clean-on-validation-error=true
 
 # rest client setup
-service.client.default.url=http://localhost:8080/httprestserver/services/rest
-service.client.app.httprestserver.url=http://localhost:8080/httprestserver/services/rest
+service.client.default.url=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/httprestserver/services/rest
+service.client.app.httprestserver.url=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/httprestserver/services/rest
 service.client.default.timeout.connection=120
 service.client.default.timeout.response=3600
 service.client.app.httprestserver.auth=basic
 service.client.app.httprestserver.user.login=admin
 service.client.app.httprestserver.user.password=admin
 </pre>
-
-
-
-Switch to the editor and open the file 'devonfw/workspaces/main/httprestclient/core/src/main/resources/config/application.properties'.
-
-`devonfw/workspaces/main/httprestclient/core/src/main/resources/config/application.properties`{{open}}
-
-
-
-
-Replace the content in the file as it is shown in the following segment of code.
-
-
-Click on 'Copy to Editor' to change it automatically.
-
-<pre class="file" data-filename="devonfw/workspaces/main/httprestclient/core/src/main/resources/config/application.properties" data-target="insert" data-marker="service.client.default.url=http://localhost:8080/httprestserver/services/rest">
-service.client.default.url=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/httprestserver/services/rest</pre>
-
-
-
-Switch to the editor and open the file 'devonfw/workspaces/main/httprestclient/core/src/main/resources/config/application.properties'.
-
-`devonfw/workspaces/main/httprestclient/core/src/main/resources/config/application.properties`{{open}}
-
-
-
-
-Replace the content in the file as it is shown in the following segment of code.
-
-
-Click on 'Copy to Editor' to change it automatically.
-
-<pre class="file" data-filename="devonfw/workspaces/main/httprestclient/core/src/main/resources/config/application.properties" data-target="insert" data-marker="service.client.default.url=http://localhost:8080/httprestserver/services/rest">
-service.client.app.httprestserver.url=https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/httprestserver/services/rest</pre>
 
 ## Service Discovery
 *service.client.default.url* :- It is used to set the default url of server and it is added for service discovery.
