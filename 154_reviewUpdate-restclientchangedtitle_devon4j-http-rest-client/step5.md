@@ -114,17 +114,17 @@ service.client.app.httprestserver.user.password=admin
 </pre>
 
 ## Service Discovery
-*service.client.default.url* :- It is used to set the default url of server and it is added for service discovery.
-*service.client.app.httprestserver.url* :- This property provide base url of REST in your application. It follows format such as &#34;service.client.app.«application».url&#34;. Here, «application» refers to the technical name of the application providing the service.
+**service.client.default.url** :- It is used to set the default url of server and it is added for service discovery.
+**service.client.app.httprestserver.url** :- This property provide base url of REST in your application. It follows format such as &#34;service.client.app.«application».url&#34;. Here, «application» refers to the technical name of the application providing the service.
 
 ## Timeouts
-*service.client.default.timeout.connection* :- It is used to set the default timeout for particular connection.
-*service.client.default.timeout.response* :- It is used to set the default timeout for particular response.
+**service.client.default.timeout.connection** :- It is used to set the default timeout for particular connection.
+**service.client.default.timeout.response** :- It is used to set the default timeout for particular response.
 
 ## Headers
-*service.client.app.httprestserver.auth* :- It is used for customization of Service Header. Here it is used for basic authentication.
+**service.client.app.httprestserver.auth** :- It is used for customization of Service Header. Here it is used for basic authentication.
 
 ## Authentication
-*service.client.app.httprestserver.user.login* :- It is used to set username of server for authentication
-*service.client.app.httprestserver.user.password* :- It is used to set password.
+**service.client.app.httprestserver.user.login** :- It is used to set username of server for authentication
+**service.client.app.httprestserver.user.password** :- It is used to set password.
 Now, after configuration you have to build and then start the client application.
