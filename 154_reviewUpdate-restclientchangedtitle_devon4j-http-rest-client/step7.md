@@ -1,4 +1,4 @@
-* Now, Execute below command to start the application.
+Now, Execute below command to start the application.
 
 
 
