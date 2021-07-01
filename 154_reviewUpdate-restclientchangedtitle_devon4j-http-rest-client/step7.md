@@ -1,20 +1,26 @@
-Now, Execute below command to start the application.
+To create devon4j service Client. First, You need to create a sample devon4j project.
 
 
 
+## Setting up your Java project
 
+Please change the folder to &#39;..&#39;.
 
-The server is already running. Rerun the command to stop and relaunch it automatically.
- 
+`cd ..`{{execute T1}}
 
-`devon mvn spring-boot:run`{{execute T2 interrupt}}
+Now you can use devonfw to setup a Java project for you by executing the following 'devon' command.
 
-This will take some time.
+`devon java create com.sample.application.httprestclient`{{execute T1}}
 
-To test Synchronous method, follow below steps.
-* Click on &#34;+&#34; next to terminal tab
-* Select &#34;select port to view host&#34;
-* Enter the port number &#34;8081&#34; 
-* In the url, append &#34;/httprestclient/services/rest/devon4jrestclient/response/&#34;
-* Enter username as &#34;admin&#34; and password as &#34;admin&#34;
-* You will be able to see response &#34;Welcome to rest api&#34;
+Then, You need to add required dependency to your application.
+
+Since in this tutorial you will build client on Synchronous call so, you have to add dependency for synchronous consuming REST services via Apache CXF (Java8+)
+
+----
+&lt;dependency&gt;
+  &lt;groupId&gt;com.devonfw.java.starters&lt;/groupId&gt;
+  &lt;artifactId&gt;devon4j-starter-cxf-client-rest&lt;/artifactId&gt;
+&lt;/dependency&gt;
+
+----
+Note: With devon4j we have already added the required dependency in pom.xml
