@@ -2,13 +2,13 @@
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/cobigen-python-example`{{execute T1}}
+`mkdir -p /root/.cobigen/templates/CobiGen_Templates/src/main/templates/cobigen-python-example`{{execute T1}}
 
 Switch to the editor and click 'Copy to Editor'. 
 
 'user.yml' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/cobigen-python-example/user.yml">
+<pre class="file" data-filename=".cobigen/templates/CobiGen_Templates/src/main/templates/cobigen-python-example/user.yml">
 openapi: 3.0.0
 servers:
   - url: &#39;https://localhost:8081/server/services/rest&#39;
