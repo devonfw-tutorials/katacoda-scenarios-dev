@@ -1,15 +1,5 @@
 
 
-
-
-
-Run cd /root/devonfw/workspaces/main with this bash-command.
-`cd /root/devonfw/workspaces/main `{{execute T1}} 
-
-
-
-
-
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
 `mkdir -p /root/devonfw/workspaces/main/cobigen-python-example`{{execute T1}}

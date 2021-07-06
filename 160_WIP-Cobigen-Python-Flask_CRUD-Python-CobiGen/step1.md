@@ -7,19 +7,9 @@ Run the CobiGen command 'adapt-templates' to generate a new templates folder and
 
 
 
+Please change the folder to &#39;../.cobigen/templates/CobiGen_Templates/src/main/templates&#39;.
 
-
-
-Run cd /root/.cobigen/templates/CobiGen_Templates/src/main/templates with this bash-command.
-`cd /root/.cobigen/templates/CobiGen_Templates/src/main/templates `{{execute T1}} 
-
-
-
-
-
-Please change the folder to &#39;workspaces/main&#39;.
-
-`cd workspaces/main`{{execute T1}}
+`cd ../.cobigen/templates/CobiGen_Templates/src/main/templates`{{execute T1}}
 
 
 

@@ -1,14 +1,18 @@
 
 
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
+Switch to the editor and open the file '.cobigen/templates/CobiGen_Templates/src/main/templates/context.xml'.
 
-`mkdir -p /root/devonfw/workspaces/main`{{execute T1}}
+`.cobigen/templates/CobiGen_Templates/src/main/templates/context.xml`{{open}}
 
-Switch to the editor and click 'Copy to Editor'. 
 
-'context.xml' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/context.xml">
+
+Replace the content of the file with the following code.
+
+
+Click on 'Copy to Editor' to change it automatically.
+
+<pre class="file" data-filename=".cobigen/templates/CobiGen_Templates/src/main/templates/context.xml" data-target="replace" data-marker="">
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;
 &lt;contextConfiguration xmlns=&#34;http://capgemini.com/devonfw/cobigen/ContextConfiguration&#34; version=&#34;2.1&#34;&gt;
 
@@ -177,6 +181,5 @@ Switch to the editor and click 'Copy to Editor'.
     &lt;/matcher&gt;
   &lt;/trigger&gt;
 &lt;/contextConfiguration&gt;
-
 </pre>
 
