@@ -1,7 +1,16 @@
-Note: devonfw IDE is already installed.
 Now, we will create a sample devon4j application with the name *sampleapp* and build it.
-Now, Copy below command and press enter to create devon4j project with older version i.e. &#34;2020.08.001&#34;:
-`devon mvn archetype:generate -DarchetypeGroupId=com.devonfw.java.templates -DarchetypeArtifactId=devon4j-template-server -DinteractiveMode=false -Dpackage=olderversion -DartifactId=olderversionapp -DgroupId=olderversion -Dversion=1.0.0-SNAPSHOT -DarchetypeVersion=2020.08.001`
+
+
+## Setting up your Java project
+
+Please change the folder to &#39;devonfw/workspaces/main&#39;.
+
+`cd devonfw/workspaces/main`{{execute T1}}
+
+Now you can use devonfw to setup a Java project for you by executing the following 'devon' command.
+
+`devon java create com.example.application.sampleapp`{{execute T1}}
+
 
 
 Switch to the editor and open the file 'devonfw/workspaces/main/sampleapp/core/pom.xml'.
