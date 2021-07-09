@@ -11,9 +11,9 @@ Run cd sampleapp with this bash-command.
 
 
 
-Switch to the editor and open the file 'devonfw/workspaces/main/sampleapp/core/pom.xml'.
+Switch to the editor and open the file 'devonfw/workspaces/main/core/pom.xml'.
 
-`devonfw/workspaces/main/sampleapp/core/pom.xml`{{open}}
+`devonfw/workspaces/main/core/pom.xml`{{open}}
 
 
 
@@ -23,7 +23,7 @@ Replace the content of the file with the following code.
 
 Click on 'Copy to Editor' to change it automatically.
 
-<pre class="file" data-filename="devonfw/workspaces/main/sampleapp/core/pom.xml" data-target="replace" data-marker="">
+<pre class="file" data-filename="devonfw/workspaces/main/core/pom.xml" data-target="replace" data-marker="">
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;
 &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34;
   xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&#34;&gt;
