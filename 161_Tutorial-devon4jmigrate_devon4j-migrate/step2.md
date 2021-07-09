@@ -1,6 +1,16 @@
 Now, you have to change properties files inside core to remove special character which might give error while migration.
 
 
+
+
+
+Run cd sampleapp with this bash-command.
+`cd sampleapp `{{execute T1}} 
+
+
+
+
+
 Switch to the editor and open the file 'devonfw/workspaces/main/sampleapp/core/pom.xml'.
 
 `devonfw/workspaces/main/sampleapp/core/pom.xml`{{open}}
