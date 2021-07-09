@@ -1,12 +1,9 @@
-Now, we will create a sample devon4j application with the name *migrateSampleApp* and build it.
-Now, Copy below command.
-`devon mvn archetype:generate -DarchetypeGroupId=com.devonfw.java.templates -DarchetypeArtifactId=devon4j-template-server -DinteractiveMode=false -Dpackage=com.devonfw.example -DartifactId=migrateSampleApp -DgroupId=com.devonfw.example -Dversion=1.0.0-SNAPSHOT -DarchetypeVersion=2020.08.001`
-Paste it in the terminal and press enter to execute it.
+Now, you have to change properties files inside core to remove special character which might give the error while migration.
 
 
-Switch to the editor and open the file 'devonfw/workspaces/main/sampleapp/core/pom.xml'.
+Switch to the editor and open the file 'migrateSampleApp/migrateSampleApp/core/pom.xml'.
 
-`devonfw/workspaces/main/sampleapp/core/pom.xml`{{open}}
+`migrateSampleApp/migrateSampleApp/core/pom.xml`{{open}}
 
 
 
@@ -16,25 +13,25 @@ Replace the content of the file with the following code.
 
 Click on 'Copy to Editor' to change it automatically.
 
-<pre class="file" data-filename="devonfw/workspaces/main/sampleapp/core/pom.xml" data-target="replace" data-marker="">
+<pre class="file" data-filename="migrateSampleApp/migrateSampleApp/core/pom.xml" data-target="replace" data-marker="">
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;
 &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34;
   xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&#34;&gt;
   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
   &lt;parent&gt;
-    &lt;groupId&gt;sampleapp&lt;/groupId&gt;
-    &lt;artifactId&gt;sampleapp&lt;/artifactId&gt;
+    &lt;groupId&gt;migrateSampleApp&lt;/groupId&gt;
+    &lt;artifactId&gt;migrateSampleApp&lt;/artifactId&gt;
     &lt;version&gt;${revision}&lt;/version&gt;
   &lt;/parent&gt;
-  &lt;artifactId&gt;sampleapp-core&lt;/artifactId&gt;
+  &lt;artifactId&gt;migrateSampleApp-core&lt;/artifactId&gt;
   &lt;packaging&gt;jar&lt;/packaging&gt;
   &lt;name&gt;${project.artifactId}&lt;/name&gt;
-  &lt;description&gt;Core of the server for the sampleapp application - a simple example based on devon4j.&lt;/description&gt;
+  &lt;description&gt;Core of the server for the migrateSampleApp application - a simple example based on devon4j.&lt;/description&gt;
 
   &lt;dependencies&gt;
     &lt;dependency&gt;
       &lt;groupId&gt;${project.groupId}&lt;/groupId&gt;
-      &lt;artifactId&gt;sampleapp-api&lt;/artifactId&gt;
+      &lt;artifactId&gt;migrateSampleApp-api&lt;/artifactId&gt;
       &lt;version&gt;${project.version}&lt;/version&gt;
     &lt;/dependency&gt;
 
@@ -237,4 +234,3 @@ Click on 'Copy to Editor' to change it automatically.
 
 &lt;/project&gt;</pre>
 
-devon4j sample project created successfully!!
