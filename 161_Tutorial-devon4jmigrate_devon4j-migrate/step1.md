@@ -1,16 +1,7 @@
-Now, we will create a sample devon4j application with the name *sampleapp* and build it.
-
-
-## Setting up your Java project
-
-Please change the folder to &#39;devonfw/workspaces/main&#39;.
-
-`cd devonfw/workspaces/main`{{execute T1}}
-
-Now you can use devonfw to setup a Java project for you by executing the following 'devon' command.
-
-`devon java create com.example.application.sampleapp`{{execute T1}}
-
+Now, we will create a sample devon4j application with the name *migrateSampleApp* and build it.
+Now, Copy below command.
+`devon mvn archetype:generate -DarchetypeGroupId=com.devonfw.java.templates -DarchetypeArtifactId=devon4j-template-server -DinteractiveMode=false -Dpackage=com.devonfw.example -DartifactId=migrateSampleApp -DgroupId=com.devonfw.example -Dversion=1.0.0-SNAPSHOT -DarchetypeVersion=2020.08.001`
+Paste it in the terminal and press enter to execute it.
 
 
 Switch to the editor and open the file 'devonfw/workspaces/main/sampleapp/core/pom.xml'.
@@ -246,3 +237,4 @@ Click on 'Copy to Editor' to change it automatically.
 
 &lt;/project&gt;</pre>
 
+devon4j sample project created successfully!!

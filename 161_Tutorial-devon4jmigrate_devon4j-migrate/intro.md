@@ -1,7 +1,8 @@
-The java commandlet allows to setup Java. Also it supports devon4j. The arguments (devon java «args») are explained by the below details: 
+This tutorial mainly focuses on migrating an old version of devon4j project to the latest version.
+The devonfw provides various commandlet allowing user to setup Java environment. It supports devon4j. The arguments (devon java «args») are explained by the below details: 
 https://devonfw.com/website/pages/docs/devonfw-ide-usage.asciidoc.html#java.asciidoc
 
-This tutorial mainly focuses on to migrate an old version of devon4j project to the latest version.
+
 ## Prerequisites
 * devonfw IDE
 
