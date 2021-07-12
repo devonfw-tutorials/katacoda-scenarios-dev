@@ -1,17 +1,12 @@
 This tutorial mainly focuses on migrating an old version of devon4j project to the latest version.
 The devonfw provides various commandlet allowing user to setup Java environment. It supports devon4j.
 
-The arguments (devon java «args») are explained by the below details: 
-https://devonfw.com/website/pages/docs/devonfw-ide-usage.asciidoc.html#java.asciidoc
-
-
 ## Prerequisites
 * devonfw IDE
 
 ## Learning goals.
 Here in this tutorial you will learn 
 * How to migrate an older version of devon4j project to the latest version.
-
 
 
 

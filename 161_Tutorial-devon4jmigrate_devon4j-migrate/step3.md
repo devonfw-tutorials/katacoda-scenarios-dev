@@ -1,4 +1,4 @@
-In the below step it will execute &#34;devon java migrate&#34;.
+Execute below command for project migration from  an older version to the latest version.
 
 
 
