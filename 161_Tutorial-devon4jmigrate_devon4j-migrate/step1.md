@@ -1,14 +1,6 @@
+Before creating sample, Copy and execute below command to navigate to main directory.
+`cd devonfw/workspaces/main`
 Now, we will create a sample devon4j application with the name *sampleapp*.
-
-
-
-
-
-Run cd devonfw/workspaces/main with this bash-command.
-`cd devonfw/workspaces/main `{{execute T1}} 
-
-
-
 
 
 
