@@ -1,4 +1,4 @@
-To demonstrate devon4j migrate we would need a sample devon4j project with an older version, which is already created for you. You just need to clone the repository.
+To demonstrate devon4j migrate you would need a sample devon4j project with any older version. Here, we have already created a project with an older version i.e. 2020.08.001 for you. You just need to clone the repository.
 
 To clone repository you should be inside devonfw-ide installed directory. 
 
