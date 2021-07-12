@@ -21,6 +21,8 @@ Update the port number in the application.properties messaging.kafka.common.boot
 ===Conclusion
  This application shows how devon4j-kafka works with the test method saveAndDeleteEmployeeViaKafkaService. This test menthod has 2 checks:
 
-  * sends an employee information to kafka using MessageSender of devon4j-kafka and consuming it with the Listener service classes implemented as part of this application and saves it in Db(using MessageProcessor). Its validated using another service findEmployeeByCriteria.
+  
+* sends an employee information to kafka using MessageSender of devon4j-kafka and consuming it with the Listener service classes implemented as part of this application and saves it in Db(using MessageProcessor). Its validated using another service findEmployeeByCriteria.
 
-  * Send an employeeId information to kakfa using MessageSender of devon4j-kafka and consuming it with the listener service classes implemented as part of this application and deletes the employee corresponding to the employeeId consumed(using MessageProcessor). Its validated using another service findEmployeeByCriteria
+  
+* Send an employeeId information to kakfa using MessageSender of devon4j-kafka and consuming it with the listener service classes implemented as part of this application and deletes the employee corresponding to the employeeId consumed(using MessageProcessor). Its validated using another service findEmployeeByCriteria
