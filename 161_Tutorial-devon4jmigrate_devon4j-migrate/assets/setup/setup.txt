@@ -1,8 +1,11 @@
-2
+3
 
 Clone devonfw IDE settings
 cloneDevonfwIdeSettings.sh
 ##########
 Restore devonfw IDE
 restoreDevonfwIde.sh
+##########
+Restore Workspace
+restoreWorkspace.sh
 ##########
