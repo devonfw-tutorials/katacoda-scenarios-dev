@@ -3,8 +3,8 @@
 
 
 
-Run flask run with this bash-command.
-`flask run `{{execute T1}} 
+Run flask run --host=0.0.0.0 --port=80 with this bash-command.
+`flask run --host=0.0.0.0 --port=80 `{{execute T1}} 
 
 
 
@@ -12,7 +12,7 @@ Run flask run with this bash-command.
 
 We can test our application using Postman. Paste the main path on a new Postman tab, for instance:
 
-http://127.0.0.1:5000/user
+Render port 80: &lt;pre&gt;https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user&lt;/pre&gt;
 
 Our table is empty for the moment, so we will select the POST method to add new data. We can submit JSON requests by clicking on the &#34;Body&#34; tab and selecting &#34;raw&#34;. For example, submit:
 
@@ -21,6 +21,8 @@ Our table is empty for the moment, so we will select the POST method to add new 
 
 
 Our new user should now be accessible from the database under &#34;id&#34; number 1. Check this by submitting a GET request to the following path:
+
+Render port 80: &lt;pre&gt;https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/user/1&lt;/pre&gt;
 
 http://127.0.0.1:5000/user/1
 
