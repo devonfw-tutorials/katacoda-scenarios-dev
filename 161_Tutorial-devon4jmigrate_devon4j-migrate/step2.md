@@ -6,9 +6,17 @@ Execute below command for project migration from an older version to the latest 
 
 
 
-We want to execute the command in a different directory so you have to change your current directory.
-With the next command we also open a new terminal, so you have to execute the command twice 
-`cd devonfw/workspaces/main `{{execute T1}}. 
+
+
+Run cd devonfw/workspaces/main with this bash-command.
+`cd devonfw/workspaces/main `{{execute T1}} 
+
+
+
+
+
+
+
 
 Run devon java migrate with this bash-command.
 `devon java migrate `{{execute T1}} 
