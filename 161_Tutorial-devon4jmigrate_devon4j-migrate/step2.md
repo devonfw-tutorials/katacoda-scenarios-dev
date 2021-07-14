@@ -1,6 +1,6 @@
 To demonstrate devon4j migrate you would need a sample devon4j project with any older version. Here, we have already created a project with an older version i.e. 2020.08.001 for you. 
 
-It is already cloned in workspace using restoreWorkspace.
+It is already cloned in workspace.
 
 Execute below command for project migration from an older version to the latest version.
 
