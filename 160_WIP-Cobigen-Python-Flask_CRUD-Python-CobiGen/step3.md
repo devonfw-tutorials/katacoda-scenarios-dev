@@ -3,8 +3,9 @@
 
 
 
-Run cd /root/devonfw/workspaces/main with this bash-command.
+Run `cd /root/devonfw/workspaces/main` with this command.
 `cd /root/devonfw/workspaces/main `{{execute T1}} 
+
 
 
 

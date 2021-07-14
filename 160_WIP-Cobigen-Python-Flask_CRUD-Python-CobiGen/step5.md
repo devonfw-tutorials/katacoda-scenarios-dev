@@ -1,9 +1,11 @@
 
 
+Please change the folder to &#39;..&#39;.
+
+`cd ..`{{execute T1}}
 
 
-
-Run python3 -m pip install virtualenv with this bash-command.
+Run `python3 -m pip install virtualenv` with this command.
 `python3 -m pip install virtualenv `{{execute T1}} 
 
 
@@ -13,7 +15,8 @@ Run python3 -m pip install virtualenv with this bash-command.
 
 
 
-Run python3 -m virtualenv venv with this bash-command.
+
+Run `python3 -m virtualenv venv` with this command.
 `python3 -m virtualenv venv `{{execute T1}} 
 
 
@@ -21,11 +24,12 @@ Run python3 -m virtualenv venv with this bash-command.
 
 
 
-We want to execute the command in a different directory so you have to change your current directory.
-With the next command we also open a new terminal, so you have to execute the command twice 
-`cd venv/bin `{{execute T1}}. 
+Please change the folder to &#39;venv/bin&#39;.
 
-Run source activate with this bash-command.
+`cd venv/bin`{{execute T1}}
+
+
+Run `source activate` with this command.
 `source activate `{{execute T1}} 
 
 
@@ -33,9 +37,12 @@ Run source activate with this bash-command.
 
 
 
+Please change the folder to &#39;../..&#39;.
+
+`cd ../..`{{execute T1}}
 
 
-Run cd /root/devonfw/workspaces/main/cobigen-python-example with this bash-command.
+Run `cd /root/devonfw/workspaces/main/cobigen-python-example` with this command.
 `cd /root/devonfw/workspaces/main/cobigen-python-example `{{execute T1}} 
 
 
@@ -45,8 +52,10 @@ Run cd /root/devonfw/workspaces/main/cobigen-python-example with this bash-comma
 
 
 
-Run pip install -r requirements.txt with this bash-command.
+
+Run `pip install -r requirements.txt` with this command.
 `pip install -r requirements.txt `{{execute T1}} 
+
 
 
 

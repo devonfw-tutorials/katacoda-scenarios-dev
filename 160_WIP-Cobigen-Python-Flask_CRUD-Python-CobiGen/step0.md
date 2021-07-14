@@ -42,11 +42,14 @@ The devonfw IDE is now installed. To use the new 'devon' commands you have the o
 
 
 
+Please change the folder to &#39;workspaces/main&#39;.
+
+`cd workspaces/main`{{execute T1}}
 
 
-
-Run devon with this bash-command.
+Run `devon` with this command.
 `devon `{{execute T1}} 
+
 
 
 

@@ -3,8 +3,9 @@
 
 
 
-Run flask db init with this bash-command.
+Run `flask db init` with this command.
 `flask db init `{{execute T1}} 
+
 
 
 
@@ -23,8 +24,9 @@ In this case, the terminal should print in return `Detected added table user`, a
 
 
 
-Run flask db upgrade with this bash-command.
+Run `flask db upgrade` with this command.
 `flask db upgrade `{{execute T1}} 
+
 
 
 

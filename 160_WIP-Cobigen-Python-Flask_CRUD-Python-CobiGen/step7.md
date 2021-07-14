@@ -3,8 +3,9 @@
 
 
 
-Run flask run --host=0.0.0.0 --port=80 with this bash-command.
+Run `flask run --host=0.0.0.0 --port=80` with this command.
 `flask run --host=0.0.0.0 --port=80 `{{execute T1}} 
+
 
 
 
