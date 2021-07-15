@@ -14,7 +14,7 @@ Replace the content of the file with the following code.
 Click on 'Copy to Editor' to change it automatically.
 
 <pre class="file" data-filename="devonfw/workspaces/main/httprestserver/core/src/main/java/com/example/application/httprestserver/general/service/impl/config/BaseWebSecurityConfig.java" data-target="replace" data-marker="">
-package com.example.application.general.service.impl.config;
+package com.example.application.httprestserver.general.service.impl.config;
 
 import javax.inject.Inject;
 import javax.servlet.Filter;

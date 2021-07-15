@@ -3,14 +3,14 @@ Now, you will create VisitormanagementRestService to provide functionality using
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/visitormanagement/service/api/rest`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest`{{execute T1}}
 
 Switch to the editor and click 'Copy to Editor'. 
 
 'VisitormanagementRestService.java' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/visitormanagement/service/api/rest/VisitormanagementRestService.java">
-package com.example.application.visitormanagement.service.api.rest;
+<pre class="file" data-filename="devonfw/workspaces/main/httprestserver/api/src/main/java/com/example/application/httprestserver/visitormanagement/service/api/rest/VisitormanagementRestService.java">
+package com.example.application.httprestserver.visitormanagement.service.api.rest;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
