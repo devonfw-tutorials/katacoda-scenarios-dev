@@ -23,7 +23,7 @@ We do not need to execute the test cases, so we can skip them by using the optio
 To test Synchronous method, follow below steps.
 * Click on &#34;+&#34; next to terminal tab
 * Select &#34;select port to view host&#34;
-* Enter the port number &#34;8081&#34; 
+* Enter the port number &#34;8080&#34; 
 * In the url, append &#34;/httprestclient/services/rest/testrest/v1/response/&#34;
 * Enter username as &#34;admin&#34; and password as &#34;admin&#34;
 * You will be able to see response &#34;Welcome to REST API world&#34;

@@ -65,7 +65,7 @@ public abstract class BaseWebSecurityConfig extends WebSecurityConfigurerAdapter
     &#34;/services/rest/logout&#34; };
 
     // disable CSRF protection by default, use csrf starter to override.
-    http = http.csrf().disable();
+    http = http.httpBasic().and().csrf().disable();
     // load starters as pluggins.
     http = this.webSecurityConfigurer.configure(http);
 

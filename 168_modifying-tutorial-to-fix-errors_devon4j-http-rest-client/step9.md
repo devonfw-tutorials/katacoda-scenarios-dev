@@ -3,14 +3,14 @@ Now, you will create service for client i.e. TestRestService.java to provide fun
 
 If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
 
-`mkdir -p /root/devonfw/workspaces/main/httprestclient/api/src/main/java/com/example/application/general/service/api/rest`{{execute T1}}
+`mkdir -p /root/devonfw/workspaces/main/httprestclient/api/src/main/java/com/example/application/httprestclient/general/service/api/rest`{{execute T1}}
 
 Switch to the editor and click 'Copy to Editor'. 
 
 'TestRestService.java' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/httprestclient/api/src/main/java/com/example/application/general/service/api/rest/TestRestService.java">
-package com.example.application.general.service.api.rest;
+<pre class="file" data-filename="devonfw/workspaces/main/httprestclient/api/src/main/java/com/example/application/httprestclient/general/service/api/rest/TestRestService.java">
+package com.example.application.httprestclient.general.service.api.rest;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
