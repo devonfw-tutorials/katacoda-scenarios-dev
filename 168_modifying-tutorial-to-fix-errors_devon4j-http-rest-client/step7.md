@@ -24,4 +24,6 @@ Add below dependency in core folder pom.xml
 &lt;/dependency&gt;
 
 ----
+--
 changeFile(&#34;httprestclient/core/pom.xml&#34;, { &#34;file&#34;: &#34;files/dependency.txt&#34;, &#34;placeholder&#34;: &#34;&lt;!-- Starter for asynchronous consuming REST services via Jaca HTTP Client (Java11+) --&gt;&#34; })
+--
