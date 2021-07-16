@@ -15,7 +15,8 @@ Now you can use devonfw to setup a Java project for you by executing the followi
 Then, You need to add required dependency to your application.
 
 Since in this tutorial you will build client on Synchronous call so, you have to add dependency for synchronous consuming REST services via Apache CXF (Java8+)
-Go to folder devonfw-&gt;workspace-&gt;main -&gt;httrestclient/core/pom.xml and add below dependency in pom.xml
+Add below dependency in core folder pom.xml
+
 ----
 &lt;dependency&gt;
   &lt;groupId&gt;com.devonfw.java.starters&lt;/groupId&gt;
@@ -23,4 +24,4 @@ Go to folder devonfw-&gt;workspace-&gt;main -&gt;httrestclient/core/pom.xml and 
 &lt;/dependency&gt;
 
 ----
-
+changeFile(&#34;httprestclient/core/pom.xml&#34;, { &#34;file&#34;: &#34;files/dependency.txt&#34;, &#34;placeholder&#34;: &#34;&lt;!-- Starter for asynchronous consuming REST services via Jaca HTTP Client (Java11+) --&gt;&#34; })
