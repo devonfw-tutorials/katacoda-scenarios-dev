@@ -16,6 +16,6 @@ Please change the folder to &#39;devonfw/workspaces/main&#39;.
 
 
 Use the 'ng create' command to create a new Angular project with the name level-app.
-`devon ng create level-app --style=scss --routing=true --strict=false`{{execute T1}}
+`devon ng create level-app --style=scss --routing=true --strict=false --skip-git=true`{{execute T1}}
 
 
