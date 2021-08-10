@@ -1,5 +1,4 @@
-git config --global user.email "demo@example.com"
-git config --global user.name "Katacoda"#!/bin/sh
+#!/bin/sh
 
 echo "Start setup script..."
 #wait until status file is loaded in katacoda

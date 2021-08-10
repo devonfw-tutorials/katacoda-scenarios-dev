@@ -1,13 +1,18 @@
+In the file app.component.html delete all the content and put in the `router-outlet` tag.
 
 
-To explain how lazy loading is implemented using angular, a basic sample app is going to be developed. This app will consist in a window named &#34;level 1&#34; that contains two buttons that redirects to other windows in a &#34;second level&#34;. It is a simple example, but useful to understand the relation between angular modules and lazy loading.
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/app.component.html'.
+
+`devonfw/workspaces/main/level-app/src/app/app.component.html`{{open}}
 
 
-This graphic shows that modules acts as gates to access components &#34;inside&#34; them.
-
-Because the objective of this guide is related mainly with logic, the html structure and scss styles are less relevant.
-
-![levels-app.png](./assets/levels-app.png)
 
 
+Replace the content of the file with the following code.
+
+
+Click on 'Copy to Editor' to change it automatically.
+
+<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/app.component.html" data-target="replace" data-marker="">
+&lt;router-outlet&gt;&lt;/router-outlet&gt;</pre>
 

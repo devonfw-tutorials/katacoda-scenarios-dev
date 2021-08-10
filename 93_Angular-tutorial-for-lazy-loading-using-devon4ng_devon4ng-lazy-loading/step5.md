@@ -1,366 +1,124 @@
-Next you will create the feature modules and components for the app. You will follow the structure shown in the image in the first step. You can use the CLI command `devon ng generate module` along with the `--routing` flag to generate the modules, and `devon ng generate component` command to generate the components.
+If you run the project at this point you can see in the terminal that just the main file is built.
+image::images/compile-eager.png
+
+Go to port 4200 and check the Network tab in the Developer Tools. We can see a document named &#34;first&#34; is loaded. If you click on [Go to right module] a second level module opens, but there is no &#39;second-right&#39; document.
+image::images/second-lvl-right-eager.png
+
+Now we will modify the app to lazily load the modules. Modifying an angular application to load its modules lazily is easy, you have to change the routing configuration of the desired module (for example `FirstModule`). Instead of loading a component, you dynamically import it in a `loadChildren` attribute because modules acts as gates to access components &#34;inside&#34; them. Updating this app to load lazily has four consecuences: no component attribute, no import of `FirstComponent`, `FirstModule` import has to be removed from the imports array at `app.module.ts`, and change of context.
+
+Also, in `first-routing.module.ts` you can change the path for the `ContentComponent`s from `first/second-left` and `first/second-right` to simply `second-left` and `second-right` respectively,  because it aquires the context set by AppRoutingModule.
 
 
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/app-routing.module.ts'.
 
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first`{{execute T1}}
+`devonfw/workspaces/main/level-app/src/app/app-routing.module.ts`{{open}}
 
-Switch to the editor and click 'Copy to Editor'. 
 
-'first-routing.module.ts' will be created automatically inside the newly created folder.
 
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts">
+
+Replace the content of the file with the following code.
+
+
+Click on 'Copy to Editor' to change it automatically.
+
+<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/app-routing.module.ts" data-target="replace" data-marker="">
 import { NgModule } from &#39;@angular/core&#39;;
 import { Routes, RouterModule } from &#39;@angular/router&#39;;
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: &#39;first&#39;,
+    loadChildren: () =&gt; import(&#39;./first/first.module&#39;).then(m =&gt; m.FirstModule),
+  },
+  {
+    path: &#39;&#39;,
+    redirectTo: &#39;first&#39;,
+    pathMatch: &#39;full&#39;,
+  },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</pre>
+
+
+
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/app.module.ts'.
+
+`devonfw/workspaces/main/level-app/src/app/app.module.ts`{{open}}
+
+
+
+
+Replace the content of the file with the following code.
+
+
+Click on 'Copy to Editor' to change it automatically.
+
+<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/app.module.ts" data-target="replace" data-marker="">
+import { BrowserModule } from &#39;@angular/platform-browser&#39;;
+import { NgModule } from &#39;@angular/core&#39;;
+
+import { AppRoutingModule } from &#39;./app-routing.module&#39;;
+import { AppComponent } from &#39;./app.component&#39;;
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+</pre>
+
+
+
+Switch to the editor and open the file 'devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts'.
+
+`devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts`{{open}}
+
+
+
+
+Replace the content of the file with the following code.
+
+
+Click on 'Copy to Editor' to change it automatically.
+
+<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/first-routing.module.ts" data-target="replace" data-marker="">
+import { NgModule } from &#39;@angular/core&#39;;
+import { Routes, RouterModule } from &#39;@angular/router&#39;;
+import { ContentComponent as ContentLeft} from &#39;./second-left/content/content.component&#39;;
+import { ContentComponent as ContentRight} from &#39;./second-right/content/content.component&#39;;
+import { FirstComponent } from &#39;./first/first.component&#39;;
+
+const routes: Routes = [
+  {
+    path: &#39;&#39;,
+    component: FirstComponent
+  },
+  {
+    path: &#39;second-left&#39;,
+    component: ContentLeft
+  },
+  {
+    path: &#39;second-right&#39;,
+    component: ContentRight
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class FirstRoutingModule { }
-
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'first.module.ts' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/first.module.ts">
-import { NgModule } from &#39;@angular/core&#39;;
-import { CommonModule } from &#39;@angular/common&#39;;
-
-import { FirstRoutingModule } from &#39;./first-routing.module&#39;;
-
-
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    FirstRoutingModule
-  ]
-})
-export class FirstModule { }
-
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-left`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'second-left-routing.module.ts' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/second-left/second-left-routing.module.ts">
-import { NgModule } from &#39;@angular/core&#39;;
-import { Routes, RouterModule } from &#39;@angular/router&#39;;
-
-const routes: Routes = [];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class SecondLeftRoutingModule { }
-
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-left`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'second-left.module.ts' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/second-left/second-left.module.ts">
-import { NgModule } from &#39;@angular/core&#39;;
-import { CommonModule } from &#39;@angular/common&#39;;
-
-import { SecondLeftRoutingModule } from &#39;./second-left-routing.module&#39;;
-import { ContentComponent } from &#39;./content/content.component&#39;;
-
-
-@NgModule({
-  declarations: [ContentComponent],
-  imports: [
-    CommonModule,
-    SecondLeftRoutingModule
-  ]
-})
-export class SecondLeftModule { }
-
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-right`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'second-right-routing.module.ts' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/second-right/second-right-routing.module.ts">
-import { NgModule } from &#39;@angular/core&#39;;
-import { Routes, RouterModule } from &#39;@angular/router&#39;;
-
-const routes: Routes = [];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class SecondRightRoutingModule { }
-
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-right`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'second-right.module.ts' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/second-right/second-right.module.ts">
-import { NgModule } from &#39;@angular/core&#39;;
-import { CommonModule } from &#39;@angular/common&#39;;
-
-import { SecondRightRoutingModule } from &#39;./second-right-routing.module&#39;;
-import { ContentComponent } from &#39;./content/content.component&#39;;
-
-
-@NgModule({
-  declarations: [ContentComponent],
-  imports: [
-    CommonModule,
-    SecondRightRoutingModule
-  ]
-})
-export class SecondRightModule { }
-
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/first`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'first.component.html' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/first/first.component.html">
-&lt;div style=&#34;text-align:center&#34;&gt;
-  &lt;h1&gt;
-    Welcome to 1st level module
-  &lt;/h1&gt;
-  &lt;img
-    width=&#34;300&#34;
-    alt=&#34;Angular Logo&#34;
-    src=&#34;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==&#34;
-  /&gt;
-&lt;/div&gt;
-&lt;div style=&#34;display: flex; align-items: center; justify-content: center&#34;&gt;
-  &lt;button routerLink=&#34;./second-left&#34;&gt;Go to left module&lt;/button&gt;
-  &lt;button routerLink=&#34;./second-right&#34;&gt;Go to right module&lt;/button&gt;
-&lt;/div&gt;
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/first`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'first.component.scss' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/first/first.component.scss">
- 
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/first`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'first.component.ts' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/first/first.component.ts">
-import { Component, OnInit } from &#39;@angular/core&#39;;
-
-@Component({
-  selector: &#39;app-first&#39;,
-  templateUrl: &#39;./first.component.html&#39;,
-  styleUrls: [&#39;./first.component.scss&#39;]
-})
-export class FirstComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
-
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-left/content`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'content.component.html' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/second-left/content/content.component.html">
-&lt;div style=&#34;text-align:center&#34;&gt;
-  &lt;h1&gt;
-    Welcome to 2nd level module (left)
-  &lt;/h1&gt;
-  &lt;img
-    width=&#34;300&#34;
-    alt=&#34;Angular Logo&#34;
-    src=&#34;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==&#34;
-  /&gt;
-&lt;/div&gt;
-&lt;div style=&#34;display: flex; align-items: center; justify-content: center&#34;&gt;
-  &lt;button routerLink=&#34;/first&#34;&gt;Go back&lt;/button&gt;
-&lt;/div&gt;
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-left/content`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'content.component.scss' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/second-left/content/content.component.scss">
- 
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-left/content`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'content.component.ts' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/second-left/content/content.component.ts">
-import { Component, OnInit } from &#39;@angular/core&#39;;
-
-@Component({
-  selector: &#39;app-content&#39;,
-  templateUrl: &#39;./content.component.html&#39;,
-  styleUrls: [&#39;./content.component.scss&#39;]
-})
-export class ContentComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
-
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-right/content`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'content.component.html' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/second-right/content/content.component.html">
-&lt;div style=&#34;text-align: center&#34;&gt;
-  &lt;h1&gt;Welcome to 2nd level module (right)&lt;/h1&gt;
-  &lt;img
-    width=&#34;300&#34;
-    alt=&#34;Angular Logo&#34;
-    src=&#34;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==&#34;
-  /&gt;
-&lt;/div&gt;
-&lt;div style=&#34;display: flex; align-items: center; justify-content: center&#34;&gt;
-  &lt;button routerLink=&#34;/first&#34;&gt;Go back&lt;/button&gt;
-&lt;/div&gt;
-
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-right/content`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'content.component.scss' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/second-right/content/content.component.scss">
- 
-</pre>
-
-
-
-If the parent directories aren't already in the project, 'mkdir -p' will create them for you. 
-
-`mkdir -p /root/devonfw/workspaces/main/level-app/src/app/first/second-right/content`{{execute T1}}
-
-Switch to the editor and click 'Copy to Editor'. 
-
-'content.component.ts' will be created automatically inside the newly created folder.
-
-<pre class="file" data-filename="devonfw/workspaces/main/level-app/src/app/first/second-right/content/content.component.ts">
-import { Component, OnInit } from &#39;@angular/core&#39;;
-
-@Component({
-  selector: &#39;app-content&#39;,
-  templateUrl: &#39;./content.component.html&#39;,
-  styleUrls: [&#39;./content.component.scss&#39;]
-})
-export class ContentComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
-
 </pre>
 
