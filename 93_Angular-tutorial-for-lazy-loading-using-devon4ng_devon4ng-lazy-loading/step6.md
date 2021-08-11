@@ -1,6 +1,6 @@
 Now when you check the terminal running the app, you could see the lazy loaded modules getting generated along with the main bundle. Also, if you check the Network tab in the developer tools, you could see the (lazy) modules getting loaded when needed. Since, `FirstModule` is the first path we visit, it is getting loaded at first only.
-image::images/compile-first-lazy.png
-image::images/first-lvl-lazy.png
+![compile-first-lazy](./assets/compile-first-lazy.png)
+![first-lvl-lazy](./assets/first-lvl-lazy.png)
 
 Now, lets make the SecondLeftModule load lazily. For this, you need to change `component` to `loadChildren` and refer `SecondLeftModule` in the file `first-routing.module.ts`. Next, you need to remove `SecondLeftModule` from the `imports` array of `first.module.ts`. After that you need to route the `ContentComponent` within the `second-left-routing.module.ts`.
 
@@ -114,7 +114,7 @@ export class SecondLeftRoutingModule { }
 </pre>
 
 If you now check the terminal, you could also see `second-left-second-left-module` along with the `first-first-module` and the `main` bundle getting generated. 
-image::images/second-lvl-lazy.png
+![second-lvl-lazy](./assets/second-lvl-lazy.png)
 
 Also, in the Network tab of the developer tools, you could see the `second-left-second-left-module.js` is only loading when we click on the [Go to left module] button
-image::images/second-lvl-left-lazy.png
+![second-lvl-left-lazy](./assets/second-lvl-left-lazy.png)

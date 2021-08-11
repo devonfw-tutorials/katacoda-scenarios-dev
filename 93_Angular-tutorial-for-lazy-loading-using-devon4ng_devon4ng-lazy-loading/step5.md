@@ -1,8 +1,8 @@
 If you run the project at this point you can see in the terminal that just the main file is built.
-image::images/compile-eager.png
+![compile-eager](./assets/compile-eager.png)
 
 Go to port 4200 and check the Network tab in the Developer Tools. We can see a document named &#34;first&#34; is loaded. If you click on [Go to right module] a second level module opens, but there is no &#39;second-right&#39; document.
-image::images/second-lvl-right-eager.png
+![second-lvl-right-eager](./assets/second-lvl-right-eager.png)
 
 Now we will modify the app to lazily load the modules. Modifying an angular application to load its modules lazily is easy, you have to change the routing configuration of the desired module (for example `FirstModule`). Instead of loading a component, you dynamically import it in a `loadChildren` attribute because modules acts as gates to access components &#34;inside&#34; them. Updating this app to load lazily has four consecuences: no component attribute, no import of `FirstComponent`, `FirstModule` import has to be removed from the imports array at `app.module.ts`, and change of context.
 
