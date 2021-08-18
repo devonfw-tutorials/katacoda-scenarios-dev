@@ -1,6 +1,4 @@
-### create devon4j sample application
-
-
+### a devon4j Sample Application
 If you want to create devon4j application on your local machine there are two ways to do it:
 
 * In eclipse as shown [here](https://devonfw.com/website/pages/docs/devon4j.asciidoc_tutorials.html#tutorial-newapp.asciidoc_from-eclipse)
@@ -23,7 +21,7 @@ Now you can use devonfw to setup a Java project for you by executing the followi
 
 Once sampleapp is created switch to next tab of IDE. In IDE explorer you can see folder structure like devonfw-&gt; workspaces-&gt;main-&gt;sampleapp . 
 
-sampleapp contains 3 modules i.e api, core and server.
+Sampleapp contains 3 modules i.e api, core and server.
 
 **api**: It contains API for sampleapp.The API contains the required artifacts to interact with your application via remote services. This can be REST service interfaces, transfer-objects with their interfaces and datatypes but also OpenAPI or gRPC contracts.
 

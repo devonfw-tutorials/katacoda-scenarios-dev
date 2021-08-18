@@ -15,4 +15,4 @@ Each component is divided into following layers:
 
 * [logic layer](https://github.com/devonfw/devon4j/blob/master/documentation/guide-logic-layer.asciidoc) for the business logic. For example, in sampleapp we generated com.example.application.sampleapp.&lt;componentname&gt;.logic will contain business logic or usecase implementation.
 
-* [data-access layer](https://github.com/devonfw/devon4j/blob/master/documentation/guide-dataaccess-layer.asciidoc) for the data access (esp. persistence).For example, in sampleapp we generated com.example.application.sampleapp.&lt;compoenntname&gt;.dataaccess will contain entity, repositories etc.
+* [data-access layer](https://github.com/devonfw/devon4j/blob/master/documentation/guide-dataaccess-layer.asciidoc) for the data access (esp. persistence).For example, in sampleapp we generated com.example.application.sampleapp.&lt;componentname&gt;.dataaccess will contain entity, repositories etc.
