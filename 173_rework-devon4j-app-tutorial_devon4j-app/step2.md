@@ -4,7 +4,7 @@
 
 
 
-As shown in above image,devon4j application follows [multilayered architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
+As shown in above image, devon4j application follows [multilayered architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
 
 Each component is divided into following layers:
 

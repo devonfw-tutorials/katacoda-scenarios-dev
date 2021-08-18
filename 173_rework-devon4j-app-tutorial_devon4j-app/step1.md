@@ -31,7 +31,7 @@ Sampleapp contains 3 modules i.e api, core and server.
 
 **core**: It is the core of the application.In this module you can write actual business logic with service implementation, as well as entire logic layer and dataaccess layer.
 
-**batch**: optional module for batch layer. In this example we have not created it. To add batch module while generating from commandline use -Dbatch=batch parameter. And to generate it from eclipse using mave archetype enter batch variable value as batch in project creation page.
+**batch**: Optional module for batch layer. In this example we have not created it. To add batch module while generating from commandline use -Dbatch=batch parameter. And to generate it from eclipse using maven archetype, enter batch variable value as batch in project creation page.
 
 **server**: This module bundles the entire app (core with optional batch) typically as a bootified WAR file.
 

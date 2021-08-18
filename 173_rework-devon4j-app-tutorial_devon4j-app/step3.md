@@ -1,4 +1,4 @@
-Now. you have to build a devon4j sample application i.e. sampleapp.
+Now you have to build a devon4j sample application i.e. sampleapp.
 
 
 
