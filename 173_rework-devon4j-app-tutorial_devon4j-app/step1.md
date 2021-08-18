@@ -1,8 +1,10 @@
-== Create devon4j sample application
+### create devon4j sample application
 
 
 If you want to create devon4j application on your local machine there are two ways to do it:
+
 * In eclipse as shown [here](https://devonfw.com/website/pages/docs/devon4j.asciidoc_tutorials.html#tutorial-newapp.asciidoc_from-eclipse)
+
 * Using command line as shown [here](https://devonfw.com/website/pages/docs/devon4j.asciidoc_tutorials.html#tutorial-newapp.asciidoc_from-command-line)
 
 Now, we will create sample devon4j application with name *sampleapp*. This step will guide you on how to do it.
@@ -31,4 +33,4 @@ sampleapp contains 3 modules i.e api, core and server.
 
 **server**: This module bundles the entire app (core with optional batch) typically as a bootified WAR file.
 
-If you want to know more about modules and project structure refer [here](https://github.com/devonfw/devon4j/blob/master/documentation/guide-structure.asciidoc#project-structure).
+If you want to know more about modules and project structure refer [here](#https://github.com/devonfw/devon4j/blob/master/documentation/guide-structure.asciidoc#project-structure).
