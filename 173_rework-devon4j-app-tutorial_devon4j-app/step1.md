@@ -1,11 +1,15 @@
-### a devon4j Sample Application
+### A devon4j Sample Application
+
+Note: Startup script will take some time for set up. After that you can proceed further.
+
 If you want to create devon4j application on your local machine there are two ways to do it:
 
 * In eclipse as shown [here](https://devonfw.com/website/pages/docs/devon4j.asciidoc_tutorials.html#tutorial-newapp.asciidoc_from-eclipse)
 
 * Using command line as shown [here](https://devonfw.com/website/pages/docs/devon4j.asciidoc_tutorials.html#tutorial-newapp.asciidoc_from-command-line)
 
-Now, we will create sample devon4j application with name *sampleapp*. This step will guide you on how to do it.
+Now, you will create sample devon4j application with name *sampleapp*. This step will guide you on how to do it.
+
 
 
 
