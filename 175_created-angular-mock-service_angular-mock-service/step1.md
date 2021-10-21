@@ -1,0 +1,59 @@
+## Mock Data
+Mock data is fake data which is artificially inserted into a piece of software. Mocking is essentially simulating the behaviour of real data in controlled ways. So in order to use mock data effectively, it is essential to have a good understanding of the software under test and more importantly how it uses its data. As with most things, there are both advantages and disadvantages to doing this.
+
+One of the big advantages with mock data is that it makes it possible to simulate errors and circumstances that would otherwise be very difficult to create in a real world environment. A disadvantage however is that without good understanding of the software, it will be possible to manipulate data in ways which would never actually happen in the real world.
+
+## Mock Service
+
+Services are often the smoothest files to unit test. A mock service imitates a real REST or SOAP API – it contains definitions for operations that clients call, receives requests, and returns simulated responses.
+
+When testing a component with service dependencies, the best practice is mocking them, in order to test the component in an isolated environment. In fact, our purpose is testing the component, not the services, that can be trouble, especially if they try to interact with a server.
+
+Here, we will go through a angular-mock-service sample app.
+
+The app presents 3 pages as follows:
+
+A leader board with the top 3 elements
+
+A data table with all the elements
+
+A details page that reads a route paramenter and displays the details of the element.
+
+There are a lot of business cases which have these requirements:
+
+A leader board can be understood as &#34;the most popular items in a set&#34;, &#34;the latest updated items&#34;, &#34;you favorite items&#34; etc.
+
+A data table with CRUD operations is very useful (in our case we only view details or delete an item, but they illustrate two important things: the details view shows how to navigate and consume a parametric route, the delete action shows how to invoke service operations over the loaded data - this means that the component is reusable and when the data comes with an API, only the service will need it’s implementation changed)
+
+First, we have to clone the Devon4ng repository to access Angular Mock Service Sample.
+--
+
+====
+
+
+Please change the folder to &#39;devonfw/workspaces/main&#39;.
+
+`cd devonfw/workspaces/main`{{execute T1}}
+
+
+
+Now clone the repository to your local directory.
+
+`git clone https://github.com/devonfw/devon4ng.git`{{execute T1}}
+
+Now we want to open the file periodicElement.ts. 
+
+You can either click on this link, here: 
+
+`devonfw/workspaces/main/devon4ng/samples/AngularMockService/src/app/models/periodicElement.ts`{{open}}
+
+and it will open the file automatically or switch to the editor and open it yourself. 
+
+Let’s consider a &#39;box of data&#39; represented in JSON. Physically this means a folder with some JSON/TS files in it. They are located in the app/mock folder. The example uses only one mock data file. The file is typed according to our data model.
+
+The model is represented by the interfaces we make. These interfaces describe the data structures we will use in our application. In this example, there is one data model, corresponding with the &#39;type&#39; of data that was mocked. In the models folder you will find the .ts script file that describes chemical elements. The corresponding mock file defines a set is chemical element objects, in accordance to our interface definition.
+
+![data-box.jpg](./assets/data-box.jpg)
+
+
+
