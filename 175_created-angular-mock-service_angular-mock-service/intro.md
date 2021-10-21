@@ -9,7 +9,6 @@ You can find a description of what to look for when creating a pull request at t
 In this scenario, you will learn how to write a simple mock service that helps us by feeding data into our components. 
 
 
-#
 ## Prerequisites
 
 * GitHub account
@@ -17,7 +16,6 @@ In this scenario, you will learn how to write a simple mock service that helps u
 * Basic Angular knowledge
 
 
-#
 ## Learning goals
 
 * After completing this scenario, You will learn how to test classes which have dependencies in isolation by using Mocks.

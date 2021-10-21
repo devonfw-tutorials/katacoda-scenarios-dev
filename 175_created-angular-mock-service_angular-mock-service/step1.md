@@ -5,7 +5,7 @@ One of the big advantages with mock data is that it makes it possible to simulat
 
 == Mock Service
 
-Services are often the smoothest files to unit test. A mock service imitates a real REST or SOAP API – it contains definitions for operations that clients call, receives requests, and returns simulated responses. Note: In the SoapUI documentation, mocking can also be called isolation, virtualization, or simulation. All these terms refer to the same SoapUI feature.
+Services are often the smoothest files to unit test. A mock service imitates a real REST or SOAP API – it contains definitions for operations that clients call, receives requests, and returns simulated responses.
 
 When testing a component with service dependencies, the best practice is mocking them, in order to test the component in an isolated environment. In fact, our purpose is testing the component, not the services, that can be trouble, especially if they try to interact with a server.
 
@@ -13,7 +13,7 @@ Here, we will go through a angular-mock-service sample app.
 
 The app presents 3 pages as follows:
 
-A leader bord with the top 3 elements
+A leader board with the top 3 elements
 
 A data table with all the elements
 
@@ -23,7 +23,7 @@ There are a lot of business cases which have these requirements:
 
 A leader board can be understood as &#34;the most popular items in a set&#34;, &#34;the latest updated items&#34;, &#34;you favorite items&#34; etc.
 
-A data table with CRUD operations is very useful (in our case we only view details or delete an item, but they illustrate two important things: the details view shows how to navigate and consume a parametric route, the delete action shows how to invoke service operations over the loaded data - this means that the component is reusable and when the data comes with and API, only the service will need it’s implementation changed)
+A data table with CRUD operations is very useful (in our case we only view details or delete an item, but they illustrate two important things: the details view shows how to navigate and consume a parametric route, the delete action shows how to invoke service operations over the loaded data - this means that the component is reusable and when the data comes with an API, only the service will need it’s implementation changed)
 
 First, we have to clone the Devon4ng repository to access Angular Mock Service Sample.
 

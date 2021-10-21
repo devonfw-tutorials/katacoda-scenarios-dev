@@ -4,7 +4,7 @@ Let’s consider a &#39;box of data&#39; represented in JSON. Physically this me
 
 The model is represented by the interfaces we make. These interfaces describe the data structures we will use in our application. In this example, there is one data model, corresponding with the &#39;type&#39; of data that was mocked. In the models folder you will find the .ts script file that describes chemical elements. The corresponding mock file defines a set is chemical element objects, in accordance to our interface definition.
 
-![data-box.png](./assets/data-box.png)
+![data-box.jpg](./assets/data-box.jpg)
 
 
 
