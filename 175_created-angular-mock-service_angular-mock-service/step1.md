@@ -14,19 +14,21 @@ Here, we will go through a angular-mock-service sample app.
 
 
 
+![leaderboard.png](./assets/leaderboard.png)
+
+The app presents 3 pages as follows:
+
 1. A leader board with the top 3 elements
 A leader board can be understood as &#34;the most popular items in a set&#34;, &#34;the latest updated items&#34;, &#34;you favorite items&#34; etc.
 
-![leaderboard.png](./assets/leaderboard.png)
+![data-table.png](./assets/data-table.png)
 
 2. A data table with all the elements
 A data table with CRUD operations is very useful (in our case we only view details or delete an item, but they illustrate two important things: the details view shows how to navigate and consume a parametric route, the delete action shows how to invoke service operations over the loaded data - this means that the component is reusable and when the data comes with an API, only the service will need it’s implementation changed)
 
-![data-table.png](./assets/data-table.png)
+![detail.png](./assets/detail.png)
 
 3. A details page that reads a route paramenter and displays the details of the element.
-
-![detail.png](./assets/detail.png)
 
 
 
