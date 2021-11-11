@@ -75,13 +75,6 @@ public class CustomerEntity {
 
 
 
-Run the CobiGen command 'adapt-templates' to generate a new templates folder and save its location in a configuration file.
-
-`devon cobigen adapt-templates`{{execute T1}}
-
-
-
-
 ## CobiGen Java
 
 
@@ -94,7 +87,7 @@ A terminal will open on the bottom of the IDE and CobiGen CLI will start.
 
 You can choose the templates CobiGen should use by entering the numbers in the terminal of the IDE.
 
-`5`
+`1,3,5,6,8`
 
 
 The CobiGen code generator will generate code for Transfer object, REST service handling and data access and so on.
