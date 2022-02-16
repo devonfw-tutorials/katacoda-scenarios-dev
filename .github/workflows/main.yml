@@ -20,10 +20,12 @@ jobs:
         with:
           path: repo
       
-      - uses: actions/setup-node@v2-beta
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
       
       - name: install TS
-        run: npm install typescript
+        run: npm install typescript -g
 
       - name: install fs-extra
         run: npm install fs-extra
