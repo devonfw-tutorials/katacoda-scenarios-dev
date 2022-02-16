@@ -1,4 +1,3 @@
-
 ## Conclusion
 You have successfully created a Jump the Queue application. You can now proceed with development of another sample application.
 

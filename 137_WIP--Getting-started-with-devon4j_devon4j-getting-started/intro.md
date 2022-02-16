@@ -8,10 +8,8 @@ You can find a description of what to look for when creating a pull request at t
 
 This tutorial starts with an empty folder and will show you how to start your project. You will be setting up the complete IDE and will be writing your first business logic with devon4j.
 
-
 ## Prerequisites
 Basic java skills
-
 
 ## Learning goals
 After this tutorial you will be able to start your project and write your first business logic with devon4j.

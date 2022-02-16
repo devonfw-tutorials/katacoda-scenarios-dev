@@ -9,11 +9,9 @@ You can find a description of what to look for when creating a pull request at t
 Jump The Queue is a small application based on the devonfw framework, which you can create yourself by following our simple step-by-step tutorial. By doing so, you will learn about the app development workflow and gain insight into the design of a professional business information system.
 
 
-#
-## Prerequisites
+### Prerequisites
 
 * User should have Java, Angular development experience
-
 
 ## Learning goals
 
