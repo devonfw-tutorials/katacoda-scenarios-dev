@@ -1,4 +1,4 @@
-devonfw IDE has been installed for you.
+devonfw-ide has been installed for you.
 
 First, clone the `QueryDslTutorial` repository from GitHub. It contains an application with a simple REST service.
 
@@ -13,4 +13,5 @@ Now clone the repository to your local directory.
 
 `git clone https://github.com/EduardKrieger/QueryDslTutorial.git`{{execute T1}}
 
-In the next step, integrate Querydsl into your Maven project.
+In order to use Querydsl, we need to add the Querydsl dependencies to our Maven project and configure the Maven APT plugin. 
+The JPAAnnotationProcessor will find domain types annotated with the javax.persistence.Entity annotation and generate query types for them.
